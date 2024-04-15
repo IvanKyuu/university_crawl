@@ -1,3 +1,39 @@
+"""
+This module provides functionality to interact with OpenAI's API for retrieving detailed information about
+Canadian universities and managing spreadsheet data for a given set of university records. It leverages the
+OpenAI GPT models to fill in missing university data based on user input and predefined prompts, and handles
+data retrieval with robust error management using retries and exponential backoff strategies.
+
+The module is structured to support tasks such as fetching JSON data from the OpenAI API based on the name
+or URL of a university, and updating spreadsheets with missing university data. It includes custom exception
+handling, caching mechanisms, and spreadsheet operations using the gspread library.
+
+Key Functions:
+- get_university_name_from_gpt: Fetches information about a university using the OpenAI API and returns it in JSON format.
+- get_value_and_reference_from_gpt: Retrieves specific attribute values and references for a given university using the OpenAI API.
+- fill_missing_entry: Updates missing entries in a worksheet based on the data fetched using OpenAI.
+- fill_target_university: A wrapper function to manage worksheet updates for university records.
+
+Custom Exceptions:
+- UnscorableCommentError: Custom exception to handle specific error cases in OpenAI responses.
+
+Dependencies:
+- openai: Python client library for accessing OpenAI's API.
+- gspread: Python library for interacting with Google Sheets.
+- dotenv: Python library for managing environment variables.
+- tenacity: Python library for retrying failing operations with customizable strategies.
+
+Usage:
+The module should be utilized in environments where OpenAI's API access is configured, and Google Sheets API
+credentials are set up for gspread operations. Ensure all required environment variables are available through
+a .env file or environment settings.
+
+Example Usage:
+To use the functions for filling missing university data in a Google Sheet, call the fill_target_university
+function after setting up the appropriate API keys and sheet credentials.
+
+"""
+
 from openai import OpenAI
 from openai import APIConnectionError, APIError, RateLimitError
 import os
@@ -17,6 +53,34 @@ cache_repo_path = "./cache_repo"
 
 
 def get_university_name_from_gpt(name: str) -> str:
+    """
+    Retrieves a JSON string containing information about a Canadian university based on a provided identifier.
+    The identifier can be the university's name, abbreviation, or an official or Wikipedia URL. The function
+    interacts with the OpenAI API to generate a JSON response which includes the university's name, abbreviation,
+    official website, and Wikipedia page link.
+
+    Parameters:
+    - name (str): The name, abbreviation, or a URL of the university.
+
+    Returns:
+    - str: A JSON string that includes the university's name, abbreviation, website, and Wikipedia URL.
+
+    Raises:
+    # TODO
+    - KeyError: If the 'IRIS_OPENAI_API_KEY' environment variable is not set.
+    - OpenAIError: If there is an error in calling the OpenAI API.
+
+    Example:
+    - Calling get_university_name_from_gpt("UBC") might return:
+        '{"ID":"1","university_name":"The University of British Columbia","abbreviation":"UBC",
+        "website":"https://www.ubc.ca","wikipedia":"https://en.wikipedia.org/wiki/University_of_British_Columbia"}'
+
+    Note:
+    # TODO
+    - The function requires an OpenAI API key to be set in the environment variable 'IRIS_OPENAI_API_KEY'.
+    - This function is specifically designed to use OpenAI's 'gpt-3.5-turbo' model.
+    """
+
     load_dotenv(".env")
     client = OpenAI(api_key=os.environ["IRIS_OPENAI_API_KEY"])
     example_output = r"""{"ID":"","university_name":"The University of British Columbia","abbreviation":"UBC","website":"https://www.ubc.ca","wikipedia":"https://en.wikipedia.org/wiki/University_of_British_Columbia"}"""
@@ -35,33 +99,6 @@ def get_university_name_from_gpt(name: str) -> str:
         {"role": "user", "content": "UBC"},
         {"role": "assistant", "content": example_output},
         {"role": "user", "content": name},
-    ]
-    response = client.chat.completions.create(messages=messages, max_tokens=256, model="gpt-3.5-turbo")
-    return response.choices[0].message.content
-
-
-def get_domestic_tuition_from_gpt(reference: str) -> str:
-    load_dotenv(".env")
-    client = OpenAI(api_key=os.environ["IRIS_OPENAI_API_KEY"])
-    output_format = r"""{domestic_student_tuition: [<min_tuition>, <max_tuition>]}"""
-    example_output = r"""{domestic_student_tuition: [7179, 12649]}"""
-
-    prompt = f"""# Instruction
-    You are an Education developer in Canada aiming to help high school students to apply to universities. Now I will give
-    you a list of website that related to the tuition and fee for new undergraduate in Canada, you are suppose to extra the min and max 
-    tuition fee for Canadian citizens and permanent residents.
-    
-    # Input Format:
-    <reference>: List[str], where each item is a string of website you could use to find the tuition from.
-
-    # Output Format:
-    json: {output_format}
-    """
-    messages = [
-        {"role": "system", "content": prompt},
-        {"role": "user", "content": "['https://www.torontomu.ca/admissions/tuition-fees/']"},
-        {"role": "assistant", "content": example_output},
-        {"role": "user", "content": reference},
     ]
     response = client.chat.completions.create(messages=messages, max_tokens=256, model="gpt-3.5-turbo")
     return response.choices[0].message.content
@@ -86,6 +123,42 @@ def get_value_and_reference_from_gpt(
     extra_prompt: str = "",
     model: str = "gpt-4-turbo",
 ):
+    """
+    Uses an OpenAI API to fetch specific information about a given university and the associated references from
+    internet sources. The function requires details such as the university name and a target attribute that needs
+    to be retrieved. It formats the request and sends it to the OpenAI model specified, parsing the JSON response to
+    return both the information and its sources.
+
+    Parameters:
+    - university_name (str): Name of the university.
+    - target_attribute (str): The specific attribute of the university that needs to be retrieved.
+    - format (str): The format expected for the output, as a guide for JSON structure.
+    - reference (List[str]): A list of initial references or sources that might contain the required data.
+    - data_example_pair (str): Additional examples to guide the model on expected outputs and formats.
+    - extra_prompt (str, optional): Additional instructions or context to provide to the model.
+    - model (str): Specifies the OpenAI model to use, default is 'gpt-4-turbo'.
+
+    Returns:
+    - tuple:
+        - output (str): The retrieved value for the specified target attribute.
+        - reference (List[str]): A list of URLs or references where the information was sourced.
+
+    Raises:
+    # TODO
+    - KeyError: If the 'IRIS_OPENAI_API_KEY' environment variable is not set.
+    - OpenAIError: Handles various OpenAI specific exceptions like APIConnectionError, APIError, RateLimitError.
+
+    Usage Example:
+    - result = get_value_and_reference_from_gpt(
+            "University of British Columbia", "description", "string",
+            ["https://en.wikipedia.org/wiki/University_of_British_Columbia"],
+            "Example data pairs",
+            "Check the latest publications on their official site."
+            )
+        print(result)
+        >>> The University of British Columbia (UBC), located in British Columbia, Canada, is a public university and a member of the U15...
+    """
+
     output_example = r"""{output: 'The University of British Columbia (UBC), located in British Columbia, Canada, is a public university and a member of the U15 Group of Canadian Research Universities, the Association of Commonwealth Universities, the Association of Pacific Rim Universities, and Universitas 21. As of now, UBC has produced a total of 8 Nobel Prize laureates.', reference: ['https://en.wikipedia.org/wiki/University_of_British_Columbia']}"""
     output_example_graduation_year = r"""{output: '4', reference=['https://you.ubc.ca/applying-ubc/requirements/']}"""
     prompt = f"""
@@ -157,6 +230,13 @@ def get_value_and_reference_from_gpt(
 
 
 def fill_missing_entry(records, columns: List[str], sheet):
+    """Fill the worksheet `sheet` using the rows from records.
+
+    Args:
+        records (dict): Dict format (json) of rows that need to be filled in.
+        columns (List[str]): List of columns' name.
+        sheet (gspread.Worksheet): the worksheet object records intended to write to.
+    """
     for index, record in enumerate(records, start=2):
         parameter = None
         for column_name in columns[1:]:
@@ -177,6 +257,11 @@ def fill_missing_entry(records, columns: List[str], sheet):
 
 
 def fill_target_university():
+    """wrapper to load the cache from target_university_before_action, then fill the target_university worksheet
+
+    Returns:
+        _type_: worksheet target_university
+    """
     sheet = gspread.Client = get_worksheet("target_university")
     cache = load_cache(os.path.join(cache_repo_path, "target_university_before_action.jsonl"))
     records = cache["target_university"]

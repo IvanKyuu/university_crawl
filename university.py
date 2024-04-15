@@ -4,12 +4,69 @@ from pprint import pprint
 
 
 def str_to_list(arg: Union[str, List[str]], splitter=None) -> List[str]:
+    """
+    Converts a single string into a list of substrings, or returns the list unchanged if the input is already a list.
+    """
     if not isinstance(arg, str):
         return arg
     return list(arg.split(splitter)) if splitter else list(arg.split())
 
 
 class University:
+        """
+    A class representing details about a university, encapsulating various attributes related to university information.
+
+    Attributes:
+        id (int): Unique identifier for the university, default is 0.
+        university_name (str): The full name of the university.
+        abbreviation (str): The common abbreviation of the university's name.
+        university_type (str): The type of university (e.g., public, private).
+        graduation_year (float): Year of graduation.
+        location (List[str]): The geographical location(s) of the university.
+        graduation_rate (float): The graduation rate of the university.
+        domestic_student_tuition (float): Tuition fees for domestic students.
+        international_student_tuition (float): Tuition fees for international students.
+        description (str): A brief description of the university.
+        ranking (List[str]): Rankings of the university across various platforms or criteria.
+        website (str): Official website of the university.
+        important_calendar (str): Key dates and events in the university's academic calendar.
+        statistics (List[str]): List of important statistics about the university.
+        faculty (List[str]): List of faculties or departments within the university.
+        popular_programs (List[str]): List of popular academic programs offered by the university.
+        characteristics (List[str]): Distinctive features or characteristics of the university.
+        wikipedia (str): Wikipedia link for the university.
+        others (str): Additional information about the university.
+
+    Methods:
+        __init__: Initializes the University object with the provided values for its attributes.
+        __repr__: Provides a simple string representation of the university.
+        to_dict_ch: Returns a dictionary representation of the university's attributes with keys in Chinese.
+        to_dict_en: Returns a dictionary representation of the university's attributes with keys in English.
+
+    Example:
+        >>> university = University(
+                university_name="University of Waterloo",
+                id=1,
+                abbreviation="UW",
+                university_type="Public",
+                graduation_year=2024,
+                location=["Waterloo, Ontario, Canada"],
+                graduation_rate=88.5,
+                domestic_student_tuition=8000,
+                international_student_tuition=32000,
+                description="Known for its cooperative education programs.",
+                ranking=["Top 100 Worldwide"],
+                website="https://www.uwaterloo.ca",
+                important_calendar="Fall Semester starts in September",
+                statistics=["Enrollment: 35000"],
+                faculty=["Engineering", "Mathematics", "Science"],
+                popular_programs=["Computer Science", "Mechanical Engineering"],
+                characteristics=["Innovative", "Entrepreneurial"],
+                wikipedia="https://en.wikipedia.org/wiki/University_of_Waterloo"
+            )
+        >>> print(university)
+        University(ID=1, Name=University of Waterloo)
+    """
     def __init__(
         self,
         university_name: str,
