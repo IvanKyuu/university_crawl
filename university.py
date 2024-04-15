@@ -13,7 +13,7 @@ def str_to_list(arg: Union[str, List[str]], splitter=None) -> List[str]:
 
 
 class University:
-        """
+    """
     A class representing details about a university, encapsulating various attributes related to university information.
 
     Attributes:
@@ -67,6 +67,7 @@ class University:
         >>> print(university)
         University(ID=1, Name=University of Waterloo)
     """
+
     def __init__(
         self,
         university_name: str,
@@ -166,7 +167,7 @@ def json_to_university_en(json_input: json):
         popular_programs=data.get("popular_programs", []),
         characteristics=data.get("features", []),
         wikipedia=data.get("wikipedia", ""),
-        others=data.get("others", "")
+        others=data.get("others", ""),
     )
 
     return university
@@ -181,12 +182,8 @@ def json_to_university_ch(json_input):
         university_name=data.get("学校名", ""),
         id=data.get("ID", 0),
         abbreviation=data.get("缩写", ""),
-        university_type=(
-            data.get("学校类型", "")
-        ),
-        graduation_year=(
-            data.get("毕业年数", 4)
-        ),
+        university_type=(data.get("学校类型", "")),
+        graduation_year=(data.get("毕业年数", 4)),
         location=data.get("地理位置", []),
         graduation_rate=data.get("毕业率", 0.0),
         domestic_student_tuition=data.get("本地学生学费", 0.0),
@@ -199,7 +196,7 @@ def json_to_university_ch(json_input):
         faculty=data.get("院校", []),
         popular_programs=data.get("热门专业", []),
         characteristics=data.get("学校特色", []),
-        wikipedia=data.get("维基百科页", "")
+        wikipedia=data.get("维基百科页", ""),
     )
     return university
 
@@ -222,6 +219,6 @@ if __name__ == "__main__":
         faculty="应用科学学院\n建筑与景观建筑学院\n文学院\n听力学与言语科学学院\nSauder商学院\n社区与区域规划学院\n牙科学院\n教育学院\n继续教育学院\n林学院\n研究生与博士后研究院\n新闻学院\n运动学院\n土地与食品系统学院\n法学院，Peter A. Allard法学院\n图书馆、档案与信息研究学院\n医学院\n音乐学院\n护理学院\n药剂科学学院\n人口与公共卫生学院\n公共政策与全球事务学院\n科学学院\n社会工作学院\nUBC Vantage College\n温哥华经济学院",
         popular_programs="教育专业\n商学院\n工程专业",
         characteristics="英属哥伦比亚大学（UBC）以其独特的特色和成就而著称，这些特色和成就共同构成了其作为全球领先的教学、学习和研究中心的声誉。以下是一些关键亮点：\n可持续性领导力：UBC被评为加拿大最可持续发展的大学，展示了其对环境保护和创新可持续实践的承诺。\n丰富的生物多样性：UBC的比提生物多样性博物馆拥有加拿大最大的蓝鲸骨架，为游客提供与世界上最大生物近距离接触的独特体验。\n多元化的校园文化：UBC支持多元文化环境，在两个校园的双语街道标志中体现出来。这些标志结合了英语和Okanagan校区的原住民Nsyilxcen语言，以及温哥华校区的hən̓q̓əmin̓əm̓语言和英语，反映了UBC对当地原住民文化的尊重和融合。",
-        wikipedia="https://en.wikipedia.org/wiki/University_of_British_Columbia"
+        wikipedia="https://en.wikipedia.org/wiki/University_of_British_Columbia",
     )
     pprint(ubc.to_dict_en())
