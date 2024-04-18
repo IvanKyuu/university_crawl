@@ -1,0 +1,32 @@
+{
+    "target_university": [
+        {
+            "ID": "",
+            "university_name": "University of Waterloo",
+            "abbreviation": "",
+            "website": "",
+            "wikipedia": ""
+        },
+        {
+            "ID": "",
+            "university_name": "",
+            "abbreviation": "",
+            "website": "https://www.utoronto.ca/",
+            "wikipedia": ""
+        },
+        {
+            "ID": "",
+            "university_name": "Simon Fraser University",
+            "abbreviation": "",
+            "website": "",
+            "wikipedia": ""
+        },
+        {
+            "ID": "",
+            "university_name": "Toronto Metropolitan University",
+            "abbreviation": "",
+            "website": "",
+            "wikipedia": ""
+        }
+    ]
+}

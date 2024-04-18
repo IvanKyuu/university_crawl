@@ -1,4 +1,7 @@
 __pycache__/
 working_file/
+cache_repo/*.json
+university_info_generator/university_info_generator.egg-info/
+university_info_generator/configs/.env
+university_info_generator/configs/uforseAdminKey.json
 cache_repo/
-.env
