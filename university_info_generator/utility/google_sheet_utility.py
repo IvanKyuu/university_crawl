@@ -213,13 +213,27 @@ def write_cache_to_worksheet(filepath: str, worksheet: gspread.worksheet):
         # Cleanse the DataFrame by replacing NaN with empty strings
         universities_df.fillna('', inplace=True)
         
+        # Get the headers from the worksheet (assuming the first row is the header)
+        headers = worksheet.row_values(1)
+        
+        # Reorder the DataFrame columns to match the worksheet column order
+        # Only include columns that exist in the worksheet; drop any additional columns from the DataFrame
+        if set(headers).issubset(set(universities_df.columns)):
+            universities_df = universities_df[headers]
+        else:
+            missing_columns = set(headers) - set(universities_df.columns)
+            raise ValueError(f"Missing columns in DataFrame that are expected in the worksheet: {missing_columns}")
+        
         # Iterate over DataFrame rows and append each row to the Google Sheet
         for _, row in universities_df.iterrows():
-            # Ensure all values are converted to strings, replace None with an empty string
-            row_values = row.astype(str).replace({np.nan: None}).tolist()
+            # Convert all values to string, ensuring proper format for Google Sheets
+            row_values = row.astype(str).tolist()
             worksheet.append_row(row_values)
+            
     except FileNotFoundError:
-        print("Cache file not found. Starting with an empty cache.")
+        print("Cache file not found. Please ensure the file path is correct.")
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
 
 
 __all__ = [name for name in dir() if name[0] != "_"]
