@@ -1,3 +1,50 @@
+"""
+This module defines utilities and classes for handling university-related information, focusing on
+    structured data management and conversion. It includes functionalities to handle attributes, manipulate university
+    data, and facilitate the interaction between different formats and representations.
+
+The `University` class is a core component, representing comprehensive details about universities.
+    It encapsulates various attributes such as the university's name, location, type and statistics.
+    The class provides methods for converting university data between English and Simplified Chinese representations,
+    handling JSON data serialization, and managing attributes dynamically.
+
+Functions:
+    - str_to_list: Converts a string to a list of strings based on a given splitter.
+    - University.json_to_university: Static method that deserializes JSON input into a `University` instance, supporting
+        translations between English and Simplified Chinese.
+
+Class:
+    - University: Represents detailed information about a university, encapsulating attributes related to its
+        identification, academic offerings, location, rankings, and etc.
+        Provides methods for dictionary conversions and attribute access.
+
+Usage:
+    This module is intended for applications that require detailed and structured management of university data,
+    particularly in environments where internationalization (i.e., support for both English and Chinese) is necessary.
+    It facilitates easy transformations between different data representations (e.g., JSON, dictionaries) and provides
+    utility functions to aid in data manipulation and extraction tasks.
+
+Example:
+    >>> university = University(
+            id_=1,
+            university_name="University of Waterloo",
+            params={
+                "abbreviation": "UW",
+                "university_type": "Public",
+                ...
+            }
+        )
+    >>> print(university)
+    University(ID=1, Name=University of Waterloo)
+
+Dependencies:
+    - json: For parsing and generating JSON formatted strings.
+    - typing: For type annotations that enhance readability and maintainability of the code.
+
+This module can be used in academic data management systems, university ranking websites, and other educational
+platforms where detailed information about institutions is handled and displayed in multiple languages.
+"""
+
 import json
 from typing import List, Dict, Union
 
@@ -92,6 +139,7 @@ class University:
         "学校重要日历": "important_calendar",
         "统计数据": "statistics",
         "院校": "faculty",
+        "专业": "programs",
         "热门专业": "popular_programs",
         "学校特色": "characteristics",
         "其他": "others",
@@ -118,6 +166,7 @@ class University:
         "important_calendar": "学校重要日历",
         "statistics": "统计数据",
         "faculty": "院校",
+        "programs": "专业",
         "popular_programs": "热门专业",
         "characteristics": "学校特色",
         "others": "其他",

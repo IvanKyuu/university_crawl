@@ -1,5 +1,8 @@
 """
-This module is designed to facilitate the scraping of tuition fee information for Canadian universities from the website universitystudy.ca. It utilizes the requests library to handle HTTP requests and BeautifulSoup for parsing HTML content. The module provides a class, TuitionCrawl, which offers methods to fetch URLs for specific universities and scrape tuition fee data from those pages.
+This module is designed to facilitate the scraping of tuition fee information for Canadian universities from
+    the website university study.ca. It utilizes the requests library to handle HTTP requests and BeautifulSoup
+    for parsing HTML content. The module provides a class, TuitionCrawl, which offers methods to fetch URLs
+    for specific universities and scrape tuition fee data from those pages.
 
 Classes:
 - TuitionCrawl: Manages the scraping of university URLs and tuition fee information.
@@ -9,7 +12,9 @@ Dependencies:
 - BeautifulSoup: Used to parse HTML documents.
 - collections.defaultdict: Used to manage default values for dictionary keys during scraping.
 
-The TuitionCrawl class includes methods for obtaining the URL of a university's specific page based on the university's name and for scraping the tuition fees from that page. It handles various HTTP errors and parses HTML content to extract relevant data. The class uses predefined HTTP headers to mimic browser requests and avoid being blocked by the website's anti-scraping measures.
+The TuitionCrawl class includes methods for obtaining the URL of a university's specific page based on
+    the university's name and for scraping the tuition fees from that page. It handles various HTTP errors
+    and parses HTML content to extract relevant data.
 
 Usage:
 - Create an instance of the TuitionCrawl class.
@@ -23,11 +28,9 @@ print(tuition_info)
 ```
 
 """
-
+from collections import defaultdict
 import requests
 from bs4 import BeautifulSoup
-from pprint import pprint
-from collections import defaultdict
 
 
 class TuitionCrawl:
@@ -51,7 +54,8 @@ class TuitionCrawl:
     ```
     """
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) \
+            Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0",
         "DNT": "1",  # Do Not Track
         "Upgrade-Insecure-Requests": "1",
     }
@@ -104,8 +108,8 @@ class TuitionCrawl:
                     return link["href"]
 
             return "University not found on the page."
-        except requests.RequestException as e:
-            return f"An error occurred: {str(e)}"
+        except requests.RequestException as exc:
+            return f"An error occurred: {str(exc)}"
 
     def fetch_tuition(self, university_name: str):
         """
@@ -143,13 +147,7 @@ class TuitionCrawl:
                 "international_student_tuition": undergraduate_fees["fee1"],
             }
 
-        except requests.RequestException as e:
-            return f"An error occurred with {university_name}: {str(e)}"
+        except requests.RequestException as exc:
+            return f"An error occurred with {university_name}: {str(exc)}"
 
 __all__ = []
-# if __name__ == "__main__":
-#     cra = TuitionCrawl()
-#     pprint(cra.fetch_tuition("University of Waterloo"))
-#     print("*" * 30)
-#     pprint(cra.fetch_tuition("University of Alberta"))
-#     print("*" * 30)

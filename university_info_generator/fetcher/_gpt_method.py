@@ -9,8 +9,10 @@ or URL of a university, and updating spreadsheets with missing university data. 
 handling, caching mechanisms, and spreadsheet operations using the gspread library.
 
 Key Functions:
-- get_university_name_from_gpt: Fetches information about a university using the OpenAI API and returns it in JSON format.
-- get_value_and_reference_from_gpt: Retrieves specific attribute values and references for a given university using the OpenAI API.
+- get_university_name_from_gpt: Fetches information about a university using the OpenAI API and
+    returns it in JSON format.
+- get_value_and_reference_from_gpt: Retrieves specific attribute values and references for a given university
+    using the OpenAI API.
 - fill_missing_entry: Updates missing entries in a worksheet based on the data fetched using OpenAI.
 - fill_target_university: A wrapper function to manage worksheet updates for university records.
 
@@ -41,21 +43,56 @@ from openai import OpenAI
 from openai import APIConnectionError, APIError, RateLimitError
 from tenacity import retry, wait_random_exponential, retry_if_exception_type, stop_after_attempt
 from university_info_generator.configs import config
-from pprint import pprint
 
 
 class UnscorableCommentError(Exception):
+    """
+    Exception raised for comments that cannot be scored.
+
+    This exception is used to indicate a scenario where a comment does not meet the criteria for scoring,
+    due to factors such as format, content, or context inadequacies.
+
+    Usage:
+        Able GPT to retry upon unscorable situations
+    """
+
     pass
 
 
-class GPT_Client:
+class GPTClient:
+    """
+    A client class for interfacing with the OpenAI GPT models.
+
+    This class handles the initialization and management of connections to OpenAI's API using credentials
+    stored in environment variables. It provides methods to perform various operations using GPT models,
+    such as retrieving university names or other specific information based on input queries.
+
+    Attributes:
+        api_key (str): The API key required to authenticate requests to the OpenAI API.
+        gpt_basic_client (OpenAI): A basic GPT client for general operations.
+        gpt_client (OpenAI): An enhanced GPT client configured for more specific or complex operations.
+
+    Methods:
+        get_university_name_from_gpt(name: str) -> str:
+            Retrieves the name of a university from the GPT model based on a given input name.
+
+    Raises:
+        KeyError: If the OpenAI API key is not found in the configuration, indicating that the client
+            cannot be properly initialized without necessary credentials.
+
+    Usage:
+        This class is typically used where GPT-based textual analysis or generation is required,
+            especially in contexts involving educational data processing or any application requiring
+            access to up-to-date, AI-generated content.
+    """
+
     def __init__(self):
         load_dotenv(config.ENV_FILE_PATH)
-        self.api_key = config._OPENAI_KEY
+        self.api_key = config.OPENAI_API_KEY
         if not self.api_key:
-            raise KeyError("The 'config._OPENAI_KEY' environment variable is not set.")
+            raise KeyError("The 'config.OPENAI_API_KEY' environment variable is not set.")
         self.gpt_basic_client = OpenAI(api_key=self.api_key)
-        self.gpt_client = OpenAI(api_key=config._OPENAI_KEY)
+        self.gpt_client = OpenAI(api_key=config.OPENAI_API_KEY)
 
     def get_university_name_from_gpt(self, name: str) -> str:
         """
@@ -86,7 +123,10 @@ class GPT_Client:
         - This function is specifically designed to use OpenAI's 'gpt-3.5-turbo' model.
         """
 
-        example_output = r"""{"id_":"","university_name":"The University of British Columbia","abbreviation":"UBC","website":"https://www.ubc.ca","wikipedia":"https://en.wikipedia.org/wiki/University_of_British_Columbia"}"""
+        example_output = r"""{"id_":"","university_name":"The University of British Columbia",
+        "abbreviation":"UBC","website":"https://www.ubc.ca",
+        "wikipedia":"https://en.wikipedia.org/wiki/University_of_British_Columbia"}
+        """
         prompt = """# Instruction
         You are an Education developer in Canada aiming to help high school students to apply to universities. Now I will give
         you any university name, an abbreviation, an official website or a wikipedia website that links to the university. You are supposed to give me back
@@ -134,7 +174,8 @@ class GPT_Client:
         Uses an OpenAI API to fetch specific information about a given university and the associated references from
         internet sources. The function requires details such as the university name and a target attribute that needs
         to be retrieved. It formats the request and sends it to the OpenAI model specified, parsing the JSON response to
-        return both the information and its sources.
+        return both the information and its sources. If you don't know or you are not sure, just return "not available"
+        without further explaining
 
         Parameters:
         - university_name (str): Name of the university.
@@ -162,10 +203,15 @@ class GPT_Client:
                 "Check the latest publications on their official site."
                 )
             print(result)
-            >>> The University of British Columbia (UBC), located in British Columbia, Canada, is a public university and a member of the U15...
+            >>> The University of British Columbia (UBC), located in British Columbia, Canada,
+                    is a public university and a member of the U15...
         """
 
-        output_example = r"""{"output": "The University of British Columbia (UBC), located in British Columbia, Canada, is a public university and a member of the U15 Group of Canadian Research Universities, the Association of Commonwealth Universities, the Association of Pacific Rim Universities, and Universitas 21. As of now, UBC has produced a total of 8 Nobel Prize laureates.", "reference": ["https://en.wikipedia.org/wiki/University_of_British_Columbia"]}"""
+        output_example = r"""{"output": "The University of British Columbia (UBC), located in British Columbia, \
+            Canada, is a public university and a member of the U15 Group of Canadian Research Universities, \
+                the Association of Commonwealth Universities, the Association of Pacific Rim Universities, \
+                    and Universitas 21. As of now, UBC has produced a total of 8 Nobel Prize laureates.", \
+                        "reference": ["https://en.wikipedia.org/wiki/University_of_British_Columbia"]}"""
         output_example_graduation_year = (
             r"""{"output": "4", "reference"=["https://you.ubc.ca/applying-ubc/requirements/"]}"""
         )
@@ -234,7 +280,8 @@ class GPT_Client:
             result = response.choices[0].message.content
             # pprint(result)
             print(
-                f"used GPT: get_value_and_reference_from_gpt, university_name: {university_name}, attribute: {target_attribute}"
+                f"used GPT: get_value_and_reference_from_gpt, university_name: {university_name}, \
+                    attribute: {target_attribute}"
             )
             result_json = {}
             if isinstance(result, str):
@@ -249,5 +296,5 @@ class GPT_Client:
             return "", []
 
 
-__all__ = ["GPT_Client"]
+__all__ = ["GPTClient"]
 # __all__ = ["get_university_name_from_gpt", "get_value_and_reference_from_gpt"]
