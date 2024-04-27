@@ -34,22 +34,24 @@ function after setting up the appropriate API keys and sheet credentials.
 
 """
 
-from openai import OpenAI
-from openai import APIConnectionError, APIError, RateLimitError
 import os
 import json
 from typing import List
-from utility import get_worksheet, restore_by_cache, get_sheet_client, load_cache, store_cache, get_worksheet_records
-import gspread
 from dotenv import load_dotenv
+from openai import OpenAI
+from openai import APIConnectionError, APIError, RateLimitError
+import gspread
 from tenacity import retry, wait_random_exponential, retry_if_exception_type, stop_after_attempt
+from university_info_generator.utility import (
+    get_worksheet,
+    load_cache,
+    get_worksheet_records,
+)
+from university_info_generator.configs import config
 
 
 class UnscorableCommentError(Exception):
     pass
-
-
-cache_repo_path = "./cache_repo"
 
 
 def get_university_name_from_gpt(name: str) -> str:
@@ -67,7 +69,7 @@ def get_university_name_from_gpt(name: str) -> str:
 
     Raises:
     # TODO
-    - KeyError: If the 'IRIS_OPENAI_API_KEY' environment variable is not set.
+    - KeyError: If the 'UFORSE_OPENAI_API_KEY' environment variable is not set.
     - OpenAIError: If there is an error in calling the OpenAI API.
 
     Example:
@@ -77,12 +79,12 @@ def get_university_name_from_gpt(name: str) -> str:
 
     Note:
     # TODO
-    - The function requires an OpenAI API key to be set in the environment variable 'IRIS_OPENAI_API_KEY'.
+    - The function requires an OpenAI API key to be set in the environment variable 'UFORSE_OPENAI_API_KEY'.
     - This function is specifically designed to use OpenAI's 'gpt-3.5-turbo' model.
     """
 
-    load_dotenv(".env")
-    client = OpenAI(api_key=os.environ["IRIS_OPENAI_API_KEY"])
+    load_dotenv(config.ENV_FILE_PATH)
+    client = OpenAI(api_key=os.getenv("UFORSE_OPENAI_API_KEY"))
     example_output = r"""{"ID":"","university_name":"The University of British Columbia","abbreviation":"UBC","website":"https://www.ubc.ca","wikipedia":"https://en.wikipedia.org/wiki/University_of_British_Columbia"}"""
     prompt = """# Instruction
     You are an Education developer in Canada aiming to help high school students to apply to universities. Now I will give
@@ -117,7 +119,7 @@ def get_university_name_from_gpt(name: str) -> str:
 def get_value_and_reference_from_gpt(
     university_name: str,
     target_attribute: str,
-    format: str,
+    format_: str,
     reference: List[str],
     data_example_pair: str,
     extra_prompt: str = "",
@@ -145,7 +147,7 @@ def get_value_and_reference_from_gpt(
 
     Raises:
     # TODO
-    - KeyError: If the 'IRIS_OPENAI_API_KEY' environment variable is not set.
+    - KeyError: If the 'UFORSE_OPENAI_API_KEY' environment variable is not set.
     - OpenAIError: Handles various OpenAI specific exceptions like APIConnectionError, APIError, RateLimitError.
 
     Usage Example:
@@ -208,7 +210,7 @@ def get_value_and_reference_from_gpt(
     
     # Output Format
     json format, in the format of 
-    output: {format},
+    output: {format_},
     reference: List[str], which is a list of references that you have checked.
     """
 
@@ -221,7 +223,7 @@ def get_value_and_reference_from_gpt(
             "content": f"university_name: {university_name}\ntarget_attribute: {target_attribute}",
         },
     ]
-    client = OpenAI(api_key=os.environ["IRIS_OPENAI_API_KEY"])
+    client = OpenAI(api_key=os.environ["UFORSE_OPENAI_API_KEY"])
     response = client.chat.completions.create(messages=messages, model=model)
     result = response.choices[0].message.content
     # pprint(f"GPT: {result}")
@@ -263,8 +265,11 @@ def fill_target_university():
         _type_: worksheet target_university
     """
     sheet = gspread.Client = get_worksheet("target_university")
-    cache = load_cache(os.path.join(cache_repo_path, "target_university_before_action.jsonl"))
+    cache = load_cache(config.CACHE_REPO_PATH, "target_university_before_action.jsonl")
     records = cache["target_university"]
     column_names = sheet.row_values(1)
     fill_missing_entry(records, column_names, sheet)
     return get_worksheet_records("target_university")
+
+
+__all__ = ["get_university_name_from_gpt", "get_value_and_reference_from_gpt"]

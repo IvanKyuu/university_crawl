@@ -146,10 +146,10 @@ class TuitionCrawl:
         except requests.RequestException as e:
             return f"An error occurred: {str(e)}"
 
-
-if __name__ == "__main__":
-    cra = TuitionCrawl()
-    pprint(cra.fetch_tuition("University of Waterloo"))
-    print("*" * 30)
-    pprint(cra.fetch_tuition("University of Alberta"))
-    print("*" * 30)
+__all__ = []
+# if __name__ == "__main__":
+#     cra = TuitionCrawl()
+#     pprint(cra.fetch_tuition("University of Waterloo"))
+#     print("*" * 30)
+#     pprint(cra.fetch_tuition("University of Alberta"))
+#     print("*" * 30)
