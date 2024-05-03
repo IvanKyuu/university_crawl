@@ -1,0 +1,30 @@
+# Core dependencies for handling data and API interactions
+numpy==1.23.3
+pandas==1.4.3
+python-dotenv==0.20.0
+oauth2client==4.1.3
+openai==0.16.0
+gspread==5.3.2
+gspread-dataframe==3.0.8
+
+# Web scraping and client interactions
+bs4==0.0.1
+apify-client==2.3.0
+streamlit==1.25.0
+
+# Language model and AI processing
+langchain==0.0.244
+langchain-openai==0.1.5
+tenacity==8.0.1
+
+# Google API dependencies
+google-api-core==2.11.1
+google-api-python-client==2.95.0
+google-auth==2.22.0
+google-auth-httplib2==0.1.0
+
+# Database and vector storage for AI models
+chromadb==0.4.3
+faiss-cpu==1.7.4
+
+# Ensure you replace the versions with the ones compatible with your system or latest as of your last update check.

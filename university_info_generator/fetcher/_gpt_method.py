@@ -145,7 +145,8 @@ class GPTClient:
         ]
         print(f"used GPT: get_university_name_from_gpt, university_name: {name}")
         response = self.gpt_basic_client.chat.completions.create(
-            messages=messages, max_tokens=256, model="gpt-3.5-turbo"
+            messages=messages, max_tokens=256, model="gpt-3.5-turbo", temperature=0
+            messages=messages, max_tokens=256, model="gpt-3.5-turbo", temperature=0
         )
         return response.choices[0].message.content
 
@@ -168,7 +169,8 @@ class GPTClient:
         reference: List[str],
         data_example_pair: str,
         extra_prompt: str = "",
-        model: str = "gpt-4-turbo",
+        model: str = config.DEFAULT_OPENAI_MODEL,
+        temperature=0,
     ):
         """
         Uses an OpenAI API to fetch specific information about a given university and the associated references from
@@ -222,6 +224,7 @@ class GPTClient:
         If you have checked any websites during your data collection procedure, you should return a List[str], which is a list of references that you have checked.
         Think through the procedure deeply and take it step by step.
         IMPORTANT: You don't need to explain your result, just produce the jsonl as expected, following the exact format.
+        If you don't know or you are not sure, just return "not available" without further explaining
         
         # Suggestion
         When you have provided with an official website of the target university, you should value the official website heavily, and check it first.
@@ -276,7 +279,7 @@ class GPTClient:
             },
         ]
         try:
-            response = self.gpt_client.chat.completions.create(messages=messages, model=model)
+            response = self.gpt_client.chat.completions.create(messages=messages, model=model, temperature=temperature)
             result = response.choices[0].message.content
             # pprint(result)
             print(

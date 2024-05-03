@@ -29,18 +29,33 @@ This module is an integral part of the university information scrapping, interac
     handle data preparing, cleaning and generations.
 """
 
-
+from pprint import pprint
 import os
-from tenacity import retry, stop_after_attempt, retry_if_exception_type, wait_random_exponential
-from requests.exceptions import HTTPError, ConnectionError
+from typing import List, Union, Literal, Dict
+import re
+from functools import reduce
+import json
 
-from university_info_generator.configs import config
+from bs4 import BeautifulSoup
+from requests.exceptions import HTTPError, ConnectionError
+from tenacity import retry, stop_after_attempt, retry_if_exception_type, wait_random_exponential
+
+from langchain_chroma import Chroma
+from langchain_core.documents.base import Document
+from langchain_community.document_loaders.recursive_url_loader import RecursiveUrlLoader
 from langchain_community.retrievers import TavilySearchAPIRetriever
+from langchain_community.utilities import GoogleSerperAPIWrapper
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
-from langchain_openai import ChatOpenAI
-
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain_community.embeddings.sentence_transformer import (
+    SentenceTransformerEmbeddings,
+)
+from langchain_community.vectorstores import FAISS
+from langchain_text_splitters import CharacterTextSplitter
+from university_info_generator.configs import config
+from university_info_generator.configs.enum_class import AttributeColumnType
 
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
 os.environ["LANGCHAIN_API_KEY"] = config.LANGCHAIN_API_KEY
@@ -67,16 +82,18 @@ class LanchainWrapper:
         stop=stop_after_attempt(3),  # Stop after 3 attempts
         wait=wait_random_exponential(multiplier=1, max=30),
         retry=retry_if_exception_type((HTTPError, ConnectionError)),  # Retry on HTTPError and ConnectionError
-        reraise=True
+        reraise=True,
     )
     def get_retrieved_attr_with_format_tavily(
         cls,
         university_name: str,
         target_attribute: str,
         format_: str,
-        reference: str,
-        data_example_pair: str,
-        extra_prompt: str = "",
+        reference: List[str],
+        _data_example_pair: str,
+        _extra_prompt: str = "",
+        k_value: int = AttributeColumnType.K_VALUE.get_default_value(),
+        _params = None
     ):
         """
         Retrieves detailed attributes for a specified university using the
@@ -88,7 +105,7 @@ class LanchainWrapper:
             university_name (str): The name of the university for which to retrieve information.
             target_attribute (str): The specific attribute of the university to retrieve.
             format_ (str): The desired output format for the retrieved information.
-            reference (str): A string of references or URLs to consider when retrieving information.
+            reference (List[str]): A list of references in terms of URLs to consider when retrieving information.
             data_example_pair (str): Example data to help guide the retrieval process.
             extra_prompt (str, optional): Additional instructions or context for the OpenAI prompt.
 
@@ -100,10 +117,11 @@ class LanchainWrapper:
                 It constructs a detailed query using multiple inputs to obtain accurate and relevant information.
         """
         print(
-            f"""used langchain: get_retrieved_attr_with_format, university_name: {university_name},
+            f"""used langchain: get_retrieved_attr_with_format_tavily, university_name: {university_name},
                 attribute: {target_attribute}"""
         )
-        retriever = TavilySearchAPIRetriever(api_key=config.TAVILY_API_KEY)
+        retriever = TavilySearchAPIRetriever(api_key=config.TAVILY_API_KEY, k=k_value)
+        # GPT
         prompt = ChatPromptTemplate.from_template(
             """Find the attribute based only on the context provided.
                 If you don't know or you are not sure, just return "not available" without further explaining
@@ -122,6 +140,7 @@ class LanchainWrapper:
         chain = (
             RunnablePassthrough.assign(
                 context=(
+                    # Tavily
                     lambda x: "For "
                     + x["university_name"]
                     + ". "
@@ -134,7 +153,11 @@ class LanchainWrapper:
                 | retriever
             )
             | prompt
-            | ChatOpenAI(api_key=config.OPENAI_API_KEY, model=config.OPENAI_MODEL)
+            | ChatOpenAI(
+                api_key=config.OPENAI_API_KEY,
+                model=config.DEFAULT_OPENAI_MODEL,
+                temperature=0,
+            )
             | StrOutputParser()
         )
 
@@ -142,8 +165,8 @@ class LanchainWrapper:
             {
                 "university_name": f"{university_name}",
                 "reference": f"{reference}",
-                "example": f"{data_example_pair}",
-                "extra_prompt": f"{extra_prompt}",
+                "example": f"{_data_example_pair}",
+                "extra_prompt": f"{_extra_prompt}",
                 "attribute": f"{target_attribute}",
                 "format": f"{format_}",
             }
@@ -152,16 +175,20 @@ class LanchainWrapper:
     @classmethod
     @retry(
         stop=stop_after_attempt(3),  # Stop after 3 attempts
-        wait=wait_random_exponential(multiplier=1, max=30),
+        wait=wait_random_exponential(multiplier=3, max=30),
         retry=retry_if_exception_type((HTTPError, ConnectionError)),  # Retry on HTTPError and ConnectionError
-        reraise=True
+        reraise=True,
     )
     def get_retrieved_ranking_with_format_tavily(
         cls,
         university_name: str,
         target_attribute: str,
         format_: str,
-        reference: str,
+        reference: List[str],
+        _data_example_pair: str,  #                   place holder: data_example_pair
+        _extra_prompt: str = "",  #                   place holder: extra_prompt
+        k_value: int = AttributeColumnType.K_VALUE.get_default_value(),
+        _params = None
     ):
         """
         Retrieves ranking information for a specified university using
@@ -172,7 +199,7 @@ class LanchainWrapper:
             university_name (str): The name of the university for which to retrieve ranking information.
             target_attribute (str): The specific ranking attribute to retrieve (e.g., QSNews, USNews, ARWU).
             format_ (str): The desired output format for the ranking information.
-            reference (str): A string of URLs where the latest ranking information can be found.
+            reference (List[str]): A list of URLs where the latest ranking information can be found.
 
         Returns:
             The retrieved ranking information as processed by the GPT model in the specified format.
@@ -186,10 +213,10 @@ class LanchainWrapper:
                 attribute: {target_attribute}"""
         )
 
-        retriever = TavilySearchAPIRetriever(api_key=config.TAVILY_API_KEY)
+        retriever = TavilySearchAPIRetriever(api_key=config.TAVILY_API_KEY, k=k_value)
         prompt = ChatPromptTemplate.from_template(
             """Find the ranking based only on the context provided.
-                If you don't know or you are not sure, just return "not available" without further explaining
+                If you don't know or you are not sure, just return "not available" without further explaining.
                 You can check here: {reference}.
                 Focus on the latest results from these websites.
         Context: {context}
@@ -204,13 +231,17 @@ class LanchainWrapper:
                     + x["university_name"]
                     + " "
                     + x["attribute"]
-                    + "You may wish to refer "
+                    + ". You may wish to refer "
                     + x["reference"]
                 )
                 | retriever
             )
             | prompt
-            | ChatOpenAI(api_key=config.OPENAI_API_KEY, model=config.OPENAI_MODEL)
+            | ChatOpenAI(
+                api_key=config.OPENAI_API_KEY,
+                model=config.DEFAULT_OPENAI_MODEL,
+                temperature=0,
+            )
             | StrOutputParser()
         )
 
@@ -220,5 +251,119 @@ class LanchainWrapper:
                 "reference": f"{reference}",
                 "attribute": f"{target_attribute}",
                 "format": f"{format_}",
+            }
+        )
+
+    @classmethod
+    @retry(
+        stop=stop_after_attempt(3),
+        wait=wait_random_exponential(multiplier=1, max=30),
+        retry=retry_if_exception_type((HTTPError, ConnectionError)),
+        reraise=True,
+    )
+    def get_retrieved_attr_langchain_google_search(
+        cls,
+        university_name: str,
+        target_attribute: str,
+        format_: str,
+        reference: List[str],
+        _data_example_pair: str,
+        _extra_prompt: str = "",
+        k_value: int = AttributeColumnType.K_VALUE.get_default_value(),
+        _params: Dict[Literal["transformer"], Literal["BeautifulSoup", "RecursiveURL"]] = {
+            "transformer": "BeautifulSoup"
+        },
+    ):
+        """
+        Retrieves attributes for a specified university by performing an automated Google search
+        and then using language models to synthesize information from retrieved documents.
+
+        Args:
+            university_name (str): Name of the university.
+            target_attribute (str): The attribute to retrieve.
+            format_ (str): The desired output format.
+            reference (Union[List[str], str]): List of references or a single reference URL.
+            _data_example_pair (str): Example data to help guide the retrieval process.
+            _extra_prompt (str, optional): Additional prompt information for the model.
+            k_value (int, optional): Number of search results to consider.
+
+        Returns:
+            The synthesized information as a string.
+        """
+
+        def get_text(url):
+            trans = _params["transformer"]
+            if trans == "BeautifulSoup":
+                html_content = BeautifulSoup(url, "html.parser").text
+                cleaned_content = clean_text(html_content)
+            elif trans == "RecursiveURL":
+                web_pages = RecursiveUrlLoader(
+                    url=url, max_depth=1, extractor=lambda x: BeautifulSoup(x, "html.parser").text
+                ).load()
+                cleaned_content = []
+                for page in web_pages:
+                    cleaned_content.append(clean_text(page.page_content))
+                cleaned_content = "\n".join(cleaned_content)
+            return cleaned_content
+
+        print(f"Searching for {target_attribute} related to {university_name} using LangChain and Google search.")
+
+        # Clean text function
+        def clean_text(html_content):
+            return re.sub(r"\s+", " ", html_content).strip()
+
+        # Set up search API
+        search = GoogleSerperAPIWrapper(k=k_value, gl="ca", serper_api_key=config.SERPER_API_KEY, type="search")
+        links = []
+        # print(reference)
+        if isinstance(reference, str):
+            reference = json.loads(reference.replace("'", '"'))
+        # print(f"{reference}")
+        for site in reference:
+            # print(f"in for {site}")
+            results = search.results(f"{target_attribute} {university_name} site={site}")
+            links.extend([result["link"] for result in results.get("organic", [])])
+        # print(links)
+
+        # Fetch documents from links and clean them
+        docs = []
+        for url in set(links):
+            doc = get_text(url)
+            # pprint(f"   type: {type(doc)}")
+            docs.append(doc)
+
+        # Prepare and execute the model chain
+        template = """
+        Find the attribute based only on the context provided.
+        If you don't know or you are not sure, just return "not available" without further explaining
+        Find detailed information about {target_attribute} from {university_name} from the context:
+        Context: {context}
+        {extra_prompt}
+        Output format: {format}
+        Example: {example}
+        """
+        prompt = ChatPromptTemplate.from_template(template)
+        # response = ChatOpenAI(api_key=config.OPENAI_API_KEY, model=config.DEFAULT_OPENAI_MODEL, temperature=0).invoke(
+        #     prompt
+        # )
+        chain = (
+            RunnablePassthrough()
+            | prompt
+            | ChatOpenAI(
+                api_key=config.OPENAI_API_KEY,
+                model=config.DEFAULT_OPENAI_MODEL,
+                temperature=0,
+            )
+            | StrOutputParser()
+        )
+        return chain.invoke(
+            {
+                "university_name": f"{university_name}",
+                # "reference": f"{reference}",
+                "example": f"{_data_example_pair}",
+                "extra_prompt": f"{_extra_prompt}",
+                "target_attribute": f"{target_attribute}",
+                "format": f"{format_}",
+                "context": f"{' '.join(docs)}",
             }
         )

@@ -22,7 +22,8 @@ These enums are integral to various system components, from data handling functi
 and are extensively used to maintain clarity and consistency across the system.
 """
 
-from enum import Enum
+from enum import Enum, auto, Flag
+from typing import Any
 
 
 class SavedDictType(Enum):
@@ -53,6 +54,7 @@ class SavedDictType(Enum):
     UNIVERSITY_INFO = 2
     ATTRIBUTE = 3
     GPT_CACHE = 4
+    TROUBLE_PRODUCED = 5
 
 
 class BasicInfoType(Enum):
@@ -61,25 +63,152 @@ class BasicInfoType(Enum):
     Attributes:
     NOT_SPECIFIED (int): Default value indicating that no specific information type has been determined.
 
-    UNIVERSITY_NAME (int): Represents the official name of the university.
+    UNIVERSITY_NAME (str): Represents the official name of the university.
 
-    ABBREVIATION (int): Refers to the commonly used abbreviation or short form of the university's name.
+    ABBREVIATION (str): Refers to the commonly used abbreviation or short form of the university's name.
 
-    WEBSITE (int): Points to the official website URL of the university.
+    WEBSITE (str): Points to the official website URL of the university.
         This can be used for direct linking to the university's online resources.
 
-    WIKIPEDIA (int): Indicates the URL to the Wikipedia page about the university.
+    WIKIPEDIA (str): Indicates the URL to the Wikipedia page about the university.
         This is useful for providing users with a quick access to detailed and vetted background information.
 
-    ID (int): Denotes a unique identifier for the university.
+    ID (str): Denotes a unique identifier for the university.
     """
 
     NOT_SPECIFIED = 0
-    UNIVERSITY_NAME = 1
-    ABBREVIATION = 2
-    WEBSITE = 3
-    WIKIPEDIA = 4
-    ID = 5
+    UNIVERSITY_NAME = "university_name"
+    ABBREVIATION = "abbreviation"
+    WEBSITE = "website"
+    WIKIPEDIA = "wikipedia"
+    ID = "id_"
+    __all__ = ["university_name", "abbreviation", "website", "wikipedia", "id_"]
+
+
+# TODO: refactor everything!
+class GeneralInfoType(Enum):
+    """
+    Enumeration for specifying different types of general information attributes related to universities.
+    These members represent the various data points that can be associated with universities,
+    such as tuition fees, location, academic programs, etc.
+
+    Attributes:
+        GRADUATION_YEAR (str): Represents the typical graduation year for a program at the university.
+        LOCATION (str): Geographical location(s) of the university.
+        GRADUATION_RATE (str): The percentage of students who graduate from the university.
+        DOMESTIC_STUDENT_TUITION (str): Annual tuition fees for domestic students.
+        INTERNATIONAL_STUDENT_TUITION (str): Annual tuition fees for international students.
+        DESCRIPTION (str): A brief description of the university.
+        RANKING_QS_NEWS_2024 (str): QS World University Rankings for the year 2024.
+        RANKING_US_NEWS_2023 (str): US News & World Report University Rankings for the year 2023.
+        RANKING_TIMES_RANK_2024 (str): Times Higher Education World University Rankings for the year 2024.
+        RANKING_ARWU_RANK_2023 (str): Academic Ranking of World Universities for the year 2023.
+        WEBSITE (str): Official website of the university.
+        IMPORTANT_CALENDAR (str): Key dates and events in the university's academic calendar.
+        STATISTICS (str): Important statistics about the university, such as enrollment numbers.
+        FACULTY (str): List of faculties or departments within the university.
+        POPULAR_PROGRAMS (str): List of popular academic programs offered by the university.
+        PROGRAMS (str): General listing of academic programs available at the university.
+        CHARACTERISTICS (str): Distinctive features or characteristics of the university.
+        WIKIPEDIA (str): Wikipedia link for more information about the university.
+        OTHERS (str): Any other additional information about the university.
+
+    Usage:
+        This enum is used to key dictionaries that organize different categories of data in systems
+            dealing with university information, allowing for structured access and manipulation of these data sets.
+    """
+
+    UNIVERSITY_TYPE = "university_type"
+    GRADUATION_YEAR = "graduation_year"
+    LOCATION = "location"
+    GRADUATION_RATE = "graduation_rate"
+    DOMESTIC_STUDENT_TUITION = "domestic_student_tuition"
+    INTERNATIONAL_STUDENT_TUITION = "international_student_tuition"
+    DESCRIPTION = "description"
+    RANKING_QS_NEWS_2024 = "ranking_qs_news_2024"
+    RANKING_US_NEWS_2023 = "ranking_us_news_2023"
+    RANKING_TIMES_RANK_2024 = "ranking_times_rank_2024"
+    RANKING_ARWU_RANK_2023 = "ranking_arwu_rank_2023"
+    WEBSITE = "website"
+    IMPORTANT_CALENDAR = "important_calendar"
+    STATISTICS = "statistics"
+    FACULTY = "faculty"
+    POPULAR_PROGRAMS = "popular_programs"
+    PROGRAMS = "programs"
+    CHARACTERISTICS = "characteristics"
+    WIKIPEDIA = "wikipedia"
+    OTHERS = "others"
+
+    @classmethod
+    def is_ranking(cls, attr_name: str):
+        return "ranking" in attr_name
+
+    # __all__ = [class]
+
+    # TODO: add default here
+    def get_default_value(self):
+        """
+        Wrapper to get the default value
+        """
+        __default_value_dict__ = {
+            __class__.GRADUATION_YEAR: 4,
+        }
+        return __default_value_dict__[self.name]
+
+
+class AttributeColumnType(Enum):
+    """
+    Enumeration defining the columns of attribute data in a system that manages university information.
+    These members represent the different types of data columns that can be used to describe attributes
+    related to university information management.
+
+    Attributes:
+        ATTRIBUTE_FORMAT (str): The expected format of the attribute value.
+        ATTRIBUTE_REFERENCE (str): References or sources providing more information about the attribute.
+        ATTRIBUTE_PROMPT (str): A prompt or description to guide data entry or explain the attribute's use.
+        EXAMPLE (str): Example data to illustrate how the attribute values should appear.
+        HANDLER (str): Specifies the method or handler responsible for processing or fetching this attribute.
+        K_VALUE (str): A parameter used in algorithms or queries, usually defining the number or scope of items
+            to fetch or consider.
+        MAPPING (str): Defines how this attribute maps to other data structures or external databases.
+
+    Usage:
+        This enum is used within systems that require structured definitions of data attributes, such as databases,
+        data ingestion pipelines, or data management interfaces. It helps ensure that all parts of the system
+        consistently refer to these attributes by the same standards.
+    """
+
+    ATTRIBUTE_FORMAT = "attribute_format"
+    ATTRIBUTE_REFERENCE = "attribute_reference"
+    ATTRIBUTE_PROMPT = "attribute_prompt"
+    EXAMPLE = "example"
+    HANDLER = "handler"
+    K_VALUE = "k_value"
+    MAPPING = "mapping"
+
+    def __str__(self) -> str:
+        return self.value
+
+    # TODO: add default here
+    def get_default_value(self) -> Any:
+        """
+        Wrapper to get the default value
+        """
+        __default_value_dict__ = {
+            "k_value": 10,
+            "handler": "LANGCHAIN_TAVILY",
+        }
+        return __default_value_dict__.get(self.value, "")
+
+    __all__ = [
+        "attribute_format",
+        "attribute_reference",
+        "attribute_prompt",
+        "example",
+        "handler",
+        "k_value",
+        "mapping",
+    ]
 
 
 class GPTMethodType(Enum):
@@ -103,7 +232,7 @@ class GPTMethodType(Enum):
     ATTRIBUTE_INFO = 2
 
 
-class HandlerType(Enum):
+class HandlerType(Flag):
     """# The `HandlerType` enum class is a placeholder for a brief summary or description of the purpose of the
         enum member. It is meant to provide a quick overview of what each enum member represents or is used for.
         In this case, it is used as a placeholder for describing the purpose of each enum member in the
@@ -113,11 +242,15 @@ class HandlerType(Enum):
         Enum
     """
 
-    NOT_SPECIFIED = 0
-    GPT_BASIC = 1
-    LANGCHAIN_TAVILY = 2
-    TUITION_CRAWL = 3
-    GPT_GENERAL = 4
+    NOT_SPECIFIED = auto()
+    GPT_BASIC = auto()
+    GPT_GENERAL = auto()
+    TUITION_CRAWL = auto()
+    LANGCHAIN_TAVILY = auto()
+    LANGCHAIN_SERPER = auto()
+    LANGCHAIN_METHOD = LANGCHAIN_TAVILY | LANGCHAIN_SERPER
 
+
+ALL_ATTRIBUTE_NAME = [member.value for member in BasicInfoType] + [member.value for member in GeneralInfoType]
 
 __all__ = [name for name in dir() if name[0] != "_"]

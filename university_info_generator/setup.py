@@ -7,7 +7,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="university_info_generator",
-    version="0.1.2",
+    version="0.0.3",
     packages=find_packages(),
     install_requires=[
         # list the package dependencies here
@@ -23,7 +23,9 @@ setup(
         # env for langchain
         "langchain",
         "langchain-openai",
-        "apify-client",
+        "google-api-python-client",
+        "langchain-chroma",
+        "tavily-python"
     ],
     include_package_data=True,
     package_data={
