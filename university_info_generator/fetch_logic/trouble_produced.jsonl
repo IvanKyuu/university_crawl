@@ -1,1 +1,202 @@
-{"('University of Waterloo', 'ranking_arwu_rank_2023', <HandlerType.LANGCHAIN_SERPER: 32>)": "not available"}
+{"('Adler Graduate Professional School', 'graduation_year', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Adler Graduate Professional School', 'graduation_year', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Adler Graduate Professional School', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Adler Graduate Professional School', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Adler Graduate Professional School', 'domestic_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Adler Graduate Professional School', 'domestic_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Adler Graduate Professional School', 'description', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Adler Graduate Professional School', 'description', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Adler Graduate Professional School', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: not available\nMaster's Programs: 8\nPhD Programs: not available"}
+{"('Adler Graduate Professional School', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Adler Graduate Professional School', 'faculty', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Adler Graduate Professional School', 'faculty', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Adler Graduate Professional School', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Adler Graduate Professional School', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Alberta Business School - University of Alberta', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: not available\nMaster's Programs: not available\nPhD Programs: not available"}
+{"('Alberta Business School - University of Alberta', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Alberta Business School - University of Alberta', 'faculty', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Alberta Business School - University of Alberta', 'faculty', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Alberta Business School - University of Alberta', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Alberta Business School - University of Alberta', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Algoma University', 'international_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Algoma University', 'international_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Algoma University', 'popular_programs', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Algoma University', 'popular_programs', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Algoma University', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Algoma University', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Algonquin College', 'graduation_year', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Algonquin College', 'graduation_year', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Algonquin College', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Algonquin College', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Algonquin College', 'domestic_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Algonquin College', 'domestic_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Algonquin College', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: not available\nMaster's and PhD Programs: not available"}
+{"('Algonquin College', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Algonquin College', 'faculty', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Algonquin College', 'faculty', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Algonquin College', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Algonquin College', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Asper School of Business - University of Manitoba', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Asper School of Business - University of Manitoba', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Asper School of Business - University of Manitoba', 'important_calendar', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Asper School of Business - University of Manitoba', 'important_calendar', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Asper School of Business - University of Manitoba', 'faculty', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Asper School of Business - University of Manitoba', 'faculty', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Asper School of Business - University of Manitoba', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Asper School of Business - University of Manitoba', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Assiniboine Community College', 'graduation_year', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Assiniboine Community College', 'graduation_year', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Assiniboine Community College', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Assiniboine Community College', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Assiniboine Community College', 'international_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Assiniboine Community College', 'international_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Assiniboine Community College', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: not available\nMaster's Programs: not available\nPhD Programs: not available"}
+{"('Assiniboine Community College', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Assiniboine Community College', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Assiniboine Community College', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Athabasca University', 'graduation_year', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Athabasca University', 'graduation_year', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Athabasca University', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Athabasca University', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Athabasca University', 'international_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Athabasca University', 'international_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Athabasca University', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: not available\nMaster's Programs: not available\nPhD Programs: not available"}
+{"('Athabasca University', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Athabasca University', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Athabasca University', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Beedie School of Business - Simon Fraser University', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Beedie School of Business - Simon Fraser University', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Beedie School of Business - Simon Fraser University', 'important_calendar', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Beedie School of Business - Simon Fraser University', 'important_calendar', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Beedie School of Business - Simon Fraser University', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Beedie School of Business - Simon Fraser University', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"(\"Bishop's University\", 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"(\"Bishop's University\", 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"(\"Bishop's University\", 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: 39\nMaster's Programs: 10\nPhD Programs: not available"}
+{"(\"Bishop's University\", 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"(\"Bishop's University\", 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"(\"Bishop's University\", 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Bow Valley College', 'domestic_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Bow Valley College', 'domestic_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Bow Valley College', 'international_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Bow Valley College', 'international_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Bow Valley College', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: not available\nMaster's and PhD Programs: not available"}
+{"('Bow Valley College', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Bow Valley College', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Bow Valley College', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Brandon University', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Brandon University', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Brandon University', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: Not available\nMaster's Programs: 5\nPhD Programs: Not available"}
+{"('Brandon University', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Brandon University', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Brandon University', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('British Columbia Institute of Technology', 'graduation_year', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('British Columbia Institute of Technology', 'graduation_year', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('British Columbia Institute of Technology', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('British Columbia Institute of Technology', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('British Columbia Institute of Technology', 'international_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('British Columbia Institute of Technology', 'international_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('British Columbia Institute of Technology', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: over 300\nMaster's and PhD Programs: not available"}
+{"('British Columbia Institute of Technology', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('British Columbia Institute of Technology', 'popular_programs', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('British Columbia Institute of Technology', 'popular_programs', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('British Columbia Institute of Technology', 'programs', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('British Columbia Institute of Technology', 'programs', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('British Columbia Institute of Technology', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('British Columbia Institute of Technology', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Brock University', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Brock University', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Brock University', 'domestic_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Brock University', 'domestic_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Brock University', 'international_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Brock University', 'international_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Brock University', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: 9\nMaster's and PhD Programs: not available"}
+{"('Brock University', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Brock University', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Brock University', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Cambrian College', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Cambrian College', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Cambrian College', 'international_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Cambrian College', 'international_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Cambrian College', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: over 100\nMaster's and PhD Programs: not available"}
+{"('Cambrian College', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Cambrian College', 'faculty', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Cambrian College', 'faculty', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Cambrian College', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Cambrian College', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Cambrian College (Hanson Campus)', 'domestic_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Cambrian College (Hanson Campus)', 'domestic_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Cambrian College (Hanson Campus)', 'international_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Cambrian College (Hanson Campus)', 'international_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Cambrian College (Hanson Campus)', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Cambrian College (Hanson Campus)', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Cambrian College (Hanson Campus)', 'description', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Cambrian College (Hanson Campus)', 'description', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Cambrian College (Hanson Campus)', 'faculty', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Cambrian College (Hanson Campus)', 'faculty', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Cambrian College (Hanson Campus)', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: 100\nMaster's and PhD Programs: not available"}
+{"('Cambrian College (Hanson Campus)', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Cambrian College (Hanson Campus)', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Cambrian College (Hanson Campus)', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Camosun College', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Camosun College', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Camosun College', 'domestic_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Camosun College', 'domestic_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Camosun College', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: 160\nMaster's and PhD Programs: not available"}
+{"('Camosun College', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Camosun College', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Camosun College', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Canada College/Coll\u00e8ge Canada', 'graduation_year', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Canada College/Coll\u00e8ge Canada', 'graduation_year', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Canada College/Coll\u00e8ge Canada', 'domestic_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Canada College/Coll\u00e8ge Canada', 'domestic_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Canada College/Coll\u00e8ge Canada', 'international_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Canada College/Coll\u00e8ge Canada', 'international_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Canada College/Coll\u00e8ge Canada', 'description', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Canada College/Coll\u00e8ge Canada', 'description', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Canada College/Coll\u00e8ge Canada', 'important_calendar', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Canada College/Coll\u00e8ge Canada', 'important_calendar', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Canada College/Coll\u00e8ge Canada', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Canada College/Coll\u00e8ge Canada', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Canada College/Coll\u00e8ge Canada', 'faculty', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Canada College/Coll\u00e8ge Canada', 'faculty', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Canada College/Coll\u00e8ge Canada', 'popular_programs', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Canada College/Coll\u00e8ge Canada', 'popular_programs', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Canada College/Coll\u00e8ge Canada', 'programs', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Canada College/Coll\u00e8ge Canada', 'programs', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Canada College/Coll\u00e8ge Canada', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Canada College/Coll\u00e8ge Canada', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Canadore College', 'graduation_year', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Canadore College', 'graduation_year', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Canadore College', 'international_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Canadore College', 'international_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Canadore College', 'important_calendar', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Canadore College', 'important_calendar', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Canadore College', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: not available\nMaster's and PhD Programs: not available"}
+{"('Canadore College', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Canadore College', 'popular_programs', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Canadore College', 'popular_programs', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Canadore College', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Canadore College', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Cape Breton University', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Cape Breton University', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Cape Breton University', 'domestic_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Cape Breton University', 'domestic_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Cape Breton University', 'international_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Cape Breton University', 'international_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Cape Breton University', 'important_calendar', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Cape Breton University', 'important_calendar', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Cape Breton University', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: not available\nMaster's Programs: not available\nPhD Programs: not available"}
+{"('Cape Breton University', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Cape Breton University', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Cape Breton University', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Capilano University', 'graduation_year', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Capilano University', 'graduation_year', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Capilano University', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Capilano University', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Capilano University', 'domestic_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Capilano University', 'domestic_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Capilano University', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: 100\nMaster's and PhD Programs: not available"}
+{"('Capilano University', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Capilano University', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Capilano University', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}

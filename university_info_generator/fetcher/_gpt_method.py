@@ -56,7 +56,6 @@ class UnscorableCommentError(Exception):
         Able GPT to retry upon unscorable situations
     """
 
-    pass
 
 
 class GPTClient:
@@ -132,7 +131,7 @@ class GPTClient:
         you any university name, an abbreviation, an official website or a wikipedia website that links to the university. You are supposed to give me back
         a JSON filled with fields <university_name>, <abbreviation>, <website>, and <wikipedia>.
         
-        You can randomly generate the id_ field.
+        You leave the id_ field as is.
 
         # Suggestion
         You can checkout the Wikipedia
@@ -145,7 +144,6 @@ class GPTClient:
         ]
         print(f"used GPT: get_university_name_from_gpt, university_name: {name}")
         response = self.gpt_basic_client.chat.completions.create(
-            messages=messages, max_tokens=256, model="gpt-3.5-turbo", temperature=0
             messages=messages, max_tokens=256, model="gpt-3.5-turbo", temperature=0
         )
         return response.choices[0].message.content

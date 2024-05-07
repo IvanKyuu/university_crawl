@@ -26,6 +26,7 @@ TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 LANGCHAIN_API_KEY = os.getenv("LANGCHAIN_PERSONAL_API_KEY")
 SERPER_API_KEY = os.getenv("SERPER_API_KEY")
 DEFAULT_OPENAI_MODEL = "gpt-4-turbo-2024-04-09"
+# DEFAULT_OPENAI_MODEL = "gpt-3.5-turbo-0125"
 DEFAULT_K_VALUE = 10
 
 __all__ = [name for name in dir() if name[0] != "_" and name != "os"]

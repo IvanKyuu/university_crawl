@@ -1,11 +1,11 @@
 #!/bin/bash
-current_path=$(pwd)
+# current_path=$(pwd)
 # change this accordingly
 export PROJECT_HOME="/home/ivan/Uforse/university_crawl"
 
 # export PROJECT_HOME=$current_path
 
-main () {
+main() {
     cd $PROJECT_HOME/university_info_generator && pip install -e .
     . "${PROJECT_HOME}/university_info_generator/setup_env.sh"
 }

@@ -34,6 +34,7 @@ from typing import Any, Dict, List, Tuple, Union, Literal
 
 import gspread
 import numpy as np
+import time
 
 from university_info_generator.configs import config
 from university_info_generator.configs.enum_class import (
@@ -48,6 +49,7 @@ from university_info_generator.configs.enum_class import (
 from university_info_generator.fetcher._gpt_method import GPTClient
 from university_info_generator.fetcher._langchain_method import LanchainWrapper
 from university_info_generator.fetcher._tuition_crawl import TuitionCrawl
+from university_info_generator.fetcher.ranking_fetcher import RankingFetcher
 from university_info_generator.university import University
 from university_info_generator.utility.save_load_utility import load_cache, store_cache
 
@@ -122,6 +124,7 @@ class UniversityInfoGenerator:
         self.gpt_cache_dict = gpt_cache_list
         self.tuition_crawl = TuitionCrawl()
         self.gpt_client = GPTClient()
+        self.ranking_fetcher = RankingFetcher()
         self.trouble_produced_dict = {}
         # self.get_retrieved_attr = LanchainWrapper.get_retrieved_attr_with_format
 
@@ -265,17 +268,16 @@ class UniversityInfoGenerator:
         # last choice
         if attribute_name not in university_json or len(university_json[attribute_name]) <= 0:
             # if handler == HandlerType.GPT_GENERAL
-            self.trouble_produced_dict.update({})
             university_json = self.process_attribute_with_gpt(
                 university_json, university_name, attribute_name, reference, params
             )
         return university_json
 
-    def initialize_university_json(self, university_name) -> Dict[str, Any]:
+    def initialize_university_json(self, university_name:str, id_:int=0) -> Dict[str, Any]:
         """
         TODO: place holder for initializing university_json
         """
-        return {"id_": "0", "university_name": university_name}
+        return {"id_": id_, "university_name": university_name}
 
     def add_basic_university_info(
         self, university_json: Dict[str, str], university_name
@@ -299,7 +301,6 @@ class UniversityInfoGenerator:
         Procedure:
             - Retrieves basic information using `get_university_basic_info` with the university's name.
             - Updates the passed university JSON dictionary with this basic information.
-            - TODO: Initializes or updates the 'id_' key to '0' as a placeholder for a future unique identifier.
             - Constructs a reference string from the university's website and Wikipedia URL, if available.
             - Returns the updated university JSON and the reference string.
 
@@ -319,8 +320,6 @@ class UniversityInfoGenerator:
         """
         basic_json = self.get_university_basic_info(param=university_name, param_type=BasicInfoType.UNIVERSITY_NAME)
         university_json.update(basic_json)
-        # TODO: add logic to produce id
-        university_json.update({"id_": "0"})
         reference = [basic_json.get("website", ""), basic_json.get("wikipedia", "")]
         return university_json, reference
 
@@ -450,20 +449,16 @@ class UniversityInfoGenerator:
         if gpt_dict_key in self.gpt_cache_dict:
             university_json[attribute_name] = self.gpt_cache_dict[gpt_dict_key][0]
             return university_json
-        if params is not None:
-            format_, additional_reference, extra_prompt, example, _, _, mapping = map(
-                lambda x: __class__.unpack_params(
-                    params=self.unpack_attribute_dict(
-                        attribute_name=attribute_name, dict_to_unpack=params
-                    ),
-                    name=x,
-                ),
-                AttributeColumnType.__all__,
-            )
-        else:
-            format_, additional_reference, extra_prompt, example, _, _, mapping = self.unpack_attribute_dict(
-                attribute_name=attribute_name, dict_to_unpack=self.attribute_dict[attribute_name]
-            )
+        pra = self.attribute_dict[attribute_name]
+        if params:
+            pra = params
+        format_, additional_reference, extra_prompt, example, _, _, mapping = map(
+            lambda x: __class__.unpack_params(
+                params=self.unpack_attribute_dict(attribute_name=attribute_name, dict_to_unpack=pra),
+                name=x,
+            ),
+            AttributeColumnType.__all__,
+        )
         reference.extend(additional_reference)
         generated_attr, generated_reference = self.gpt_client.get_value_and_reference_from_gpt(
             university_name=university_name,
@@ -534,21 +529,17 @@ class UniversityInfoGenerator:
                 f"Expect a handler of type: HandlerType.LANGCHAIN_METHOD \
                 from {HandlerType.LANGCHAIN_METHOD.name}, but got {handler}"
             )
+        pra = self.attribute_dict[attribute_name]
         if params:
-            format_, additional_reference, extra_prompt, example, _, k_value, mapping = map(
-                lambda x: __class__.unpack_params(
-                    params=self.unpack_attribute_dict(
-                        attribute_name=attribute_name, dict_to_unpack=params
-                    ),
-                    name=x,
-                ),
-                AttributeColumnType.__all__,
-            )
+            pra = params
+        format_, additional_reference, extra_prompt, example, _, k_value, mapping = map(
+            lambda x: __class__.unpack_params(
+                params=self.unpack_attribute_dict(attribute_name=attribute_name, dict_to_unpack=pra),
+                name=x,
+            ),
+            AttributeColumnType.__all__,
+        )
 
-        else:
-            format_, additional_reference, extra_prompt, example, _, k_value, mapping = self.unpack_attribute_dict(
-                attribute_name=attribute_name, dict_to_unpack=self.attribute_dict[attribute_name]
-            )
         # pprint(f"{format_} {additional_reference} {example} {extra_prompt} {example} {k_value} {mapping}")
         # pprint(f"process_attribute_with_langchain {(additional_reference)}")
         if handler == HandlerType.LANGCHAIN_TAVILY and GeneralInfoType.is_ranking(attr_name=attribute_name):
@@ -568,7 +559,7 @@ class UniversityInfoGenerator:
             _data_example_pair=f"{example}",
             _extra_prompt=extra_prompt,
             k_value=k_value,
-            _params=params
+            _params=params,
         )
         temp_generated_attr = generated_attr
 
@@ -592,7 +583,7 @@ class UniversityInfoGenerator:
         return university_json
 
     # @lru_cache(maxsize=config.CACHE_MAX_SIZE)
-    def get_university_info(self, university_name: str) -> University:
+    def get_university_info(self, university_name: str, id_) -> University:
         """
         Gathers comprehensive information about a university by using various handlers and updates it
             into a University object.
@@ -621,13 +612,16 @@ class UniversityInfoGenerator:
         This method ensures that the University instance it returns is filled with up-to-date and comprehensive
             information.
         """
-        university_json = self.initialize_university_json(university_name)
+        if (university_name in self.university_info_dict):
+            return self.university_info_dict[university_name]
+        university_json = self.initialize_university_json(university_name, id_=id_)
         university_json, reference = self.add_basic_university_info(university_json, university_name)
         university_name = (
             temp
             if university_name != (temp := university_json[BasicInfoType.UNIVERSITY_NAME.value])
             else university_name
         )
+        university_json.update({"id_": id_})
 
         def process_attribute(attribute_name: str, university_json: Dict[str, str]):
             if (
@@ -641,6 +635,14 @@ class UniversityInfoGenerator:
                 university_json = self.handle_tuition_info(university_json, university_name)
                 if attribute_name in university_json and len(university_json[attribute_name]) > 0:
                     return
+            # handle by ranking fetcher
+            if "ranking" in attribute_name:
+                ret_json = self.ranking_fetcher.get_ranking(university_name, attribute_name)
+                if ret_json:
+                    university_json.update({attribute_name: ret_json["rank"]})
+                else:
+                    university_json.update({attribute_name: ""})
+                return
             if (
                 handler := self.attribute_dict[attribute_name].get(
                     AttributeColumnType.HANDLER.value, HandlerType.LANGCHAIN_TAVILY
@@ -658,10 +660,12 @@ class UniversityInfoGenerator:
             if attribute_name not in university_json or len(university_json[attribute_name]) <= 0:
                 # last choice
                 # if self.attribute_dict[attribute_name]["handler"] == HandlerType.GPT_GENERAL
-                self.trouble_produced_dict.update({(university_name, "tuition", HandlerType.TUITION_CRAWL): ""})
-                # university_json = self.process_attribute_with_gpt(
-                #     university_json, university_name, attribute_name, reference
-                # )
+                self.trouble_produced_dict.update({(university_name, attribute_name, HandlerType.LANGCHAIN_METHOD): ""})
+                university_json = self.process_attribute_with_gpt(
+                    university_json, university_name, attribute_name, reference
+                )
+            if attribute_name not in university_json or len(university_json[attribute_name]) <= 0:
+                university_json.update({attribute_name: ""})
 
         threads = []
         for attribute_name in self.attribute_dict:
@@ -673,6 +677,7 @@ class UniversityInfoGenerator:
                 ),
             )
             threads.append(thread)
+            time.sleep(3)
             thread.start()
         for thread in threads:
             thread.join()

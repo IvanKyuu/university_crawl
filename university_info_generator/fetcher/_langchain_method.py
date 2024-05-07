@@ -31,9 +31,8 @@ This module is an integral part of the university information scrapping, interac
 
 from pprint import pprint
 import os
-from typing import List, Union, Literal, Dict
+from typing import List, Any, Literal, Dict
 import re
-from functools import reduce
 import json
 
 from bs4 import BeautifulSoup
@@ -93,7 +92,7 @@ class LanchainWrapper:
         _data_example_pair: str,
         _extra_prompt: str = "",
         k_value: int = AttributeColumnType.K_VALUE.get_default_value(),
-        _params = None
+        _params=None,
     ):
         """
         Retrieves detailed attributes for a specified university using the
@@ -188,7 +187,7 @@ class LanchainWrapper:
         _data_example_pair: str,  #                   place holder: data_example_pair
         _extra_prompt: str = "",  #                   place holder: extra_prompt
         k_value: int = AttributeColumnType.K_VALUE.get_default_value(),
-        _params = None
+        _params=None,
     ):
         """
         Retrieves ranking information for a specified university using
@@ -255,6 +254,33 @@ class LanchainWrapper:
         )
 
     @classmethod
+    def get_text_from_url(cls, url: str, params: Dict[str, Any]) -> str:
+        """
+        return fetched text from a specific url
+
+        TODO: make this better
+        """
+
+        # Clean text function
+        def clean_text(html_content):
+            return re.sub(r"\s+", " ", html_content).strip()
+
+        trans = params["transformer"]
+        pprint(f"fetch with {trans} from: {url}")
+        if trans == "BeautifulSoup":
+            html_content = BeautifulSoup(url, "html.parser").text
+            cleaned_content = clean_text(html_content)
+        elif trans == "RecursiveURL":
+            web_pages = RecursiveUrlLoader(
+                url=url, max_depth=1, extractor=lambda x: BeautifulSoup(x, "html.parser").text
+            ).load()
+            cleaned_content = []
+            for page in web_pages:
+                cleaned_content.append(clean_text(page.page_content))
+            cleaned_content = "\n".join(cleaned_content)
+        return cleaned_content
+
+    @classmethod
     @retry(
         stop=stop_after_attempt(3),
         wait=wait_random_exponential(multiplier=1, max=30),
@@ -291,26 +317,7 @@ class LanchainWrapper:
             The synthesized information as a string.
         """
 
-        def get_text(url):
-            trans = _params["transformer"]
-            if trans == "BeautifulSoup":
-                html_content = BeautifulSoup(url, "html.parser").text
-                cleaned_content = clean_text(html_content)
-            elif trans == "RecursiveURL":
-                web_pages = RecursiveUrlLoader(
-                    url=url, max_depth=1, extractor=lambda x: BeautifulSoup(x, "html.parser").text
-                ).load()
-                cleaned_content = []
-                for page in web_pages:
-                    cleaned_content.append(clean_text(page.page_content))
-                cleaned_content = "\n".join(cleaned_content)
-            return cleaned_content
-
         print(f"Searching for {target_attribute} related to {university_name} using LangChain and Google search.")
-
-        # Clean text function
-        def clean_text(html_content):
-            return re.sub(r"\s+", " ", html_content).strip()
 
         # Set up search API
         search = GoogleSerperAPIWrapper(k=k_value, gl="ca", serper_api_key=config.SERPER_API_KEY, type="search")
@@ -328,7 +335,7 @@ class LanchainWrapper:
         # Fetch documents from links and clean them
         docs = []
         for url in set(links):
-            doc = get_text(url)
+            doc = __class__.get_text_from_url(url=url, params=_params)
             # pprint(f"   type: {type(doc)}")
             docs.append(doc)
 

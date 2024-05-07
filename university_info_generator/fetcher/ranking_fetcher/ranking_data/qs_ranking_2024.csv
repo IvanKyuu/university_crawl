@@ -1,0 +1,1385 @@
+university_name,rank,qs_uni_link
+Massachusetts Institute of Technology (MIT),1,https://www.topuniversities.com/universities/massachusetts-institute-technology-mit
+University of Cambridge,2,https://www.topuniversities.com/universities/university-cambridge
+University of Oxford,3,https://www.topuniversities.com/universities/university-oxford
+Harvard University,4,https://www.topuniversities.com/universities/harvard-university
+Stanford University,5,https://www.topuniversities.com/universities/stanford-university
+Imperial College London,6,https://www.topuniversities.com/universities/imperial-college-london
+ETH Zurich,7,https://www.topuniversities.com/universities/eth-zurich
+National University of Singapore (NUS),8,https://www.topuniversities.com/universities/national-university-singapore-nus
+UCL,9,https://www.topuniversities.com/universities/ucl
+University of Chicago,11,https://www.topuniversities.com/universities/university-chicago
+University of Pennsylvania,12,https://www.topuniversities.com/universities/university-pennsylvania
+Cornell University,13,https://www.topuniversities.com/universities/cornell-university
+The University of Melbourne,14,https://www.topuniversities.com/universities/university-melbourne
+California Institute of Technology (Caltech),15,https://www.topuniversities.com/universities/california-institute-technology-caltech
+Yale University,16,https://www.topuniversities.com/universities/yale-university
+Peking University,=17,https://www.topuniversities.com/universities/peking-university
+Princeton University,=17,https://www.topuniversities.com/universities/princeton-university
+The University of New South Wales (UNSW Sydney),=19,https://www.topuniversities.com/universities/university-new-south-wales-unsw-sydney
+The University of Sydney,=19,https://www.topuniversities.com/universities/university-sydney
+University of Toronto,21,https://www.topuniversities.com/universities/university-toronto
+The University of Edinburgh,22,https://www.topuniversities.com/universities/university-edinburgh
+Columbia University,23,https://www.topuniversities.com/universities/columbia-university
+Université PSL,24,https://www.topuniversities.com/universities/universite-psl
+"Nanyang Technological University, Singapore (NTU Singapore)",=26,https://www.topuniversities.com/universities/nanyang-technological-university-singapore-ntu-singapore
+The University of Hong Kong,=26,https://www.topuniversities.com/universities/university-hong-kong
+Johns Hopkins University,28,https://www.topuniversities.com/universities/johns-hopkins-university
+The University of Tokyo,28,https://www.topuniversities.com/universities/university-tokyo
+"University of California, Los Angeles (UCLA)",29,https://www.topuniversities.com/universities/university-california-los-angeles-ucla
+McGill University,30,https://www.topuniversities.com/universities/mcgill-university
+The University of Manchester,32,https://www.topuniversities.com/universities/university-manchester
+University of Michigan-Ann Arbor,33,https://www.topuniversities.com/universities/university-michigan-ann-arbor
+Australian National University (ANU),=34,https://www.topuniversities.com/universities/australian-national-university-anu
+University of British Columbia,=34,https://www.topuniversities.com/universities/university-british-columbia
+EPFL – École polytechnique fédérale de Lausanne,36,https://www.topuniversities.com/universities/epfl-ecole-polytechnique-federale-de-lausanne
+Technical University of Munich,37,https://www.topuniversities.com/universities/technical-university-munich
+Institut Polytechnique de Paris,=38,https://www.topuniversities.com/universities/institut-polytechnique-de-paris
+New York University (NYU),=38,https://www.topuniversities.com/universities/new-york-university-nyu
+Seoul National University,41,https://www.topuniversities.com/universities/seoul-national-university
+Monash University,42,https://www.topuniversities.com/universities/monash-university
+The University of Queensland,43,https://www.topuniversities.com/universities/university-queensland
+Zhejiang University,=44,https://www.topuniversities.com/universities/zhejiang-university
+The London School of Economics and Political Science (LSE),45,https://www.topuniversities.com/universities/london-school-economics-political-science-lse
+Kyoto University,46,https://www.topuniversities.com/universities/kyoto-university
+Delft University of Technology,=47,https://www.topuniversities.com/universities/delft-university-technology
+Northwestern University,=47,https://www.topuniversities.com/universities/northwestern-university
+The Chinese University of Hong Kong (CUHK),=47,https://www.topuniversities.com/universities/chinese-university-hong-kong-cuhk
+Fudan University,50,https://www.topuniversities.com/universities/fudan-university
+Shanghai Jiao Tong University,51,https://www.topuniversities.com/universities/shanghai-jiao-tong-university
+Carnegie Mellon University,52,https://www.topuniversities.com/universities/carnegie-mellon-university
+University of Amsterdam,53,https://www.topuniversities.com/universities/university-amsterdam
+Ludwig-Maximilians-Universität München,54,https://www.topuniversities.com/universities/ludwig-maximilians-universitat-munchen
+KAIST - Korea Advanced Institute of Science & Technology,56,https://www.topuniversities.com/universities/kaist-korea-advanced-institute-science-technology
+Duke University,57,https://www.topuniversities.com/universities/duke-university
+University of Texas at Austin,58,https://www.topuniversities.com/universities/university-texas-austin
+Sorbonne University,59,https://www.topuniversities.com/universities/sorbonne-university
+The Hong Kong University of Science and Technology,60,https://www.topuniversities.com/universities/hong-kong-university-science-technology
+KU Leuven,61,https://www.topuniversities.com/universities/ku-leuven
+"University of California, San Diego (UCSD)",62,https://www.topuniversities.com/universities/university-california-san-diego-ucsd
+University of Washington,63,https://www.topuniversities.com/universities/university-washington
+University of Illinois at Urbana-Champaign,64,https://www.topuniversities.com/universities/university-illinois-urbana-champaign
+The Hong Kong Polytechnic University,=65,https://www.topuniversities.com/universities/hong-kong-polytechnic-university
+Universiti Malaya (UM),=65,https://www.topuniversities.com/universities/universiti-malaya-um
+The University of Warwick,67,https://www.topuniversities.com/universities/university-warwick
+The University of Auckland,68,https://www.topuniversities.com/universities/university-auckland
+National Taiwan University (NTU),69,https://www.topuniversities.com/universities/national-taiwan-university-ntu
+Université Paris-Saclay,71,https://www.topuniversities.com/universities/universite-paris-saclay
+The University of Western Australia,72,https://www.topuniversities.com/universities/university-western-australia
+Brown University,=73,https://www.topuniversities.com/universities/brown-university
+KTH Royal Institute of Technology,=73,https://www.topuniversities.com/universities/kth-royal-institute-technology
+University of Leeds,75,https://www.topuniversities.com/universities/university-leeds
+University of Glasgow,=76,https://www.topuniversities.com/universities/university-glasgow
+Yonsei University,=76,https://www.topuniversities.com/universities/yonsei-university
+Durham University,78,https://www.topuniversities.com/universities/durham-university
+Korea University,79,https://www.topuniversities.com/universities/korea-university
+Osaka University,80,https://www.topuniversities.com/universities/osaka-university
+"Trinity College Dublin, The University of Dublin",=81,https://www.topuniversities.com/universities/trinity-college-dublin-university-dublin
+University of Southampton,=81,https://www.topuniversities.com/universities/university-southampton
+Pennsylvania State University,83,https://www.topuniversities.com/universities/pennsylvania-state-university
+University of Birmingham,84,https://www.topuniversities.com/universities/university-birmingham
+Universidade de São Paulo,=85,https://www.topuniversities.com/universities/universidade-de-sao-paulo
+Lomonosov Moscow State University,=87,https://www.topuniversities.com/universities/lomonosov-moscow-state-university
+Universität Heidelberg,=87,https://www.topuniversities.com/universities/universitat-heidelberg
+The University of Adelaide,89,https://www.topuniversities.com/universities/university-adelaide
+University of Technology Sydney,90,https://www.topuniversities.com/universities/university-technology-sydney
+Tokyo Institute of Technology (Tokyo Tech),=91,https://www.topuniversities.com/universities/tokyo-institute-technology-tokyo-tech
+University of Zurich,=91,https://www.topuniversities.com/universities/university-zurich
+Boston University,=93,https://www.topuniversities.com/universities/boston-university
+Universidad Nacional Autónoma de México  (UNAM),=93,https://www.topuniversities.com/universities/universidad-nacional-autonoma-de-mexico-unam
+Universidad de Buenos Aires (UBA),=95,https://www.topuniversities.com/universities/universidad-de-buenos-aires-uba
+University of St Andrews,=95,https://www.topuniversities.com/universities/university-st-andrews
+Georgia Institute of Technology,97,https://www.topuniversities.com/universities/georgia-institute-technology
+Freie Universitaet Berlin,98,https://www.topuniversities.com/universities/freie-universitaet-berlin
+Purdue University,99,https://www.topuniversities.com/universities/purdue-university
+University of Nottingham,=100,https://www.topuniversities.com/universities/university-nottingham
+University of Wisconsin-Madison,102,https://www.topuniversities.com/universities/university-wisconsin-madison
+Pontificia Universidad Católica de Chile (UC),103,https://www.topuniversities.com/universities/pontificia-universidad-católica-de-chile-uc
+The University of Sheffield,104,https://www.topuniversities.com/universities/university-sheffield
+Uppsala University,105,https://www.topuniversities.com/universities/uppsala-university
+RWTH Aachen University,106,https://www.topuniversities.com/universities/rwth-aachen-university
+University of Copenhagen,=107,https://www.topuniversities.com/universities/university-copenhagen
+Utrecht University,=107,https://www.topuniversities.com/universities/utrecht-university
+Aalto University,109,https://www.topuniversities.com/universities/aalto-university
+Newcastle University,110,https://www.topuniversities.com/universities/newcastle-university
+University of Alberta,111,https://www.topuniversities.com/universities/university-alberta
+University of Waterloo,112,https://www.topuniversities.com/universities/university-waterloo
+Tohoku University,113,https://www.topuniversities.com/universities/tohoku-university
+Western University,114,https://www.topuniversities.com/universities/western-university
+University of Southern California,116,https://www.topuniversities.com/universities/university-southern-california
+University of Oslo,117,https://www.topuniversities.com/universities/university-oslo
+Stockholm University,118,https://www.topuniversities.com/universities/stockholm-university
+"University of California, Davis",=118,https://www.topuniversities.com/universities/university-california-davis
+"KIT, Karlsruhe Institute of Technology",119,https://www.topuniversities.com/universities/kit-karlsruhe-institute-technology
+Humboldt-Universität zu Berlin,120,https://www.topuniversities.com/universities/humboldt-universitat-zu-berlin
+Technical University of Denmark,121,https://www.topuniversities.com/universities/technical-university-denmark
+Lancaster University,122,https://www.topuniversities.com/universities/lancaster-university
+Politecnico di Milano,123,https://www.topuniversities.com/universities/politecnico-di-milano
+Eindhoven University of Technology,=124,https://www.topuniversities.com/universities/eindhoven-university-technology
+University of Basel,=124,https://www.topuniversities.com/universities/university-basel
+Leiden University,=126,https://www.topuniversities.com/universities/leiden-university
+University of Bern,=126,https://www.topuniversities.com/universities/university-bern
+University of Geneva,128,https://www.topuniversities.com/universities/university-geneva
+"Macquarie University (Sydney, Australia)",=130,https://www.topuniversities.com/universities/macquarie-university-sydney-australia
+University of Vienna,=130,https://www.topuniversities.com/universities/university-vienna
+University of North Carolina at Chapel Hill,=132,https://www.topuniversities.com/universities/university-north-carolina-chapel-hill
+Sapienza University of Rome,=134,https://www.topuniversities.com/universities/sapienza-university-rome
+Texas A&M University,=134,https://www.topuniversities.com/universities/texas-am-university
+Michigan State University,136,https://www.topuniversities.com/universities/michigan-state-university
+Universiti Sains Malaysia (USM),=137,https://www.topuniversities.com/universities/universiti-sains-malaysia-usm
+University of Science and Technology of China,=137,https://www.topuniversities.com/universities/university-science-technology-china
+University of Groningen,139,https://www.topuniversities.com/universities/university-groningen
+RMIT University,140,https://www.topuniversities.com/universities/rmit-university
+Nanjing University,=141,https://www.topuniversities.com/universities/nanjing-university
+Université de Montréal,=141,https://www.topuniversities.com/universities/universite-de-montreal
+Aarhus University,=143,https://www.topuniversities.com/universities/aarhus-university
+King Abdulaziz University (KAU),=143,https://www.topuniversities.com/universities/king-abdulaziz-university-kau
+Rice University,=145,https://www.topuniversities.com/universities/rice-university
+Sungkyunkwan University (SKKU),=145,https://www.topuniversities.com/universities/sungkyunkwan-universityskku
+University of Bath,148,https://www.topuniversities.com/universities/university-bath
+Indian Institute of Technology Bombay (IITB),=149,https://www.topuniversities.com/universities/indian-institute-technology-bombay-iitb
+Universitat Autònoma de Barcelona,=149,https://www.topuniversities.com/universities/universitat-autonoma-de-barcelona
+The Ohio State University,=151,https://www.topuniversities.com/universities/ohio-state-university
+Wageningen University & Research,=151,https://www.topuniversities.com/universities/wageningen-university-research
+University of Exeter,153,https://www.topuniversities.com/universities/university-exeter
+Alma Mater Studiorum - Università di Bologna,=154,https://www.topuniversities.com/universities/alma-mater-studiorum-universita-di-bologna
+Cardiff University,=154,https://www.topuniversities.com/universities/cardiff-university
+Technische Universität Berlin (TU Berlin),=154,https://www.topuniversities.com/universities/technische-universitat-berlin-tu-berlin
+Washington University in St. Louis,=154,https://www.topuniversities.com/universities/washington-university-st-louis
+Universiti Putra Malaysia (UPM),158,https://www.topuniversities.com/universities/universiti-putra-malaysia-upm
+Ghent University,=159,https://www.topuniversities.com/universities/ghent-university
+Universiti Kebangsaan Malaysia (UKM),=159,https://www.topuniversities.com/universities/universiti-kebangsaan-malaysia-ukm
+University of Wollongong,162,https://www.topuniversities.com/universities/university-wollongong
+"University of California, Santa Barbara (UCSB)",163,https://www.topuniversities.com/universities/university-california-santa-barbara-ucsb
+Hanyang University,=164,https://www.topuniversities.com/universities/hanyang-university
+Kyushu University,=164,https://www.topuniversities.com/universities/kyushu-university
+Universitat de Barcelona,=164,https://www.topuniversities.com/universities/universitat-de-barcelona
+Emory University,=166,https://www.topuniversities.com/universities/emory-university
+University of York,167,https://www.topuniversities.com/universities/university-york
+University of Florida,168,https://www.topuniversities.com/universities/university-florida
+"University of Maryland, College Park",=169,https://www.topuniversities.com/universities/university-maryland-college-park
+University of Reading,=169,https://www.topuniversities.com/universities/university-reading
+Complutense University of Madrid,=171,https://www.topuniversities.com/universities/complutense-university-madrid
+University College Dublin,=171,https://www.topuniversities.com/universities/university-college-dublin
+Qatar University,=173,https://www.topuniversities.com/universities/qatar-university
+University of Cape Town,=173,https://www.topuniversities.com/universities/university-cape-town
+Erasmus University Rotterdam,=176,https://www.topuniversities.com/universities/erasmus-university-rotterdam
+Nagoya University,=176,https://www.topuniversities.com/universities/nagoya-university
+University of Liverpool,=176,https://www.topuniversities.com/universities/university-liverpool
+Arizona State University,179,https://www.topuniversities.com/universities/arizona-state-university
+KFUPM,=180,https://www.topuniversities.com/universities/kfupm
+Université catholique de Louvain (UCLouvain),=180,https://www.topuniversities.com/universities/universite-catholique-de-louvain-uclouvain
+University of Calgary,182,https://www.topuniversities.com/universities/university-calgary
+Curtin University,183,https://www.topuniversities.com/universities/curtin-university
+Technische Universität Wien,=184,https://www.topuniversities.com/universities/vienna-university-technology
+Tecnológico de Monterrey,=184,https://www.topuniversities.com/universities/tecnologico-de-monterrey
+École Normale Supérieure de Lyon,=184,https://www.topuniversities.com/universities/ecole-normale-superieure-de-lyon
+University of Gothenburg,187,https://www.topuniversities.com/universities/university-gothenburg
+Universiti Teknologi Malaysia,188,https://www.topuniversities.com/universities/universiti-teknologi-malaysia
+Queensland University of Technology (QUT),=189,https://www.topuniversities.com/universities/queensland-university-technology-qut
+Universite libre de Bruxelles,=189,https://www.topuniversities.com/universities/universite-libre-de-bruxelles
+Albert-Ludwigs-Universitaet Freiburg,=192,https://www.topuniversities.com/universities/albert-ludwigs-universitaet-freiburg
+Ecole des Ponts ParisTech,=192,https://www.topuniversities.com/universities/ecole-des-ponts-paristech
+Wuhan University,194,https://www.topuniversities.com/universities/wuhan-university
+University of Minnesota Twin Cities,195,https://www.topuniversities.com/universities/university-minnesota-twin-cities
+Hokkaido University,196,https://www.topuniversities.com/universities/hokkaido-university
+Indian Institute of Technology Delhi (IITD),197,https://www.topuniversities.com/universities/indian-institute-technology-delhi-iitd
+Universidad de los Andes,198,https://www.topuniversities.com/universities/universidad-de-los-andes
+Universidad Autónoma de Madrid,=199,https://www.topuniversities.com/universities/universidad-autonoma-de-madrid
+Waseda University,=199,https://www.topuniversities.com/universities/waseda-university
+Queen's University Belfast,202,https://www.topuniversities.com/universities/queens-university-belfast
+King Saud University,=203,https://www.topuniversities.com/universities/king-saud-university
+University of Ottawa,=203,https://www.topuniversities.com/universities/university-ottawa
+University of Otago,206,https://www.topuniversities.com/universities/university-otago
+Vrije Universiteit Amsterdam,207,https://www.topuniversities.com/universities/vrije-universiteit-amsterdam
+University of Aberdeen,208,https://www.topuniversities.com/universities/university-aberdeen
+Queen's University at Kingston,209,https://www.topuniversities.com/universities/queens-university-kingston
+University of Twente,210,https://www.topuniversities.com/universities/university-twente
+Chulalongkorn University,211,https://www.topuniversities.com/universities/chulalongkorn-university
+Loughborough University,212,https://www.topuniversities.com/universities/loughborough-university
+Eberhard Karls Universität Tübingen,213,https://www.topuniversities.com/universities/eberhard-karls-universitat-tubingen
+Keio University,214,https://www.topuniversities.com/universities/keio-university
+Tel Aviv University,215,https://www.topuniversities.com/universities/tel-aviv-university
+Tongji University,216,https://www.topuniversities.com/universities/tongji-university
+National Yang Ming Chiao Tung University,217,https://www.topuniversities.com/universities/national-yang-ming-chiao-tung-university
+University of Sussex,218,https://www.topuniversities.com/universities/university-sussex
+Università di Padova,219,https://www.topuniversities.com/universities/universita-di-padova
+University of Lausanne,=220,https://www.topuniversities.com/universities/university-lausanne
+Radboud University,=222,https://www.topuniversities.com/universities/radboud-university
+University of Pittsburgh,=222,https://www.topuniversities.com/universities/university-pittsburgh
+University of Rochester,224,https://www.topuniversities.com/universities/university-rochester
+Indian Institute of Science,225,https://www.topuniversities.com/universities/indian-institute-science
+American University of Beirut (AUB),=226,https://www.topuniversities.com/universities/american-university-beirut-aub
+Universidad Nacional de Colombia,=226,https://www.topuniversities.com/universities/universidad-nacional-de-colombia
+National Cheng Kung University (NCKU),228,https://www.topuniversities.com/universities/national-cheng-kung-university-ncku
+Friedrich-Alexander-Universität Erlangen-Nürnberg,229,https://www.topuniversities.com/universities/friedrich-alexander-universitat-erlangen-nurnberg
+Al-Farabi Kazakh National University,=230,https://www.topuniversities.com/universities/al-farabi-kazakh-national-university
+Khalifa University,=230,https://www.topuniversities.com/universities/khalifa-university
+University of Göttingen,232,https://www.topuniversities.com/universities/university-gottingen
+Deakin University,=233,https://www.topuniversities.com/universities/deakin-university
+National Tsing Hua University,=233,https://www.topuniversities.com/universities/national-tsing-hua-university
+Université Paris Cité,236,https://www.topuniversities.com/universities/universite-paris-cite
+Dartmouth College,=237,https://www.topuniversities.com/universities/dartmouth-college
+Universitas Indonesia,=237,https://www.topuniversities.com/universities/universitas-indonesia
+Massey University,=239,https://www.topuniversities.com/universities/massey-university
+Rheinische Friedrich-Wilhelms-Universität Bonn,=239,https://www.topuniversities.com/universities/rheinische-friedrich-wilhelms-universitat-bonn
+Victoria University of Wellington,241,https://www.topuniversities.com/universities/victoria-university-wellington
+La Trobe University,242,https://www.topuniversities.com/universities/la-trobe-university
+Griffith University,243,https://www.topuniversities.com/universities/griffith-university
+University of Surrey,244,https://www.topuniversities.com/universities/university-surrey
+University of Massachusetts Amherst,245,https://www.topuniversities.com/universities/university-massachusetts-amherst
+Technical University of Darmstadt,=246,https://www.topuniversities.com/universities/technical-university-darmstadt
+Technische Universität Dresden,=246,https://www.topuniversities.com/universities/technische-universitat-dresden
+Charles University,=248,https://www.topuniversities.com/universities/charles-university
+University of Antwerp,=248,https://www.topuniversities.com/universities/university-antwerp
+The Hebrew University of Jerusalem,251,https://www.topuniversities.com/universities/hebrew-university-jerusalem
+Politecnico di Torino,252,https://www.topuniversities.com/universities/politecnico-di-torino
+University of Porto,253,https://www.topuniversities.com/universities/university-porto
+University of Macau,254,https://www.topuniversities.com/universities/university-macau
+Case Western Reserve University,255,https://www.topuniversities.com/universities/case-western-reserve-university
+Harbin Institute of Technology,=256,https://www.topuniversities.com/universities/harbin-institute-technology
+Maastricht University,=256,https://www.topuniversities.com/universities/maastricht-university
+University of Canterbury | Te Whare Wānanga o Waitaha,=256,https://www.topuniversities.com/universities/university-canterbury-te-whare-wananga-o-waitaha
+Vrije Universiteit Brussel (VUB),259,https://www.topuniversities.com/universities/vrije-universiteit-brussel-vub
+University of Virginia,260,https://www.topuniversities.com/universities/university-virginia
+Vanderbilt University,261,https://www.topuniversities.com/universities/vanderbilt-university
+University of Warsaw,262,https://www.topuniversities.com/universities/university-warsaw
+Gadjah Mada University,263,https://www.topuniversities.com/universities/gadjah-mada-university
+University of Colorado Boulder,=264,https://www.topuniversities.com/universities/university-colorado-boulder
+Ulsan National Institute of Science and Technology (UNIST),=266,https://www.topuniversities.com/universities/ulsan-national-institute-science-technology-unist
+University of Lisbon,=266,https://www.topuniversities.com/universities/university-lisbon
+Linköping University,=268,https://www.topuniversities.com/universities/linkoping-university
+"University of California, Irvine",=268,https://www.topuniversities.com/universities/university-california-irvine
+University of Cologne,=268,https://www.topuniversities.com/universities/university-cologne
+Indian Institute of Technology Kharagpur (IIT-KGP),271,https://www.topuniversities.com/universities/indian-institute-technology-kharagpur-iit-kgp
+Beijing Normal University,=272,https://www.topuniversities.com/universities/beijing-normal-university
+University of Leicester,=272,https://www.topuniversities.com/universities/university-leicester
+North Carolina State University,274,https://www.topuniversities.com/universities/north-carolina-state-university
+Huazhong University of Science and Technology,275,https://www.topuniversities.com/universities/huazhong-university-science-technology
+University of Milan,=276,https://www.topuniversities.com/universities/university-milan
+University of Strathclyde,=276,https://www.topuniversities.com/universities/university-strathclyde
+Indian Institute of Technology Kanpur (IITK),=278,https://www.topuniversities.com/universities/indian-institute-technology-kanpur-iitk
+University of Miami,=278,https://www.topuniversities.com/universities/university-miami
+Bandung Institute of Technology (ITB),=281,https://www.topuniversities.com/universities/bandung-institute-technology-itb
+University of Bergen,=281,https://www.topuniversities.com/universities/university-bergen
+Stellenbosch University,283,https://www.topuniversities.com/universities/stellenbosch-university
+Taylor's University,284,https://www.topuniversities.com/universities/taylors-university
+Indian Institute of Technology Madras (IITM),=285,https://www.topuniversities.com/universities/indian-institute-technology-madras-iitm
+Swinburne University of Technology,=285,https://www.topuniversities.com/universities/swinburne-university-technology
+The University of Arizona,=285,https://www.topuniversities.com/universities/university-arizona
+Tianjin University,=285,https://www.topuniversities.com/universities/tianjin-university
+University of Galway,289,https://www.topuniversities.com/universities/university-galway
+United Arab Emirates University,290,https://www.topuniversities.com/universities/united-arab-emirates-university
+Xi’an Jiaotong University,291,https://www.topuniversities.com/universities/xian-jiaotong-university
+Norwegian University of Science And Technology,=292,https://www.topuniversities.com/universities/norwegian-university-science-technology
+University College Cork,=292,https://www.topuniversities.com/universities/university-college-cork
+Université Grenoble Alpes,294,https://www.topuniversities.com/universities/universite-grenoble-alpes
+University of East Anglia (UEA),=295,https://www.topuniversities.com/universities/university-east-anglia-uea
+Georgetown University,297,https://www.topuniversities.com/universities/georgetown-university
+Dalhousie University,298,https://www.topuniversities.com/universities/dalhousie-university
+Rutgers University–New Brunswick,299,https://www.topuniversities.com/universities/rutgers-university-new-brunswick
+UCSI University,300,https://www.topuniversities.com/universities/ucsi-university
+Southern University of Science and Technology (SUSTech),301,https://www.topuniversities.com/universities/southern-university-science-technology-sustech
+Goethe-University Frankfurt am Main,=302,https://www.topuniversities.com/universities/goethe-university-frankfurt-am-main
+Virginia Polytechnic Institute and State University,=302,https://www.topuniversities.com/universities/virginia-polytechnic-institute-state-university
+Jagiellonian University,=304,https://www.topuniversities.com/universities/jagiellonian-university
+University of Notre Dame,=304,https://www.topuniversities.com/universities/university-notre-dame
+University of Johannesburg,306,https://www.topuniversities.com/universities/university-johannesburg
+Daegu Gyeongbuk Institute of Science and Technology (DGIST),307,https://www.topuniversities.com/universities/daegu-gyeongbuk-institute-science-technology-dgist
+Swansea University,=307,https://www.topuniversities.com/universities/swansea-university
+Universiti Teknologi PETRONAS (UTP),=307,https://www.topuniversities.com/universities/universiti-teknologi-petronas-utp
+Hamad bin Khalifa University,=310,https://www.topuniversities.com/universities/hamad-bin-khalifa-university
+Universitat Pompeu Fabra (Barcelona),=310,https://www.topuniversities.com/universities/universitat-pompeu-fabra
+Universität Stuttgart,312,https://www.topuniversities.com/universities/universitat-stuttgart
+Indiana University Bloomington,=313,https://www.topuniversities.com/universities/indiana-university-bloomington
+University of Oulu,=313,https://www.topuniversities.com/universities/university-oulu
+Quaid-i-Azam University,=315,https://www.topuniversities.com/universities/quaid-i-azam-university
+Saint Petersburg State University,=315,https://www.topuniversities.com/universities/saint-petersburg-state-university
+University of Turku,=315,https://www.topuniversities.com/universities/university-turku
+Simon Fraser University,318,https://www.topuniversities.com/universities/simon-fraser-university
+Bauman Moscow State Technical University,=319,https://www.topuniversities.com/universities/bauman-moscow-state-technical-university
+Sciences Po,=319,https://www.topuniversities.com/universities/sciences-po
+Universidad Carlos III de Madrid (UC3M),=319,https://www.topuniversities.com/universities/universidad-carlos-iii-de-madrid-uc3m
+University of Victoria (UVic),322,https://www.topuniversities.com/universities/university-victoria-uvic
+"Sun Yat-sen University, Guangzhou",=323,https://www.topuniversities.com/universities/sun-yat-sen-university-guangzhou
+University of Pretoria,=323,https://www.topuniversities.com/universities/university-pretoria
+University of South Australia,=326,https://www.topuniversities.com/universities/university-south-australia
+University of Southern Denmark (SDU),=326,https://www.topuniversities.com/universities/university-southern-denmark-sdu
+"City, University of London",=328,https://www.topuniversities.com/universities/city-university-london
+Gwangju Institute of Science and Technology (GIST),=328,https://www.topuniversities.com/universities/gwangju-institute-science-technology-gist
+USI - Università della Svizzera italiana,=328,https://www.topuniversities.com/universities/usi-universita-della-svizzera-italiana
+Université Paris 1 Panthéon-Sorbonne,=328,https://www.topuniversities.com/universities/universite-paris-1-pantheon-sorbonne
+Kyung Hee University,=332,https://www.topuniversities.com/universities/kyung-hee-university
+"University of California, Santa Cruz",=332,https://www.topuniversities.com/universities/university-california-santa-cruz
+Sharif University of Technology,334,https://www.topuniversities.com/universities/sharif-university-technology
+University of Naples - Federico II,335,https://www.topuniversities.com/universities/university-naples-federico-ii
+Aalborg University,=336,https://www.topuniversities.com/universities/aalborg-university
+Middle East Technical University,=336,https://www.topuniversities.com/universities/middle-east-technical-university
+Pontificia Universidad Catolica del Peru (PUCP),=336,https://www.topuniversities.com/universities/pontificia-universidad-catolica-del-peru-pucp
+Beijing Institute of Technology,=340,https://www.topuniversities.com/universities/beijing-institute-technology
+George Washington University,=340,https://www.topuniversities.com/universities/george-washington-university
+RUDN University,342,https://www.topuniversities.com/universities/rudn-university
+Brunel University London,343,https://www.topuniversities.com/universities/brunel-university-london
+University of Aveiro,344,https://www.topuniversities.com/universities/university-aveiro
+Airlangga University,=345,https://www.topuniversities.com/universities/airlangga-university
+University of Saskatchewan,=345,https://www.topuniversities.com/universities/university-saskatchewan
+National Technical University of Athens,=347,https://www.topuniversities.com/universities/national-technical-university-athens
+Pontificia Universidad Javeriana,=347,https://www.topuniversities.com/universities/pontificia-universidad-javeriana
+Universidad Politécnica de Madrid (UPM),=349,https://www.topuniversities.com/universities/universidad-politecnica-de-madrid
+University of Pisa,=349,https://www.topuniversities.com/universities/university-pisa
+Lappeenranta-Lahti University of Technology LUT,=351,https://www.topuniversities.com/universities/lappeenranta-lahti-university-technology-lut
+University of Coimbra,=351,https://www.topuniversities.com/universities/university-coimbra
+York University,353,https://www.topuniversities.com/universities/york-university
+L.N. Gumilyov Eurasian National University (ENU),=355,https://www.topuniversities.com/universities/ln-gumilyov-eurasian-national-university-enu
+Sichuan University,=355,https://www.topuniversities.com/universities/sichuan-university
+University of Tsukuba,=355,https://www.topuniversities.com/universities/university-tsukuba
+University of Florence,=358,https://www.topuniversities.com/universities/university-florence
+University of Tartu,=358,https://www.topuniversities.com/universities/university-tartu
+Shandong University,=360,https://www.topuniversities.com/universities/shandong-university
+University of Tehran,=360,https://www.topuniversities.com/universities/university-tehran
+Lincoln University,=362,https://www.topuniversities.com/universities/lincoln-university
+Universität Innsbruck,=362,https://www.topuniversities.com/universities/universitat-innsbruck
+American University of Sharjah,=364,https://www.topuniversities.com/universities/american-university-sharjah
+Indian Institute of Technology Guwahati (IITG),=364,https://www.topuniversities.com/universities/indian-institute-technology-guwahati-iitg
+University of Turin,=364,https://www.topuniversities.com/universities/university-turin
+National University of Sciences And Technology (NUST) Islamabad,367,https://www.topuniversities.com/universities/national-university-sciences-technology-nust-islamabad
+University of Cyprus (UCY),368,https://www.topuniversities.com/universities/university-cyprus-ucy
+Yeshiva University,=369,https://www.topuniversities.com/universities/yeshiva-university
+Cairo University,=371,https://www.topuniversities.com/universities/cairo-university
+Tilburg University,=371,https://www.topuniversities.com/universities/tilburg-university
+Universidade Federal do Rio de Janeiro,=371,https://www.topuniversities.com/universities/universidade-federal-do-rio-de-janeiro
+"Birkbeck, University of London",374,https://www.topuniversities.com/universities/birkbeck-university-london
+National Taiwan University of Science and Technology (Taiwan Tech),=387,https://www.topuniversities.com/universities/national-taiwan-university-science-technology-taiwan-tech
+Universiti Brunei Darussalam (UBD),=387,https://www.topuniversities.com/universities/universiti-brunei-darussalam-ubd
+Institut National des Sciences Appliquées de Lyon (INSA),=392,https://www.topuniversities.com/universities/institut-national-des-sciences-appliquees-de-lyon-insa
+South China University of Technology,=392,https://www.topuniversities.com/universities/south-china-university-technology
+Technion - Israel Institute of Technology,=392,https://www.topuniversities.com/universities/technion-israel-institute-technology
+Xiamen University,=392,https://www.topuniversities.com/universities/xiamen-university
+Justus-Liebig-University Giessen,=396,https://www.topuniversities.com/universities/justus-liebig-university-giessen
+Kazan (Volga region) Federal University,=396,https://www.topuniversities.com/universities/kazan-volga-region-federal-university
+"Stony Brook University, State University of New York",=396,https://www.topuniversities.com/universities/stony-brook-university-state-university-new-york
+Iowa State University,=400,https://www.topuniversities.com/universities/iowa-state-university
+Masaryk University,=400,https://www.topuniversities.com/universities/masaryk-university
+Universidade Nova de Lisboa,=400,https://www.topuniversities.com/universities/universidade-nova-de-lisboa
+University of Granada,403,https://www.topuniversities.com/universities/university-granada
+Istanbul Technical University,=404,https://www.topuniversities.com/universities/istanbul-technical-university
+"University of California, Riverside",=404,https://www.topuniversities.com/universities/university-california-riverside
+University of the Philippines,=404,https://www.topuniversities.com/universities/university-philippines
+Auckland University of Technology (AUT),=407,https://www.topuniversities.com/universities/auckland-university-technology-aut
+University of Delhi,=407,https://www.topuniversities.com/universities/university-delhi
+Colorado State University,409,https://www.topuniversities.com/universities/colorado-state-university
+Universidad de Santiago de Chile (USACH),=410,https://www.topuniversities.com/universities/universidad-de-santiago-de-chile-usach
+University of Kansas,=410,https://www.topuniversities.com/universities/university-kansas
+University of Southern Queensland,=410,https://www.topuniversities.com/universities/university-southern-queensland
+Oxford Brookes University,=413,https://www.topuniversities.com/universities/oxford-brookes-university
+James Cook University,=415,https://www.topuniversities.com/universities/james-cook-university
+Moscow Institute of Physics and Technology (MIPT / Moscow Phystech),=415,https://www.topuniversities.com/universities/moscow-institute-physics-technology-mipt-moscow-phystech
+The American University in Cairo,=415,https://www.topuniversities.com/universities/american-university-cairo
+Tomsk State University,418,https://www.topuniversities.com/universities/tomsk-state-university
+UNESP,=419,https://www.topuniversities.com/universities/unesp
+Washington State University,=419,https://www.topuniversities.com/universities/washington-state-university
+Graz University of Technology,=421,https://www.topuniversities.com/universities/graz-university-technology
+Novosibirsk State University,=421,https://www.topuniversities.com/universities/novosibirsk-state-university
+University of Canberra,=421,https://www.topuniversities.com/universities/university-canberra
+Université de Liège,=421,https://www.topuniversities.com/universities/universite-de-liege
+Université de Strasbourg,=421,https://www.topuniversities.com/universities/universite-de-strasbourg
+University of Limerick,426,https://www.topuniversities.com/universities/university-limerick
+Anna University,427,https://www.topuniversities.com/universities/anna-university
+IE University,428,https://www.topuniversities.com/universities/ie-university
+University of Trento,=429,https://www.topuniversities.com/universities/university-trento
+Koç University,=431,https://www.topuniversities.com/universities/koc-university
+Murdoch University,=431,https://www.topuniversities.com/universities/murdoch-university
+National Taipei University of Technology,=431,https://www.topuniversities.com/universities/national-taipei-university-technology
+National Taiwan Normal University,=431,https://www.topuniversities.com/universities/national-taiwan-normal-university
+University of Stirling,=431,https://www.topuniversities.com/universities/university-stirling
+Dublin City University,=436,https://www.topuniversities.com/universities/dublin-city-university
+Sejong University,=436,https://www.topuniversities.com/universities/sejong-university
+Tampere University,=436,https://www.topuniversities.com/universities/tampere-university
+University of Science and Technology Beijing,=436,https://www.topuniversities.com/universities/university-science-technology-beijing
+University of St.Gallen (HSG),=436,https://www.topuniversities.com/universities/university-stgallen-hsg
+Julius-Maximilians-Universität Würzburg,=440,https://www.topuniversities.com/universities/julius-maximilians-universitat-wurzburg
+University of Dundee,=441,https://www.topuniversities.com/universities/university-dundee
+University of Utah,=441,https://www.topuniversities.com/universities/university-utah
+National and Kapodistrian University of Athens,=444,https://www.topuniversities.com/universities/national-kapodistrian-university-athens
+University of Connecticut,=444,https://www.topuniversities.com/universities/university-connecticut
+Aston University,=446,https://www.topuniversities.com/universities/aston-university
+Johannes Kepler University Linz,=446,https://www.topuniversities.com/universities/johannes-kepler-university-linz
+"The University of Tennessee, Knoxville",=446,https://www.topuniversities.com/universities/university-tennessee-knoxville
+Toyota Technological Institute,=446,https://www.topuniversities.com/universities/toyota-technological-institute
+University of Jyväskylä,=446,https://www.topuniversities.com/universities/university-jyvaskyla
+Iran University of Science and Technology,451,https://www.topuniversities.com/universities/iran-university-science-technology
+Central South University,=452,https://www.topuniversities.com/universities/central-south-university
+Université Claude Bernard Lyon 1,=452,https://www.topuniversities.com/universities/universite-claude-bernard-lyon-1
+Czech Technical University in Prague,=454,https://www.topuniversities.com/universities/czech-technical-university-prague
+Indian Institute of Technology Indore,=454,https://www.topuniversities.com/universities/indian-institute-technology-indore
+Southeast University,=454,https://www.topuniversities.com/universities/southeast-university
+Sultan Qaboos University,=454,https://www.topuniversities.com/universities/sultan-qaboos-university
+"Essex, University of",459,https://www.topuniversities.com/universities/essex-university
+Universität Potsdam,460,https://www.topuniversities.com/universities/universitat-potsdam
+Florida State University,=461,https://www.topuniversities.com/universities/florida-state-university
+National Research Nuclear University MEPhI (Moscow Engineering Physics Institute),=461,https://www.topuniversities.com/universities/national-research-nuclear-university-mephi-moscow-engineering-physics-institute
+Universität Jena,=461,https://www.topuniversities.com/universities/universitat-jena
+Johannes Gutenberg Universität Mainz,464,https://www.topuniversities.com/universities/johannes-gutenberg-universitat-mainz
+Colorado School of Mines,=465,https://www.topuniversities.com/universities/colorado-school-mines
+Umea University,=465,https://www.topuniversities.com/universities/umea-university
+University of Bordeaux,=465,https://www.topuniversities.com/universities/university-bordeaux
+University of Sharjah,=465,https://www.topuniversities.com/universities/university-sharjah
+Ben-Gurion University of The Negev,=469,https://www.topuniversities.com/universities/ben-gurion-university-negev
+Illinois Institute of Technology,=469,https://www.topuniversities.com/universities/illinois-institute-technology
+Università degli Studi di Pavia,=469,https://www.topuniversities.com/universities/universita-degli-studi-di-pavia
+Hiroshima University,472,https://www.topuniversities.com/universities/hiroshima-university
+Ural Federal University - UrFU,=473,https://www.topuniversities.com/universities/ural-federal-university-urfu
+Vilnius University,=473,https://www.topuniversities.com/universities/vilnius-university
+Kobe University,=476,https://www.topuniversities.com/universities/kobe-university
+Universitat Politecnica de Valencia,=476,https://www.topuniversities.com/universities/universitat-politecnica-de-valencia
+Universität Konstanz,478,https://www.topuniversities.com/universities/universitat-konstanz
+Universität  Leipzig,479,https://www.topuniversities.com/universities/universitat-leipzig
+Missouri University of Science and Technology,480,https://www.topuniversities.com/universities/missouri-university-science-technology
+Bangor University,=481,https://www.topuniversities.com/universities/bangor-university
+Hitotsubashi University,=481,https://www.topuniversities.com/universities/hitotsubashi-university
+Leibniz University Hannover,=481,https://www.topuniversities.com/universities/leibniz-university-hannover
+Satbayev University,=481,https://www.topuniversities.com/universities/satbayev-university
+University of Milano-Bicocca,=481,https://www.topuniversities.com/universities/university-milano-bicocca
+Universitat de Valencia,485,https://www.topuniversities.com/universities/universitat-de-valencia
+University of Electronic Science and Technology of China,=486,https://www.topuniversities.com/universities/university-electronic-science-technology-china
+IPB University (aka Bogor Agricultural University),=489,https://www.topuniversities.com/universities/ipb-university-aka-bogor-agricultural-university
+"University of Rome ""Tor Vergata""",=489,https://www.topuniversities.com/universities/university-rome-tor-vergata
+Dalian University of Technology,=491,https://www.topuniversities.com/universities/dalian-university-technology
+University at Buffalo SUNY,=491,https://www.topuniversities.com/universities/university-buffalo-suny
+University of Iowa,=491,https://www.topuniversities.com/universities/university-iowa
+Chung-Ang University (CAU),=494,https://www.topuniversities.com/universities/chung-ang-university-cau
+Hunan University,=494,https://www.topuniversities.com/universities/hunan-university
+Rensselaer Polytechnic Institute,=494,https://www.topuniversities.com/universities/rensselaer-polytechnic-institute
+Universidad de Sevilla,=494,https://www.topuniversities.com/universities/universidad-de-sevilla
+Ewha Womans University,=498,https://www.topuniversities.com/universities/ewha-womans-university
+Ulster University,=498,https://www.topuniversities.com/universities/ulster-university
+University of Delaware,=498,https://www.topuniversities.com/universities/university-delaware
+University of Jordan,=498,https://www.topuniversities.com/universities/university-jordan
+Bilkent University,=502,https://www.topuniversities.com/universities/bilkent-university
+University of Portsmouth,=502,https://www.topuniversities.com/universities/university-portsmouth
+Macau University of Science and Technology,=505,https://www.topuniversities.com/universities/macau-university-science-technology
+National Sun Yat-sen University,=505,https://www.topuniversities.com/universities/national-sun-yat-sen-university
+Oregon State University,=505,https://www.topuniversities.com/universities/oregon-state-university
+Università Cattolica del Sacro Cuore,=505,https://www.topuniversities.com/universities/universita-cattolica-del-sacro-cuore
+Sogang University,=509,https://www.topuniversities.com/universities/sogang-university
+University of Bayreuth,=509,https://www.topuniversities.com/universities/university-bayreuth
+East China Normal University,=511,https://www.topuniversities.com/universities/east-china-normal-university
+SOAS University of London,=511,https://www.topuniversities.com/universities/soas-university-london
+Université Paul Sabatier Toulouse III,=511,https://www.topuniversities.com/universities/universite-paul-sabatier-toulouse-iii
+Bogaziçi Üniversitesi,=514,https://www.topuniversities.com/universities/bogazici-universitesi
+Duy Tan University,=514,https://www.topuniversities.com/universities/duy-tan-university
+Pontificia Universidad Católica Argentina,=514,https://www.topuniversities.com/universities/pontificia-universidad-catolica-argentina
+Shanghai University,=514,https://www.topuniversities.com/universities/shanghai-university
+Universität Bremen,=514,https://www.topuniversities.com/universities/universitat-bremen
+Kyungpook National University,=520,https://www.topuniversities.com/universities/kyungpook-national-university
+Universidad Austral,=520,https://www.topuniversities.com/universities/universidad-austral
+University of Texas Dallas,=520,https://www.topuniversities.com/universities/university-texas-dallas
+Universidad de Zaragoza,=523,https://www.topuniversities.com/universities/universidad-de-zaragoza
+University of Hull,=523,https://www.topuniversities.com/universities/university-hull
+Universiti Teknologi Brunei,525,https://www.topuniversities.com/universities/universiti-teknologi-brunei
+MGIMO University,=526,https://www.topuniversities.com/universities/mgimo-university
+Sabanci University,=526,https://www.topuniversities.com/universities/sabanci-university
+University of Madras,=526,https://www.topuniversities.com/universities/university-madras
+Edith Cowan University,529,https://www.topuniversities.com/universities/edith-cowan-university
+Aristotle University of Thessaloniki,=530,https://www.topuniversities.com/universities/aristotle-university-thessaloniki
+Christian-Albrechts-University zu Kiel,=530,https://www.topuniversities.com/universities/christian-albrechts-university-zu-kiel
+Universidad de Palermo (UP),=530,https://www.topuniversities.com/universities/universidad-de-palermo
+China Agricultural University,=534,https://www.topuniversities.com/universities/china-agricultural-university
+Peter the Great St. Petersburg Polytechnic University,=534,https://www.topuniversities.com/universities/peter-great-st-petersburg-polytechnic-university
+University of Crete,=534,https://www.topuniversities.com/universities/university-crete
+University of Salamanca,=534,https://www.topuniversities.com/universities/university-salamanca
+Universidad de Alcalá,=538,https://www.topuniversities.com/universities/universidad-de-alcala
+Universiti Utara Malaysia (UUM),=538,https://www.topuniversities.com/universities/universiti-utara-malaysia-uum
+Lahore University of Management Sciences (LUMS),=540,https://www.topuniversities.com/universities/lahore-university-management-sciences-lums
+Universidad Nacional de La Plata (UNLP),=540,https://www.topuniversities.com/universities/universidad-nacional-de-la-plata-unlp
+ITMO University,=542,https://www.topuniversities.com/universities/itmo-university
+Ulm University,=542,https://www.topuniversities.com/universities/ulm-university
+Universidad de Costa Rica,544,https://www.topuniversities.com/universities/universidad-de-costa-rica
+Bar-Ilan University,=545,https://www.topuniversities.com/universities/bar-ilan-university
+City University of New York,=545,https://www.topuniversities.com/universities/city-university-new-york
+Singapore Management University,=545,https://www.topuniversities.com/universities/singapore-management-university
+Northumbria University at Newcastle,=548,https://www.topuniversities.com/universities/northumbria-university-newcastle
+University of Eastern Finland,=548,https://www.topuniversities.com/universities/university-eastern-finland
+Ajman University,=551,https://www.topuniversities.com/universities/ajman-university
+Canadian University Dubai,=551,https://www.topuniversities.com/universities/canadian-university-dubai
+Hasselt University,=551,https://www.topuniversities.com/universities/hasselt-university
+University of Nebraska - Lincoln,=551,https://www.topuniversities.com/universities/university-nebraska-lincoln
+Universiti Teknologi MARA - UiTM,555,https://www.topuniversities.com/universities/universiti-teknologi-mara-uitm
+Florida International University,=556,https://www.topuniversities.com/universities/florida-international-university
+INTI International University,=556,https://www.topuniversities.com/universities/inti-international-university
+Politecnico di Bari,=556,https://www.topuniversities.com/universities/politecnico-di-bari
+Renmin (People's) University of China,=556,https://www.topuniversities.com/universities/renmin-peoples-university-china
+"University of Chemistry and Technology, Prague",=556,https://www.topuniversities.com/universities/university-chemistry-technology-prague
+Chongqing University,=561,https://www.topuniversities.com/universities/chongqing-university
+University of Plymouth,=561,https://www.topuniversities.com/universities/university-plymouth
+University of South Florida,=563,https://www.topuniversities.com/universities/university-south-florida
+Université de Fribourg,=563,https://www.topuniversities.com/universities/universite-de-fribourg
+Bond University,=567,https://www.topuniversities.com/universities/bond-university
+National Chengchi University,=567,https://www.topuniversities.com/universities/national-chengchi-university
+Universidad Adolfo Ibáñez,=567,https://www.topuniversities.com/universities/universidad-adolfo-ibanez
+University of Huddersfield,=567,https://www.topuniversities.com/universities/university-huddersfield
+Chiang Mai University,=571,https://www.topuniversities.com/universities/chiang-mai-university
+Coventry University,=571,https://www.topuniversities.com/universities/coventry-university
+Indian Institute of Technology BHU Varanasi (IIT BHU Varanasi),=571,https://www.topuniversities.com/universities/indian-institute-technology-bhu-varanasi-iit-bhu-varanasi
+Warsaw University of Technology,=571,https://www.topuniversities.com/universities/warsaw-university-technology
+HUFS - Hankuk (Korea) University of Foreign Studies,=575,https://www.topuniversities.com/universities/hufs-hankuk-korea-university-foreign-studies
+University of South Carolina,=575,https://www.topuniversities.com/universities/university-south-carolina
+Lebanese University,=577,https://www.topuniversities.com/universities/lebanese-university
+Taipei Medical University (TMU),=577,https://www.topuniversities.com/universities/taipei-medical-university-tmu
+Abu Dhabi University,=580,https://www.topuniversities.com/universities/abu-dhabi-university
+University of Klagenfurt,=580,https://www.topuniversities.com/universities/university-klagenfurt
+Applied Science University - Bahrain,=582,https://www.topuniversities.com/universities/applied-science-university-bahrain
+Universidad Católica Andres Bello,=582,https://www.topuniversities.com/universities/universidad-catolica-andres-bello
+Comillas Pontifical University,=582,https://www.topuniversities.com/universities/comillas-pontifical-university
+National Research Tomsk Polytechnic University,=586,https://www.topuniversities.com/universities/national-research-tomsk-polytechnic-university
+Sunway University,=586,https://www.topuniversities.com/universities/sunway-university
+"University of Missouri, Columbia",=586,https://www.topuniversities.com/universities/university-missouri-columbia
+Central Queensland University (CQUniversity Australia),=590,https://www.topuniversities.com/universities/central-queensland-university-cquniversity-australia
+Manchester Metropolitan University,=590,https://www.topuniversities.com/universities/manchester-metropolitan-university
+Prince Mohammad Bin Fahd university,=590,https://www.topuniversities.com/universities/prince-mohammad-bin-fahd-university
+"Goldsmiths, University of London",=593,https://www.topuniversities.com/universities/goldsmiths-university-london
+University of Central Florida,=593,https://www.topuniversities.com/universities/university-central-florida
+Imam Abdulrahman Bin Faisal University (IAU),=595,https://www.topuniversities.com/universities/imam-abdulrahman-bin-faisal-university-iau
+Pontifícia Universidade Católica do Rio de Janeiro,=595,https://www.topuniversities.com/universities/pontificia-universidade-catolica-do-rio-de-janeiro
+Shenzhen University,=595,https://www.topuniversities.com/universities/shenzhen-university
+Università Vita-Salute San Raffaele,=595,https://www.topuniversities.com/universities/universita-vita-salute-san-raffaele
+Nanjing University of Science and Technology,=600,https://www.topuniversities.com/universities/nanjing-university-science-technology
+Thammasat University,=600,https://www.topuniversities.com/universities/thammasat-university
+Tulane University,=600,https://www.topuniversities.com/universities/tulane-university
+Saarland University,=600,https://www.topuniversities.com/universities/saarland-university
+Abo Akademi University,601-610,https://www.topuniversities.com/universities/abo-akademi-university
+American University in Dubai,601-610,https://www.topuniversities.com/universities/american-university-dubai
+Charles Darwin University,601-610,https://www.topuniversities.com/universities/charles-darwin-university
+Drexel University,601-610,https://www.topuniversities.com/universities/drexel-university
+Jawaharlal Nehru University,601-610,https://www.topuniversities.com/universities/jawaharlal-nehru-university
+"Kingston University, London",601-610,https://www.topuniversities.com/universities/kingston-university-london
+Umm Al-Qura University,601-610,https://www.topuniversities.com/universities/umm-al-qura-university
+University of Szeged,601-610,https://www.topuniversities.com/universities/university-szeged
+Al Ain University,611-620,https://www.topuniversities.com/universities/al-ain-university
+Auezov South Kazakhstan University (SKU),611-620,https://www.topuniversities.com/universities/auezov-south-kazakhstan-university-sku
+Brno University of Technology,611-620,https://www.topuniversities.com/universities/brno-university-technology
+Martin-Luther-Universität Halle-Wittenberg,611-620,https://www.topuniversities.com/universities/martin-luther-universitat-halle-wittenberg
+National Central University,611-620,https://www.topuniversities.com/universities/national-central-university
+Pusan National University,611-620,https://www.topuniversities.com/universities/pusan-national-university
+Tokyo Medical and Dental University (TMDU),611-620,https://www.topuniversities.com/universities/tokyo-medical-dental-university-tmdu
+University of Minho,611-620,https://www.topuniversities.com/universities/university-minho
+Asia Pacific University of Technology and Innovation (APU) Malaysia,621-630,https://www.topuniversities.com/universities/asia-pacific-university-technology-innovation-apu-malaysia
+Chang Gung University,621-630,https://www.topuniversities.com/universities/chang-gung-university
+Institut Teknologi Sepuluh Nopember (ITS Surabaya),621-630,https://www.topuniversities.com/universities/institut-teknologi-sepuluh-nopember-its-surabaya
+Management and Science University,621-630,https://www.topuniversities.com/universities/management-science-university
+Northwestern Polytechnical University,621-630,https://www.topuniversities.com/universities/northwestern-polytechnical-university
+Universitat Ramon Llull,621-630,https://www.topuniversities.com/universities/universitat-ramon-llull
+University of Kwazulu-Natal,621-630,https://www.topuniversities.com/universities/university-kwazulu-natal
+University of Ljubljana,621-630,https://www.topuniversities.com/universities/university-ljubljana
+University of the Basque Country,621-630,https://www.topuniversities.com/universities/university-basque-country
+Zhengzhou University,621-630,https://www.topuniversities.com/universities/zhengzhou-university
+Ajou University,631-640,https://www.topuniversities.com/universities/ajou-university
+Boston College,631-640,https://www.topuniversities.com/universities/boston-college
+Jinan University (China),631-640,https://www.topuniversities.com/universities/jinan-university-china
+Palacký University Olomouc,631-640,https://www.topuniversities.com/universities/palacky-university-olomouc
+Ritsumeikan University,631-640,https://www.topuniversities.com/universities/ritsumeikan-university
+Saint Joseph University of Beirut (USJ),631-640,https://www.topuniversities.com/universities/saint-joseph-university-beirut-usj
+Universidad Central de Venezuela,631-640,https://www.topuniversities.com/universities/universidad-central-de-venezuela
+University of New Mexico,631-640,https://www.topuniversities.com/universities/university-new-mexico
+Université de Lille,631-640,https://www.topuniversities.com/universities/universite-de-lille
+Free University of Bozen-Bolzano,641-650,https://www.topuniversities.com/universities/free-university-bozen-bolzano
+Kazakh National Agrarian Research University (KazNARU),641-650,https://www.topuniversities.com/universities/kazakh-national-agrarian-research-university-kaznaru
+"Lingnan University, Hong Kong",641-650,https://www.topuniversities.com/universities/lingnan-university-hong-kong
+Memorial University of Newfoundland,641-650,https://www.topuniversities.com/universities/memorial-university-newfoundland
+New Jersey Institute of Technology (NJIT),641-650,https://www.topuniversities.com/universities/new-jersey-institute-technology-njit
+Pakistan Institute of Engineering and Applied Sciences (PIEAS),641-650,https://www.topuniversities.com/universities/pakistan-institute-engineering-applied-sciences-pieas
+The New School,641-650,https://www.topuniversities.com/universities/new-school
+Universidad de La Habana,641-650,https://www.topuniversities.com/universities/universidad-de-la-habana
+University of Bradford,641-650,https://www.topuniversities.com/universities/university-bradford
+University of Houston,641-650,https://www.topuniversities.com/universities/university-houston
+University of Modena and Reggio Emilia,641-650,https://www.topuniversities.com/universities/university-modena-reggio-emilia
+University of Oklahoma,641-650,https://www.topuniversities.com/universities/university-oklahoma
+University of Windsor,641-650,https://www.topuniversities.com/universities/university-windsor
+COMSATS University Islamabad,651-660,https://www.topuniversities.com/universities/comsats-university-islamabad
+Southern Cross University,651-660,https://www.topuniversities.com/universities/southern-cross-university
+Tallinn University of Technology (TalTech),651-660,https://www.topuniversities.com/universities/tallinn-university-technology-taltech
+Universidad de Montevideo (UM),651-660,https://www.topuniversities.com/universities/universidad-de-montevideo-um
+University of Haifa,651-660,https://www.topuniversities.com/universities/university-haifa
+University of Hohenheim,651-660,https://www.topuniversities.com/universities/university-hohenheim
+Aberystwyth University,661-670,https://www.topuniversities.com/universities/aberystwyth-university
+Brandeis University,661-670,https://www.topuniversities.com/universities/brandeis-university
+Ca' Foscari University of Venice,661-670,https://www.topuniversities.com/universities/ca-foscari-university-venice
+Holy Spirit University of Kaslik,661-670,https://www.topuniversities.com/universities/holy-spirit-university-kaslik
+Karl-Franzens-Universitaet Graz,661-670,https://www.topuniversities.com/universities/karl-franzens-universitaet-graz
+Lebanese American University,661-670,https://www.topuniversities.com/universities/lebanese-american-university
+Middlesex University,661-670,https://www.topuniversities.com/universities/middlesex-university
+National Chung Hsing University,661-670,https://www.topuniversities.com/universities/national-chung-hsing-university
+Princess Nourah bint Abdulrahman University,661-670,https://www.topuniversities.com/universities/rincess-nourah-bint-abdulrahman-university
+Universidad Panamericana (UP),661-670,https://www.topuniversities.com/universities/universidad-panamericana
+Universitas Padjadjaran (UNPAD),661-670,https://www.topuniversities.com/universities/universitas-padjadjaran-unpad
+Universitat Rovira i Virgili,661-670,https://www.topuniversities.com/universities/universitat-rovira-i-virgili
+Università degli Studi di Perugia,661-670,https://www.topuniversities.com/universities/universita-degli-studi-di-perugia
+American University of the Middle East,671-680,https://www.topuniversities.com/universities/american-university-middle-east
+Carleton University,671-680,https://www.topuniversities.com/universities/carleton-university
+Dongguk University,671-680,https://www.topuniversities.com/universities/dongguk-university
+University of Debrecen,671-680,https://www.topuniversities.com/universities/university-debrecen
+University of Greenwich,671-680,https://www.topuniversities.com/universities/university-greenwich
+University of Manitoba,671-680,https://www.topuniversities.com/universities/university-manitoba
+Abai Kazakh National Pedagogical University,681-690,https://www.topuniversities.com/universities/abai-kazakh-national-pedagogical-university
+"El Colegio de México, A.C.",681-690,https://www.topuniversities.com/universities/el-colegio-de-mexico-ac
+De La Salle University,681-690,https://www.topuniversities.com/universities/de-la-salle-university
+East China University of Science and Technology,681-690,https://www.topuniversities.com/universities/east-china-university-science-technology
+Pontificia Universidad Católica de Valparaíso,681-690,https://www.topuniversities.com/universities/pontificia-universidad-catolica-de-valparaiso
+Shiraz University,681-690,https://www.topuniversities.com/universities/shiraz-university
+Soochow University,681-690,https://www.topuniversities.com/universities/soochow-university
+Taras Shevchenko National University of Kyiv,681-690,https://www.topuniversities.com/universities/taras-shevchenko-national-university-kyiv
+The National University of Science and Technology MISIS,681-690,https://www.topuniversities.com/universities/national-university-science-technology-misis
+University of Kentucky,681-690,https://www.topuniversities.com/universities/university-kentucky
+Indian Institute of Technology Hyderabad (IITH),691-700,https://www.topuniversities.com/universities/indian-institute-technology-hyderabad-iith
+Inha University,691-700,https://www.topuniversities.com/universities/inha-university
+Universidad Iberoamericana Ciudad de México - IBERO,691-700,https://www.topuniversities.com/universities/universidad-iberoamericana-ciudad-de-mexico-ibero
+Universidade Federal de Minas Gerais,691-700,https://www.topuniversities.com/universities/universidade-federal-de-minas-gerais
+Universidade Federal do Rio Grande Do Sul,691-700,https://www.topuniversities.com/universities/universidade-federal-do-rio-grande-do-sul
+University of Cincinnati,691-700,https://www.topuniversities.com/universities/university-cincinnati
+University of Dhaka,691-700,https://www.topuniversities.com/universities/university-dhaka
+University of Mons,691-700,https://www.topuniversities.com/universities/university-mons
+V. N. Karazin Kharkiv National University,691-700,https://www.topuniversities.com/universities/v-n-karazin-kharkiv-national-university
+Altai State University,701-710,https://www.topuniversities.com/universities/altai-state-university
+Chiba University,701-710,https://www.topuniversities.com/universities/chiba-university
+Czech University of Life Sciences in Prague,701-710,https://www.topuniversities.com/universities/czech-university-life-sciences-prague
+Eötvös Loránd University,701-710,https://www.topuniversities.com/universities/eotvos-lorand-university
+Universidad de Antioquia,701-710,https://www.topuniversities.com/universities/universidad-de-antioquia
+Universidade de Santiago de Compostela,701-710,https://www.topuniversities.com/universities/universidade-de-santiago-de-compostela
+Wake Forest University,701-710,https://www.topuniversities.com/universities/wake-forest-university
+Zayed University,701-710,https://www.topuniversities.com/universities/zayed-university
+Beirut Arab University,711-720,https://www.topuniversities.com/universities/beirut-arab-university
+"China University of Petroleum, Beijing",711-720,https://www.topuniversities.com/universities/china-university-petroleum-beijing
+International Islamic University Malaysia (IIUM),711-720,https://www.topuniversities.com/universities/international-islamic-university-malaysia-iium
+Istanbul University,711-720,https://www.topuniversities.com/universities/istanbul-university
+Savitribai Phule Pune University,711-720,https://www.topuniversities.com/universities/savitribai-phule-pune-university
+"University of Maryland, Baltimore County",711-720,https://www.topuniversities.com/universities/university-maryland-baltimore-county
+University of New Brunswick,711-720,https://www.topuniversities.com/universities/university-new-brunswick
+University of Westminster,711-720,https://www.topuniversities.com/universities/university-westminster
+Université de Rennes 1,711-720,https://www.topuniversities.com/universities/universite-de-rennes-1
+Victoria University,711-720,https://www.topuniversities.com/universities/victoria-university
+"Ain Shams University in Cairo (ASU, Cairo)",721-730,https://www.topuniversities.com/universities/ain-shams-university-cairo-asu-cairo
+Beijing University of Chemical Technology,721-730,https://www.topuniversities.com/universities/beijing-university-chemical-technology
+Jeonbuk National University,721-730,https://www.topuniversities.com/universities/jeonbuk-national-university
+Osaka Metropolitan University,721-730,https://www.topuniversities.com/universities/osaka-metropolitan-university
+Temple University,721-730,https://www.topuniversities.com/universities/temple-university
+Ton Duc Thang University,721-730,https://www.topuniversities.com/universities/ton-duc-thang-university
+Universita' Politecnica delle Marche,721-730,https://www.topuniversities.com/universities/universita-politecnica-delle-marche
+University of Belgrade,721-730,https://www.topuniversities.com/universities/university-belgrade
+"University of Colorado, Denver",721-730,https://www.topuniversities.com/universities/university-colorado-denver
+Université Côte d'Azur,721-730,https://www.topuniversities.com/universities/universite-cote-dazur
+Université de Lorraine,721-730,https://www.topuniversities.com/universities/universite-de-lorraine
+"Adam Mickiewicz University, Poznań",731-740,https://www.topuniversities.com/universities/adam-mickiewicz-university-poznan
+Alfaisal University,731-740,https://www.topuniversities.com/universities/alfaisal-university
+Bournemouth University,731-740,https://www.topuniversities.com/universities/bournemouth-university
+Indian Institute of Technology Bhubaneswar,731-740,https://www.topuniversities.com/universities/indian-institute-technology-bhubaneswar
+Jordan University of Science & Technology,731-740,https://www.topuniversities.com/universities/jordan-university-science-technology
+"National Technical University of Ukraine ""Igor Sikorsky Kyiv Polytechnic Institute""",731-740,https://www.topuniversities.com/universities/national-technical-university-ukraine-igor-sikorsky-kyiv-polytechnic-institute
+Universidad EAFIT,731-740,https://www.topuniversities.com/universities/universidad-eafit
+Universidade Federal de São Paulo,731-740,https://www.topuniversities.com/universities/universidade-federal-de-sao-paulo
+University of Siena,731-740,https://www.topuniversities.com/universities/university-siena
+Budapest University of Technology and Economics,741-750,https://www.topuniversities.com/universities/budapest-university-technology-economics
+Instituto Politécnico Nacional (IPN),741-750,https://www.topuniversities.com/universities/instituto-politecnico-nacional-ipn
+Jadavpur University,741-750,https://www.topuniversities.com/universities/jadavpur-university
+Swarthmore College,741-750,https://www.topuniversities.com/universities/swarthmore-college
+"University of Agriculture, Faisalabad",741-750,https://www.topuniversities.com/universities/university-agriculture-faisalabad
+University of Bari,741-750,https://www.topuniversities.com/universities/university-bari
+University of the Punjab,741-750,https://www.topuniversities.com/universities/university-punjab
+University of the West of England,741-750,https://www.topuniversities.com/universities/university-west-england
+Universität Regensburg,741-750,https://www.topuniversities.com/universities/universitat-regensburg
+Ahlia University,751-760,https://www.topuniversities.com/universities/ahlia-university
+ISCTE-IUL,751-760,https://www.topuniversities.com/universities/iscte-iul
+Kasetsart University,751-760,https://www.topuniversities.com/universities/kasetsart-university
+Liverpool John Moores University,751-760,https://www.topuniversities.com/universities/liverpool-john-moores-university
+Riga Technical University,751-760,https://www.topuniversities.com/universities/riga-technical-university
+Technische Universität Braunschweig,751-760,https://www.topuniversities.com/universities/technische-universitat-braunschweig
+Universidad Externado de Colombia,751-760,https://www.topuniversities.com/universities/universidad-externado-de-colombia
+University of Mumbai,751-760,https://www.topuniversities.com/universities/university-mumbai
+University of Zagreb,751-760,https://www.topuniversities.com/universities/university-zagreb
+Université du Québec,751-760,https://www.topuniversities.com/universities/universite-du-quebec
+Wayne State University,751-760,https://www.topuniversities.com/universities/wayne-state-university
+Hacettepe University,761-770,https://www.topuniversities.com/universities/hacettepe-university
+King Khalid University,761-770,https://www.topuniversities.com/universities/king-khalid-university
+Philipps-Universität Marburg,761-770,https://www.topuniversities.com/universities/philipps-universitat-marburg
+Universidad de Belgrano,761-770,https://www.topuniversities.com/universities/universidad-de-belgrano
+Universiti Tenaga Nasional (UNITEN),761-770,https://www.topuniversities.com/universities/universiti-tenaga-nasional-uniten
+Universität Rostock,761-770,https://www.topuniversities.com/universities/universitat-rostock
+Virginia Commonwealth University,761-770,https://www.topuniversities.com/universities/virginia-commonwealth-university
+Chandigarh University,771-780,https://www.topuniversities.com/universities/chandigarh-university
+Comenius University Bratislava,771-780,https://www.topuniversities.com/universities/comenius-university-bratislava
+Rutgers University–Newark,771-780,https://www.topuniversities.com/universities/rutgers-university-newark
+Sechenov University,771-780,https://www.topuniversities.com/universities/sechenov-university
+Universidad Anáhuac México,771-780,https://www.topuniversities.com/universities/universidad-anahuac-mexico
+Universidad ORT Uruguay,771-780,https://www.topuniversities.com/universities/universidad-ort-uruguay
+University at Albany SUNY,771-780,https://www.topuniversities.com/universities/university-albany-suny
+University of Brighton,771-780,https://www.topuniversities.com/universities/university-brighton
+Universität Duisburg-Essen,771-780,https://www.topuniversities.com/universities/universitat-duisburg-essen
+Nantes Université,771-780,https://www.topuniversities.com/universities/nantes-universite
+China University of Mining and Technology,781-790,https://www.topuniversities.com/universities/china-university-mining-technology
+Keele University,781-790,https://www.topuniversities.com/universities/keele-university
+Khoja Akhmet Yassawi International Kazakh-Turkish University,781-790,https://www.topuniversities.com/universities/khoja-akhmet-yassawi-international-kazakh-turkish-university
+Nanjing Agricultural University,781-790,https://www.topuniversities.com/universities/nanjing-agricultural-university
+"National Institute of Technology, Tiruchirappalli",781-790,https://www.topuniversities.com/universities/national-institute-technology-tiruchirappalli
+Syracuse University,781-790,https://www.topuniversities.com/universities/syracuse-university
+The Catholic University of Korea,781-790,https://www.topuniversities.com/universities/catholic-university-korea
+Universiti Malaysia Pahang Al-Sultan Abdullah (UMPSA),781-790,https://www.topuniversities.com/universities/universiti-malaysia-pahang-al-sultan-abdullah-umpsa
+University of Northern British Columbia,781-790,https://www.topuniversities.com/universities/university-northern-british-columbia
+American University,791-800,https://www.topuniversities.com/universities/american-university
+Clarkson University,791-800,https://www.topuniversities.com/universities/clarkson-university
+Diponegoro University,791-800,https://www.topuniversities.com/universities/diponegoro-university
+Instituto Tecnológico de Buenos Aires (ITBA),791-800,https://www.topuniversities.com/universities/instituto-tecnologico-de-buenos-aires-itba
+Lanzhou University,791-800,https://www.topuniversities.com/universities/lanzhou-university
+Plekhanov Russian University of Economics,791-800,https://www.topuniversities.com/universities/plekhanov-russian-university-economics
+Universidad de La Sabana,791-800,https://www.topuniversities.com/universities/universidad-de-la-sabana
+University of Brescia,791-800,https://www.topuniversities.com/universities/university-brescia
+University of Engineering & Technology (UET) Lahore,791-800,https://www.topuniversities.com/universities/university-engineering-technology-uet-lahore
+University of Patras,791-800,https://www.topuniversities.com/universities/university-patras
+Al-Ahliyya Amman University,801-850,https://www.topuniversities.com/universities/al-ahliyya-amman-university
+Almaty Technological University,801-850,https://www.topuniversities.com/universities/almaty-technological-university
+Auburn University,801-850,https://www.topuniversities.com/universities/auburn-university
+Babes-Bolyai University,801-850,https://www.topuniversities.com/universities/babes-bolyai-university
+Bangladesh University of Engineering and Technology,801-850,https://www.topuniversities.com/universities/bangladesh-university-engineering-technology
+Beijing University of Technology,801-850,https://www.topuniversities.com/universities/beijing-university-technology
+Belarusian National Technical University (BNTU),801-850,https://www.topuniversities.com/universities/belarusian-national-technical-university-bntu
+Charles Sturt University,801-850,https://www.topuniversities.com/universities/charles-sturt-university
+China University of Geosciences,801-850,https://www.topuniversities.com/universities/china-university-geosciences
+Clark University,801-850,https://www.topuniversities.com/universities/clark-university
+De Montfort University,801-850,https://www.topuniversities.com/universities/de-montfort-university
+Edinburgh Napier University,801-850,https://www.topuniversities.com/universities/edinburgh-napier-university
+Immanuel Kant Baltic Federal University,801-850,https://www.topuniversities.com/universities/immanuel-kant-baltic-federal-university
+Ivane Javakhishvili Tbilisi State University,801-850,https://www.topuniversities.com/universities/ivane-javakhishvili-tbilisi-state-university
+Jouf University,801-850,https://www.topuniversities.com/universities/jouf-university
+Karaganda State Technical University,801-850,https://www.topuniversities.com/universities/karaganda-state-technical-university
+Kaunas University of Technology,801-850,https://www.topuniversities.com/universities/kaunas-university-technology
+Louisiana State University,801-850,https://www.topuniversities.com/universities/louisiana-state-university
+Maynooth University,801-850,https://www.topuniversities.com/universities/maynooth-university
+Nagasaki University,801-850,https://www.topuniversities.com/universities/nagasaki-university
+Nanjing University of Aeronautics and Astronautics,801-850,https://www.topuniversities.com/universities/nanjing-university-aeronautics-astronautics
+North-West University,801-850,https://www.topuniversities.com/universities/north-west-university
+Poznan University of Life Sciences,801-850,https://www.topuniversities.com/universities/poznan-university-life-sciences
+Ritsumeikan Asia Pacific University,801-850,https://www.topuniversities.com/universities/ritsumeikan-asia-pacific-university
+Texas Tech University,801-850,https://www.topuniversities.com/universities/texas-tech-university
+Tokyo University of Agriculture and Technology,801-850,https://www.topuniversities.com/universities/tokyo-university-agriculture-technology
+Universidad Pontificia Bolivariana,801-850,https://www.topuniversities.com/universities/universidad-pontificia-bolivariana
+Universidad San Francisco de Quito (USFQ),801-850,https://www.topuniversities.com/universities/universidad-san-francisco-de-quito-usfq
+Universidad Técnica Federico Santa María (USM),801-850,https://www.topuniversities.com/universities/universidad-tecnica-federico-santa-maria-usm
+Universidad de San Andrés - UdeSA,801-850,https://www.topuniversities.com/universities/universidad-de-san-andres-udesa
+Universidad de la República (Udelar),801-850,https://www.topuniversities.com/universities/universidad-de-la-republica-udelar
+Universidade de Brasília,801-850,https://www.topuniversities.com/universities/universidade-de-brasilia
+Universitas Brawijaya,801-850,https://www.topuniversities.com/universities/universitas-brawijaya
+Universiti Tunku Abdul Rahman (UTAR),801-850,https://www.topuniversities.com/universities/universiti-tunku-abdul-rahman-utar
+University Duesseldorf,801-850,https://www.topuniversities.com/universities/university-duesseldorf
+University of Alicante,801-850,https://www.topuniversities.com/universities/university-alicante
+University of Balamand,801-850,https://www.topuniversities.com/universities/university-balamand
+University of Calcutta,801-850,https://www.topuniversities.com/universities/university-calcutta
+University of Dubai,801-850,https://www.topuniversities.com/universities/university-dubai
+University of Hyderabad,801-850,https://www.topuniversities.com/universities/university-hyderabad
+University of Latvia,801-850,https://www.topuniversities.com/universities/university-latvia
+University of Massachusetts Boston,801-850,https://www.topuniversities.com/universities/university-massachusetts-boston
+University of Pecs,801-850,https://www.topuniversities.com/universities/university-pecs
+University of Salerno,801-850,https://www.topuniversities.com/universities/university-salerno
+University of Santo Tomas,801-850,https://www.topuniversities.com/universities/university-santo-tomas
+Verona University,801-850,https://www.topuniversities.com/universities/verona-university
+Vilnius Gediminas Technical University (VILNIUS TECH),801-850,https://www.topuniversities.com/universities/vilnius-gediminas-technical-university-vilnius-tech
+Vytautas Magnus University,801-850,https://www.topuniversities.com/universities/vytautas-magnus-university
+Yokohama City University,801-850,https://www.topuniversities.com/universities/yokohama-city-university
+Addis Ababa University,851-900,https://www.topuniversities.com/universities/addis-ababa-university
+Beijing University of Posts and Telecommunications,851-900,https://www.topuniversities.com/universities/beijing-university-posts-telecommunications
+CY Cergy Paris University,851-900,https://www.topuniversities.com/universities/cy-cergy-paris-university
+Catania University,851-900,https://www.topuniversities.com/universities/catania-university
+Chonnam National University,851-900,https://www.topuniversities.com/universities/chonnam-national-university
+Chungnam National University,851-900,https://www.topuniversities.com/universities/chungnam-national-university
+Clemson University,851-900,https://www.topuniversities.com/universities/clemson-university
+Gdańsk University of Technology,851-900,https://www.topuniversities.com/universities/gdansk-university-technology
+Georgia State University,851-900,https://www.topuniversities.com/universities/georgia-state-university
+Gulf University for Science and Technology,851-900,https://www.topuniversities.com/universities/gulf-university-science-technology
+Kanazawa University,851-900,https://www.topuniversities.com/universities/kanazawa-university
+Kansas State University,851-900,https://www.topuniversities.com/universities/kansas-state-university
+Karaganda Buketov University,851-900,https://www.topuniversities.com/universities/karaganda-buketov-university
+King Faisal University,851-900,https://www.topuniversities.com/universities/king-faisal-university
+Kuwait University,851-900,https://www.topuniversities.com/universities/kuwait-university
+Kyrgyz-Turkish Manas University,851-900,https://www.topuniversities.com/universities/kyrgyz-turkish-manas-university
+London South Bank University,851-900,https://www.topuniversities.com/universities/london-south-bank-university
+Michigan Technological University,851-900,https://www.topuniversities.com/universities/michigan-technological-university
+National Research Saratov State University,851-900,https://www.topuniversities.com/universities/national-research-saratov-state-university
+Niigata University,851-900,https://www.topuniversities.com/universities/niigata-university
+North South University,851-900,https://www.topuniversities.com/universities/north-south-university
+Oklahoma State University,851-900,https://www.topuniversities.com/universities/oklahoma-state-university
+Pavol Jozef Šafárik University in Košice,851-900,https://www.topuniversities.com/universities/pavol-jozef-safarik-university-kosice
+"Queen Margaret University , Edinburgh",851-900,https://www.topuniversities.com/universities/queen-margaret-university-edinburgh
+Southern Federal University,851-900,https://www.topuniversities.com/universities/southern-federal-university
+TU Dortmund University,851-900,https://www.topuniversities.com/universities/tu-dortmund-university
+Technological University Dublin,851-900,https://www.topuniversities.com/universities/technological-university-dublin
+Universidad Católica del Uruguay (UCU),851-900,https://www.topuniversities.com/universities/universidad-catolica-del-uruguay-ucu
+"Universidad Central ""Marta Abreu"" de Las Villas",851-900,https://www.topuniversities.com/universities/universidad-central-marta-abreu-de-las-villas
+Universidad Torcuato Di Tella,851-900,https://www.topuniversities.com/universities/universidad-torcuato-di-tella
+Universidad de Guadalajara (UDG),851-900,https://www.topuniversities.com/universities/universidad-de-guadalajara-udg
+Universita' degli Studi di Ferrara,851-900,https://www.topuniversities.com/universities/universita-degli-studi-di-ferrara
+Universite Paris-Pantheon-Assas,851-900,https://www.topuniversities.com/universities/universite-paris-pantheon-assas
+University of Bucharest,851-900,https://www.topuniversities.com/universities/university-bucharest
+University of East London,851-900,https://www.topuniversities.com/universities/university-east-london
+University of Hertfordshire,851-900,https://www.topuniversities.com/universities/university-hertfordshire
+University of Lincoln,851-900,https://www.topuniversities.com/universities/university-lincoln
+University of Malta,851-900,https://www.topuniversities.com/universities/university-malta
+University of Messina (UniME),851-900,https://www.topuniversities.com/universities/university-messina-unime
+University of Palermo,851-900,https://www.topuniversities.com/universities/university-palermo
+University of Parma,851-900,https://www.topuniversities.com/universities/university-parma
+University of Salford,851-900,https://www.topuniversities.com/universities/university-salford
+University of South Africa,851-900,https://www.topuniversities.com/universities/university-south-africa
+"Vellore Institute of Technology (VIT), Vellore, India",851-900,https://www.topuniversities.com/universities/vellore-institute-technology-vit-vellore-india
+Wesleyan University,851-900,https://www.topuniversities.com/universities/wesleyan-university
+Worcester Polytechnic Institute,851-900,https://www.topuniversities.com/universities/worcester-polytechnic-institute
+Wuhan University of Technology,851-900,https://www.topuniversities.com/universities/wuhan-university-technology
+AGH University of Krakow,901-950,https://www.topuniversities.com/universities/agh-university-krakow
+Alexandria University,901-950,https://www.topuniversities.com/universities/alexandria-university
+Ankara Üniversitesi,901-950,https://www.topuniversities.com/universities/ankara-universitesi
+Asia University Taiwan,901-950,https://www.topuniversities.com/universities/asia-university-taiwan
+Athens University of Economics and Business,901-950,https://www.topuniversities.com/universities/athens-university-economics-business
+William & Mary,901-950,https://www.topuniversities.com/universities/william-mary
+D. Serikbayev East Kazakhstan Technical University,901-950,https://www.topuniversities.com/universities/d-serikbayev-east-kazakhstan-technical-university
+Donghua University,901-950,https://www.topuniversities.com/universities/donghua-university
+Hallym University,901-950,https://www.topuniversities.com/universities/hallym-university
+Kumamoto University,901-950,https://www.topuniversities.com/universities/kumamoto-university
+London Metropolitan University,901-950,https://www.topuniversities.com/universities/london-metropolitan-university
+Loyola University Chicago,901-950,https://www.topuniversities.com/universities/loyola-university-chicago
+Mendel University in Brno,901-950,https://www.topuniversities.com/universities/mendel-university-brno
+National Chung Cheng University,901-950,https://www.topuniversities.com/universities/national-chung-cheng-university
+"National Technical University  ""Kharkiv Polytechnic Institute""",901-950,https://www.topuniversities.com/universities/national-technical-university-kharkiv-polytechnic-institute
+Nicolaus Copernicus University,901-950,https://www.topuniversities.com/universities/nicolaus-copernicus-university
+Northern Borders University,901-950,https://www.topuniversities.com/universities/northern-borders-university
+Notre Dame University-Louaize NDU,901-950,https://www.topuniversities.com/universities/notre-dame-university-louaize-ndu
+Ocean University of China,901-950,https://www.topuniversities.com/universities/ocean-university-china
+Pontificia Universidad Católica del Ecuador (PUCE),901-950,https://www.topuniversities.com/universities/pontificia-universidad-catolica-del-ecuador-puce
+Prince of Songkla University,901-950,https://www.topuniversities.com/universities/prince-songkla-university
+Princess Sumaya University for Technology,901-950,https://www.topuniversities.com/universities/princess-sumaya-university-technology
+Qassim University,901-950,https://www.topuniversities.com/universities/qassim-university
+Rhodes University,901-950,https://www.topuniversities.com/universities/rhodes-university
+Riga Stradins University,901-950,https://www.topuniversities.com/universities/riga-stradins-university
+Robert Gordon University,901-950,https://www.topuniversities.com/universities/robert-gordon-university
+Asfendiyarov Kazakh National Medical University,901-950,https://www.topuniversities.com/universities/asfendiyarov-kazakh-national-medical-university
+Samara National Research University (Samara University),901-950,https://www.topuniversities.com/universities/samara-national-research-university-samara-university
+Sophia University,901-950,https://www.topuniversities.com/universities/sophia-university
+Saint Louis University,901-950,https://www.topuniversities.com/universities/saint-louis-university
+Sungshin Women's University,901-950,https://www.topuniversities.com/universities/sungshin-womens-university
+Universidad Autónoma Metropolitana (UAM),901-950,https://www.topuniversities.com/universities/universidad-autonoma-metropolitana-uam
+Universidad ICESI,901-950,https://www.topuniversities.com/universities/universidad-icesi
+Universidade Católica Portuguesa,901-950,https://www.topuniversities.com/universities/universidade-catolica-portuguesa
+Universidade de Vigo,901-950,https://www.topuniversities.com/universities/universidade-de-vigo
+University of Alabama at Birmingham,901-950,https://www.topuniversities.com/universities/university-alabama-birmingham
+University of Central Lancashire,901-950,https://www.topuniversities.com/universities/university-central-lancashire
+University of Denver,901-950,https://www.topuniversities.com/universities/university-denver1
+University of Murcia,901-950,https://www.topuniversities.com/universities/university-murcia
+UPES,901-950,https://www.topuniversities.com/universities/upes
+University of Vermont,901-950,https://www.topuniversities.com/universities/university-vermont
+University of Wroclaw,901-950,https://www.topuniversities.com/universities/university-wroclaw
+Università degli studi Roma Tre,901-950,https://www.topuniversities.com/universities/universita-degli-studi-roma-tre
+West Virginia University,901-950,https://www.topuniversities.com/universities/west-virginia-university
+Wroclaw University of Science and Technology (WRUST),901-950,https://www.topuniversities.com/universities/wroclaw-university-science-technology-wrust
+Bielefeld University,951-1000,https://www.topuniversities.com/universities/bielefeld-university
+"Birla Institute of Technology and Science, Pilani",951-1000,https://www.topuniversities.com/universities/birla-institute-technology-science-pilani
+Gifu University,951-1000,https://www.topuniversities.com/universities/gifu-university
+Gunma University,951-1000,https://www.topuniversities.com/universities/gunma-university
+Indiana University–Purdue University Indianapolis,951-1000,https://www.topuniversities.com/universities/indiana-university-purdue-university-indianapolis
+Islamic University of Madinah,951-1000,https://www.topuniversities.com/universities/islamic-university-madinah
+Jamia Millia Islamia,951-1000,https://www.topuniversities.com/universities/jamia-millia-islamia
+Khon Kaen University,951-1000,https://www.topuniversities.com/universities/khon-kaen-university
+King Mongkut's University of Technology Thonburi,951-1000,https://www.topuniversities.com/universities/king-mongkuts-university-technology-thonburi
+Lviv Polytechnic National University,951-1000,https://www.topuniversities.com/universities/lviv-polytechnic-national-university
+Makerere University,951-1000,https://www.topuniversities.com/universities/makerere-university
+"Manipal Academy of Higher Education, Manipal, Karnataka, India",951-1000,https://www.topuniversities.com/universities/manipal-academy-higher-education-manipal-karnataka-india
+NJSC KIMEP University,951-1000,https://www.topuniversities.com/universities/njsc-kimep-university
+Northwest Agriculture and Forestry University,951-1000,https://www.topuniversities.com/universities/northwest-agriculture-forestry-university
+O.P. Jindal Global University (JGU),951-1000,https://www.topuniversities.com/universities/op-jindal-global-university-jgu
+Saint Petersburg Electrotechnical University ETU-LETI,951-1000,https://www.topuniversities.com/universities/saint-petersburg-electrotechnical-university-etu-leti
+South Ural State University (National Research University),951-1000,https://www.topuniversities.com/universities/south-ural-state-university-national-research-university
+Sumy State University,951-1000,https://www.topuniversities.com/universities/sumy-state-university
+Tecnológico de Costa Rica -TEC,951-1000,https://www.topuniversities.com/universities/tecnologico-de-costa-rica-tec
+Thapar Institute of Engineering & Technology,951-1000,https://www.topuniversities.com/universities/thapar-institute-engineering-technology
+The University of Alabama,951-1000,https://www.topuniversities.com/universities/university-alabama
+Tokyo Metropolitan University,951-1000,https://www.topuniversities.com/universities/tokyo-metropolitan-university
+UNIVERSITY OF GDANSK,951-1000,https://www.topuniversities.com/universities/university-gdansk
+Universidad Diego Portales (UDP),951-1000,https://www.topuniversities.com/universities/universidad-diego-portales-udp
+Universidad Nacional de Córdoba - UNC,951-1000,https://www.topuniversities.com/universities/universidad-nacional-de-cordoba-unc
+Universidad Nacional de Ingeniería,951-1000,https://www.topuniversities.com/universities/universidad-nacional-de-ingenieria
+Universidad Nacional de Rosario (UNR),951-1000,https://www.topuniversities.com/universities/universidad-nacional-de-rosario-unr
+Universidad Peruana Cayetano Heredia (UPCH),951-1000,https://www.topuniversities.com/universities/universidad-peruana-cayetano-heredia-upch
+Universidad Rey Juan Carlos,951-1000,https://www.topuniversities.com/universities/universidad-rey-juan-carlos
+Universidad Simón Bolívar (USB),951-1000,https://www.topuniversities.com/universities/universidad-simon-bolivar-usb
+Universidad de Castilla-La Mancha,951-1000,https://www.topuniversities.com/universities/universidad-de-castilla-la-mancha
+Universidad de Valladolid,951-1000,https://www.topuniversities.com/universities/universidad-de-valladolid
+Universidad de las Américas Puebla (UDLAP),951-1000,https://www.topuniversities.com/universities/universidad-de-las-americas-puebla-udlap
+Universidad de los Andes - Chile,951-1000,https://www.topuniversities.com/universities/universidad-de-los-andes-chile
+Universiti Pendidikan Sultan Idris (UPSI),951-1000,https://www.topuniversities.com/universities/universiti-pendidikan-sultan-idris-upsi
+University of Baghdad,951-1000,https://www.topuniversities.com/universities/university-baghdad
+University of Bahrain,951-1000,https://www.topuniversities.com/universities/university-bahrain
+University of Calabria,951-1000,https://www.topuniversities.com/universities/university-calabria
+University of Ghana,951-1000,https://www.topuniversities.com/universities/university-ghana
+University of Lodz,951-1000,https://www.topuniversities.com/universities/university-lodz
+University of New England Australia,951-1000,https://www.topuniversities.com/universities/university-new-england-australia
+University of Peshawar,951-1000,https://www.topuniversities.com/universities/university-peshawar
+University of Seoul,951-1000,https://www.topuniversities.com/universities/university-seoul
+University of the Western Cape,951-1000,https://www.topuniversities.com/universities/university-western-cape
+Université de Tunis El Manar,951-1000,https://www.topuniversities.com/universities/universite-de-tunis-el-manar
+Viet Nam National University Ho Chi Minh City (VNU-HCM),951-1000,https://www.topuniversities.com/universities/viet-nam-national-university-ho-chi-minh-city-vnu-hcm
+"Vietnam National University, Hanoi",951-1000,https://www.topuniversities.com/universities/vietnam-national-university-hanoi
+Yeungnam University,951-1000,https://www.topuniversities.com/universities/yeungnam-university
+Yildiz Technical University,951-1000,https://www.topuniversities.com/universities/yildiz-technical-university
+Yokohama National University,951-1000,https://www.topuniversities.com/universities/yokohama-national-university
+Al-Quds University,1001-1200,https://www.topuniversities.com/universities/al-quds-university
+Aligarh Muslim University,1001-1200,https://www.topuniversities.com/universities/aligarh-muslim-university
+Amity University,1001-1200,https://www.topuniversities.com/universities/amity-university
+Amrita Vishwa Vidyapeetham,1001-1200,https://www.topuniversities.com/universities/amrita-vishwa-vidyapeetham
+An-Najah National University,1001-1200,https://www.topuniversities.com/universities/najah-national-university
+"Arab Academy for Science, Technology and Maritime Transport (AASTMT)",1001-1200,https://www.topuniversities.com/universities/arab-academy-science-technology-maritime-transport-aastmt
+Assiut University,1001-1200,https://www.topuniversities.com/universities/assiut-university
+Azerbaijan State University of Economics,1001-1200,https://www.topuniversities.com/universities/azerbaijan-state-university-economics
+Baku State University,1001-1200,https://www.topuniversities.com/universities/baku-state-university
+Banaras Hindu University,1001-1200,https://www.topuniversities.com/universities/banaras-hindu-university
+Baylor University,1001-1200,https://www.topuniversities.com/universities/baylor-university
+Beijing Foreign Studies University,1001-1200,https://www.topuniversities.com/universities/beijing-foreign-studies-university
+Beijing University of Chinese Medicine,1001-1200,https://www.topuniversities.com/universities/beijing-university-chinese-medicine
+Bina Nusantara University (BINUS),1001-1200,https://www.topuniversities.com/universities/bina-nusantara-university-binus
+Binghamton University SUNY,1001-1200,https://www.topuniversities.com/universities/binghamton-university-suny
+Birmingham City University,1001-1200,https://www.topuniversities.com/universities/birmingham-city-university
+Brigham Young University,1001-1200,https://www.topuniversities.com/universities/brigham-young-university
+Canterbury Christ Church University,1001-1200,https://www.topuniversities.com/universities/canterbury-christ-church-university
+Chang Jung Christian University,1001-1200,https://www.topuniversities.com/universities/chang-jung-christian-university
+Chung Yuan Christian University,1001-1200,https://www.topuniversities.com/universities/chung-yuan-christian-university
+Chungbuk National University,1001-1200,https://www.topuniversities.com/universities/chungbuk-national-university
+Corvinus University of Budapest,1001-1200,https://www.topuniversities.com/universities/corvinus-university-budapest
+Dankook University,1001-1200,https://www.topuniversities.com/universities/dankook-university
+Doshisha University,1001-1200,https://www.topuniversities.com/universities/doshisha-university
+EGE UNIVERSITY,1001-1200,https://www.topuniversities.com/universities/ege-university
+Escuela Politécnica Nacional,1001-1200,https://www.topuniversities.com/universities/escuela-politecnica-nacional
+Escuela Superior Politécnica del Litoral (ESPOL),1001-1200,https://www.topuniversities.com/universities/escuela-superior-politecnica-del-litoral-espol
+Ferdowsi University of Mashhad,1001-1200,https://www.topuniversities.com/universities/ferdowsi-university-mashhad
+Financial University under the Government of the Russian Federation,1001-1200,https://www.topuniversities.com/universities/financial-university-under-government-russian-federation
+Fordham University,1001-1200,https://www.topuniversities.com/universities/fordham-university
+CEU Educational Group,1001-1200,https://www.topuniversities.com/universities/ceu-educational-group
+Future University in Egypt,1001-1200,https://www.topuniversities.com/universities/future-university-egypt
+Gazi Üniversitesi,1001-1200,https://www.topuniversities.com/universities/gazi-universitesi
+German Jordanian University,1001-1200,https://www.topuniversities.com/universities/german-jordanian-university
+Glasgow Caledonian University,1001-1200,https://www.topuniversities.com/universities/glasgow-caledonian-university
+Harbin Engineering University,1001-1200,https://www.topuniversities.com/universities/harbin-engineering-university
+Howard University,1001-1200,https://www.topuniversities.com/universities/howard-university
+MATE Hungarian University of Agriculture and Life Sciences,1001-1200,https://www.topuniversities.com/universities/mate-hungarian-university-agriculture-life-sciences
+"ITESO, Universidad Jesuita de Guadalajara",1001-1200,https://www.topuniversities.com/universities/iteso-universidad-jesuita-de-guadalajara
+Imam Mohammad Ibn Saud Islamic University – IMSIU,1001-1200,https://www.topuniversities.com/universities/imam-mohammad-ibn-saud-islamic-university-imsiu
+Instituto Tecnológico de Santo Domingo (INTEC),1001-1200,https://www.topuniversities.com/universities/instituto-tecnologico-de-santo-domingo-intec
+International Christian University,1001-1200,https://www.topuniversities.com/universities/international-christian-university
+Jiangnan University,1001-1200,https://www.topuniversities.com/universities/jiangnan-university
+Kagoshima University,1001-1200,https://www.topuniversities.com/universities/kagoshima-university
+Kangwon National University,1001-1200,https://www.topuniversities.com/universities/kangwon-national-university
+Kazakh Ablai Khan University of International Relations and World Languages,1001-1200,https://www.topuniversities.com/universities/kazakh-ablai-khan-university-international-relations-world-languages
+Kazakh-British Technical University,1001-1200,https://www.topuniversities.com/universities/kazakh-british-technical-university
+Kazan National Research Technological University,1001-1200,https://www.topuniversities.com/universities/kazan-national-research-technological-university
+Kent State University,1001-1200,https://www.topuniversities.com/universities/kent-state-university
+Kookmin University,1001-1200,https://www.topuniversities.com/universities/kookmin-university
+Kyushu Institute of Technology,1001-1200,https://www.topuniversities.com/universities/kyushu-institute-technology
+Leeds Beckett University,1001-1200,https://www.topuniversities.com/universities/leeds-beckett-university
+Lobachevsky University,1001-1200,https://www.topuniversities.com/universities/lobachevsky-university
+Lodz University of Technology,1001-1200,https://www.topuniversities.com/universities/lodz-university-technology
+Mansoura University,1001-1200,https://www.topuniversities.com/universities/mansoura-university
+Meiji University,1001-1200,https://www.topuniversities.com/universities/meiji-university
+Mississippi State University,1001-1200,https://www.topuniversities.com/universities/mississippi-state-university
+Multimedia University (MMU),1001-1200,https://www.topuniversities.com/universities/multimedia-university-mmu
+Mustansiriyah University,1001-1200,https://www.topuniversities.com/universities/mustansiriyah-university
+Mutah University,1001-1200,https://www.topuniversities.com/universities/mutah-university
+Mykolas Romeris University,1001-1200,https://www.topuniversities.com/universities/mykolas-romeris-university
+Nanjing Normal University,1001-1200,https://www.topuniversities.com/universities/nanjing-normal-university
+National University of Kyiv-Mohyla Academy (NaUKMA),1001-1200,https://www.topuniversities.com/universities/national-university-kyiv-mohyla-academy-naukma
+Northern Arizona University,1001-1200,https://www.topuniversities.com/universities/northern-arizona-university
+Novosibirsk State Technical University,1001-1200,https://www.topuniversities.com/universities/novosibirsk-state-technical-university
+Odessa I.I.Mechnikov National University,1001-1200,https://www.topuniversities.com/universities/odessa-iimechnikov-national-university-0
+Ohio University,1001-1200,https://www.topuniversities.com/universities/ohio-university
+Panjab University,1001-1200,https://www.topuniversities.com/universities/panjab-university
+Paul Valéry University Montpellier,1001-1200,https://www.topuniversities.com/universities/paul-valery-university-montpellier
+Pontifícia Universidade Católica de São Paulo,1001-1200,https://www.topuniversities.com/universities/pontifcia-universidade-catlica-de-so-paulo
+Poznan University of Technology,1001-1200,https://www.topuniversities.com/universities/poznan-university-technology
+Rochester Institute of Technology (RIT),1001-1200,https://www.topuniversities.com/universities/rochester-institute-technology-rit
+Russian Presidential Academy of National Economy and Public Administration,1001-1200,https://www.topuniversities.com/universities/russian-presidential-academy-national-economy-public-administration
+Saint-Petersburg Mining University,1001-1200,https://www.topuniversities.com/universities/saint-petersburg-mining-university
+San Diego State University,1001-1200,https://www.topuniversities.com/universities/san-diego-state-university
+Sathyabama Institute of Science and Technology (Deemed to be University),1001-1200,https://www.topuniversities.com/universities/sathyabama-institute-science-technology-deemed-be-university
+Seoul National University of Science and Technology,1001-1200,https://www.topuniversities.com/universities/seoul-national-university-science-technology
+Shanghai International Studies University,1001-1200,https://www.topuniversities.com/universities/shanghai-international-studies-university
+Shinshu University,1001-1200,https://www.topuniversities.com/universities/shinshu-university
+"Siberian Federal University, SibFU",1001-1200,https://www.topuniversities.com/universities/siberian-federal-university-sibfu
+Silesian University of Technology,1001-1200,https://www.topuniversities.com/universities/silesian-university-technology
+Slovak University of Technology in Bratislava,1001-1200,https://www.topuniversities.com/universities/slovak-university-technology-bratislava
+Soonchunhyang University,1001-1200,https://www.topuniversities.com/universities/soonchunhyang-university
+Southern Methodist University,1001-1200,https://www.topuniversities.com/universities/southern-methodist-university
+Southwest University,1001-1200,https://www.topuniversities.com/universities/southwest-university
+Szechenyi Istvan University (University of Gyor),1001-1200,https://www.topuniversities.com/universities/szechenyi-istvan-university-university-gyor
+Taibah University,1001-1200,https://www.topuniversities.com/universities/taibah-university
+Tallinn University,1001-1200,https://www.topuniversities.com/universities/tallinn-university
+Technical University of Kosice,1001-1200,https://www.topuniversities.com/universities/technical-university-kosice
+Technical University of Liberec,1001-1200,https://www.topuniversities.com/universities/technical-university-liberec
+Telkom University,1001-1200,https://www.topuniversities.com/universities/telkom-university
+The University of Lahore,1001-1200,https://www.topuniversities.com/universities/university-lahore
+The University of Texas at Arlington,1001-1200,https://www.topuniversities.com/universities/university-texas-arlington
+Tokai University,1001-1200,https://www.topuniversities.com/universities/tokai-university
+Tokushima University,1001-1200,https://www.topuniversities.com/universities/tokushima-university
+Tomas Bata University in Zlin,1001-1200,https://www.topuniversities.com/universities/tomas-bata-university-zlin
+Ufa State Aviation Technical University (USATU),1001-1200,https://www.topuniversities.com/universities/ufa-state-aviation-technical-university-usatu
+Universidad Andrés Bello,1001-1200,https://www.topuniversities.com/universities/universidad-andres-bello
+Universidad Austral de Chile,1001-1200,https://www.topuniversities.com/universities/universidad-austral-de-chile
+Universidad Autonoma Chapingo,1001-1200,https://www.topuniversities.com/universities/universidad-autonoma-chapingo
+Universidad Autónoma de Guadalajara (UAG),1001-1200,https://www.topuniversities.com/universities/universidad-autonoma-de-guadalajara-uag
+Universidad Autónoma de Nuevo León,1001-1200,https://www.topuniversities.com/universities/universidad-autonoma-de-nuevo-leon
+Universidad Autónoma del Estado de Hidalgo (UAEH),1001-1200,https://www.topuniversities.com/universities/universidad-autonoma-del-estado-de-hidalgo-uaeh
+Universidad Autónoma del Estado de México (UAEMex),1001-1200,https://www.topuniversities.com/universities/universidad-autonoma-del-estado-de-mexico-uaemex
+Universidad Industrial de Santander - UIS,1001-1200,https://www.topuniversities.com/universities/universidad-industrial-de-santander-uis
+"Universidad La Salle, México",1001-1200,https://www.topuniversities.com/universities/universidad-la-salle-mexico
+Universidad Nacional de Cuyo,1001-1200,https://www.topuniversities.com/universities/universidad-nacional-de-cuyo
+Universidad Nacional de San Luis,1001-1200,https://www.topuniversities.com/universities/universidad-nacional-de-san-luis
+Universidad Nacional de la Asunción,1001-1200,https://www.topuniversities.com/universities/universidad-nacional-de-la-asuncion
+Universidad Nacional del Centro de la Provincia de Buenos Aires (UNICEN),1001-1200,https://www.topuniversities.com/universities/universidad-nacional-del-centro-de-la-provincia-de-buenos-aires-unicen
+Universidad Nacional Costa Rica,1001-1200,https://www.topuniversities.com/universities/universidad-nacional-costa-rica
+Universidad Peruana de Ciencias Aplicadas (UPC),1001-1200,https://www.topuniversities.com/universities/universidad-peruana-de-ciencias-aplicadas-upc
+Universidad Tecnológica Nacional (UTN),1001-1200,https://www.topuniversities.com/universities/universidad-tecnologica-nacional-utn
+Universidad de Córdoba,1001-1200,https://www.topuniversities.com/universities/universidad-de-cordoba
+Universidad de León,1001-1200,https://www.topuniversities.com/universities/universidad-de-leon
+Universidad de Lima,1001-1200,https://www.topuniversities.com/universities/universidad-de-lima
+Universidad de Los Andes - (ULA) Mérida,1001-1200,https://www.topuniversities.com/universities/universidad-de-los-andes-ula-merida
+Universidad de Monterrey (UDEM),1001-1200,https://www.topuniversities.com/universities/universidad-de-monterrey-udem
+"Universidad de Oriente, Santiago de Cuba",1001-1200,https://www.topuniversities.com/universities/universidad-de-oriente-santiago-de-cuba
+Universidad de Oviedo,1001-1200,https://www.topuniversities.com/universities/universidad-de-oviedo
+Universidad de Talca,1001-1200,https://www.topuniversities.com/universities/universidad-de-talca
+Universidad del Norte,1001-1200,https://www.topuniversities.com/universities/universidad-del-norte
+Universidad del Pacífico,1001-1200,https://www.topuniversities.com/universities/universidad-del-pacifico
+Universidad del Valle,1001-1200,https://www.topuniversities.com/universities/universidad-del-valle
+Universidade Federal de Pernambuco (UFPE),1001-1200,https://www.topuniversities.com/universities/universidade-federal-de-pernambuco-ufpe
+Universidade Federal de São Carlos (UFSCar),1001-1200,https://www.topuniversities.com/universities/universidade-federal-de-sao-carlos-ufscar
+Universidade Federal do Paraná - UFPR,1001-1200,https://www.topuniversities.com/universities/universidade-federal-do-parana-ufpr
+Universidade da Coruña,1001-1200,https://www.topuniversities.com/universities/universidade-da-coruna
+"Universita' degli Studi ""G. d'Annunzio"" Chieti Pescara",1001-1200,https://www.topuniversities.com/universities/universita-degli-studi-g-dannunzio-chieti-pescara
+Universitas Hasanuddin,1001-1200,https://www.topuniversities.com/universities/universitas-hasanuddin
+Universitas Sebelas Maret,1001-1200,https://www.topuniversities.com/universities/universitas-sebelas-maret
+Universitat de Lleida (University of Lleida),1001-1200,https://www.topuniversities.com/universities/universitat-de-lleida-university-lleida
+Universiti Kuala Lumpur (UniKL),1001-1200,https://www.topuniversities.com/universities/universiti-kuala-lumpur-unikl
+Universiti Malaysia Perlis,1001-1200,https://www.topuniversities.com/universities/universiti-malaysia-perlis
+Universiti Malaysia Sarawak (UNIMAS),1001-1200,https://www.topuniversities.com/universities/universiti-malaysia-sarawak-unimas
+Universiti Malaysia Terengganu (UMT),1001-1200,https://www.topuniversities.com/universities/universiti-malaysia-terengganu-umt
+Universiti Tun Hussein Onn  Malaysia (UTHM),1001-1200,https://www.topuniversities.com/universities/universiti-tun-hussein-onn-malaysia-uthm
+University of Arkansas Fayetteville,1001-1200,https://www.topuniversities.com/universities/university-arkansas-fayetteville
+University of Colombo,1001-1200,https://www.topuniversities.com/universities/university-colombo
+University of Derby,1001-1200,https://www.topuniversities.com/universities/university-derby
+University of Deusto,1001-1200,https://www.topuniversities.com/universities/university-deusto
+University of Hradec Kralove,1001-1200,https://www.topuniversities.com/universities/university-hradec-kralove
+University of Idaho,1001-1200,https://www.topuniversities.com/universities/university-idaho
+University of Ioannina,1001-1200,https://www.topuniversities.com/universities/university-ioannina
+University of Karachi,1001-1200,https://www.topuniversities.com/universities/university-karachi
+University of Louisville College of Business,1001-1200,https://www.topuniversities.com/universities/university-louisville-college-business
+University of Mississippi,1001-1200,https://www.topuniversities.com/universities/university-mississippi
+"University of Missouri, Kansas City",1001-1200,https://www.topuniversities.com/universities/university-missouri-kansas-city
+University of Naples Parthenope,1001-1200,https://www.topuniversities.com/universities/university-naples-parthenope
+University of New Hampshire,1001-1200,https://www.topuniversities.com/universities/university-new-hampshire
+University of North Carolina at Charlotte,1001-1200,https://www.topuniversities.com/universities/university-north-carolina-charlotte
+University of North Texas,1001-1200,https://www.topuniversities.com/universities/university-north-texas
+University of Novi Sad,1001-1200,https://www.topuniversities.com/universities/university-novi-sad
+University of Pardubice,1001-1200,https://www.topuniversities.com/universities/university-pardubice
+University of Primorska,1001-1200,https://www.topuniversities.com/universities/university-primorska
+University of Regina,1001-1200,https://www.topuniversities.com/universities/university-regina
+University of Rhode Island,1001-1200,https://www.topuniversities.com/universities/university-rhode-island
+University of San Francisco,1001-1200,https://www.topuniversities.com/universities/university-san-francisco
+University of South Bohemia in České Budějovice,1001-1200,https://www.topuniversities.com/universities/university-south-bohemia-ceske-budejovice
+University of Texas El Paso,1001-1200,https://www.topuniversities.com/universities/university-texas-el-paso
+University of Texas at San Antonio,1001-1200,https://www.topuniversities.com/universities/university-texas-san-antonio
+University of Toledo,1001-1200,https://www.topuniversities.com/universities/university-toledo
+University of Tyumen,1001-1200,https://www.topuniversities.com/universities/university-tyumen
+University of Wisconsin Milwaukee,1001-1200,https://www.topuniversities.com/universities/university-wisconsin-milwaukee
+University of Wolverhampton,1001-1200,https://www.topuniversities.com/universities/university-wolverhampton
+University of Wyoming,1001-1200,https://www.topuniversities.com/universities/university-wyoming
+University of the Free State,1001-1200,https://www.topuniversities.com/universities/university-free-state
+University of the Sunshine Coast,1001-1200,https://www.topuniversities.com/universities/university-sunshine-coast
+University of Zilina,1001-1200,https://www.topuniversities.com/universities/university-zilina
+Università degli Studi della Tuscia (University of Tuscia),1001-1200,https://www.topuniversities.com/universities/universita-degli-studi-della-tuscia-university-tuscia
+Università degli Studi di Udine,1001-1200,https://www.topuniversities.com/universities/universita-degli-studi-di-udine
+University of Salento,1001-1200,https://www.topuniversities.com/universities/university-salento
+Universität Siegen,1001-1200,https://www.topuniversities.com/universities/universitat-siegen
+Université Lumière Lyon 2,1001-1200,https://www.topuniversities.com/universities/universite-lumiere-lyon-2
+Université de Caen Normandie,1001-1200,https://www.topuniversities.com/universities/universite-de-caen-basse-normandie
+Université de Poitiers,1001-1200,https://www.topuniversities.com/universities/universite-de-poitiers
+Université de Sousse,1001-1200,https://www.topuniversities.com/universities/universite-de-sousse
+Université Toulouse - Jean Jaurès,1001-1200,https://www.topuniversities.com/universities/universite-toulouse-jean-jaures
+Utah State University,1001-1200,https://www.topuniversities.com/universities/utah-state-university
+VSB - Technical University of Ostrava,1001-1200,https://www.topuniversities.com/universities/vsb-technical-university-ostrava
+Vancouver Island University,1001-1200,https://www.topuniversities.com/universities/vancouver-island-university
+Warsaw University of Life Sciences  SGGW (WULS-SGGW),1001-1200,https://www.topuniversities.com/universities/warsaw-university-life-sciences-sggw-wuls-sggw
+Western Michigan University,1001-1200,https://www.topuniversities.com/universities/western-michigan-university
+Xi'an Jiaotong Liverpool University,1001-1200,https://www.topuniversities.com/universities/xian-jiaotong-liverpool-university
+Yamaguchi University,1001-1200,https://www.topuniversities.com/universities/yamaguchi-university
+Yarmouk University,1001-1200,https://www.topuniversities.com/universities/yarmouk-university
+Yerevan State University,1001-1200,https://www.topuniversities.com/universities/yerevan-state-university
+Al-Azhar University,1201-1400,https://www.topuniversities.com/universities/al-azhar-university
+Alexandru Ioan Cuza University,1201-1400,https://www.topuniversities.com/universities/alexandru-ioan-cuza-university
+Anadolu University,1201-1400,https://www.topuniversities.com/universities/anadolu-university
+Atma Jaya Catholic University of Indonesia,1201-1400,https://www.topuniversities.com/universities/atma-jaya-catholic-university-indonesia
+Azerbaijan State Oil and Industry University,1201-1400,https://www.topuniversities.com/universities/azerbaijan-state-oil-industry-university
+Bahauddin Zakariya University,1201-1400,https://www.topuniversities.com/universities/bahauddin-zakariya-university
+Belarusian State University of Informatics and Radioelectronics,1201-1400,https://www.topuniversities.com/universities/belarusian-state-university-informatics-radioelectronics
+Benemerita Universidad Autonoma de Puebla,1201-1400,https://www.topuniversities.com/universities/benemerita-universidad-autonoma-de-puebla
+Birzeit university,1201-1400,https://www.topuniversities.com/universities/birzeit-university
+British University in Egypt,1201-1400,https://www.topuniversities.com/universities/british-university-egypt
+Brock University,1201-1400,https://www.topuniversities.com/universities/brock-university
+The City College of New York,1201-1400,https://www.topuniversities.com/universities/city-college-new-york
+California Polytechnic State University,1201-1400,https://www.topuniversities.com/universities/california-polytechnic-state-university
+California State University - Long Beach,1201-1400,https://www.topuniversities.com/universities/california-state-university-long-beach
+Universidad Católica de Córdoba (UCC),1201-1400,https://www.topuniversities.com/universities/universidad-catolica-de-cordoba-ucc
+Central Michigan University,1201-1400,https://www.topuniversities.com/universities/central-michigan-university
+Chaoyang University of Technology,1201-1400,https://www.topuniversities.com/universities/chaoyang-university-technology
+Chitkara University,1201-1400,https://www.topuniversities.com/universities/chitkara-university
+Chittagong University of Engineering and Technology,1201-1400,https://www.topuniversities.com/universities/chittagong-university-engineering-technology
+Cleveland State University,1201-1400,https://www.topuniversities.com/universities/cleveland-state-university
+Daffodil International University,1201-1400,https://www.topuniversities.com/universities/daffodil-international-university
+Damascus University,1201-1400,https://www.topuniversities.com/universities/damascus-university
+Dokuz Eylul Universitesi,1201-1400,https://www.topuniversities.com/universities/dokuz-eylul-universitesi
+Don State Technical University,1201-1400,https://www.topuniversities.com/universities/don-state-technical-university
+East West University,1201-1400,https://www.topuniversities.com/universities/east-west-university
+Erciyes University,1201-1400,https://www.topuniversities.com/universities/erciyes-university
+Feng Chia University,1201-1400,https://www.topuniversities.com/universities/feng-chia-university
+Florida Atlantic University - Boca Raton,1201-1400,https://www.topuniversities.com/universities/florida-atlantic-university-boca-raton
+Fu Jen Catholic University,1201-1400,https://www.topuniversities.com/universities/fu-jen-catholic-university
+Fundación Universidad de Bogotá Jorge Tadeo Lozano,1201-1400,https://www.topuniversities.com/universities/fundacion-universidad-de-bogota-jorge-tadeo-lozano
+Gebze Technical University (GTU),1201-1400,https://www.topuniversities.com/universities/gebze-technical-university-gtu
+Hanoi University of Science and Technology,1201-1400,https://www.topuniversities.com/universities/hanoi-university-science-technology
+Helwan University,1201-1400,https://www.topuniversities.com/universities/helwan-university
+Hohai University,1201-1400,https://www.topuniversities.com/universities/hohai-university
+Hongik University,1201-1400,https://www.topuniversities.com/universities/hongik-university
+Indiana State University,1201-1400,https://www.topuniversities.com/universities/indiana-state-university
+"International Islamic University, Islamabad (IIU)",1201-1400,https://www.topuniversities.com/universities/international-islamic-university-islamabad-iiu
+Istanbul Aydin University,1201-1400,https://www.topuniversities.com/universities/istanbul-aydin-university
+Istanbul Bilgi Üniversitesi,1201-1400,https://www.topuniversities.com/universities/istanbul-bilgi-universitesi
+Ivan Franko National University of Lviv,1201-1400,https://www.topuniversities.com/universities/ivan-franko-national-university-lviv
+Izmir Institute of Technology (IZTECH),1201-1400,https://www.topuniversities.com/universities/izmir-institute-technology-iztech
+Jahangirnagar University,1201-1400,https://www.topuniversities.com/universities/jahangirnagar-university
+Jamia Hamdard,1201-1400,https://www.topuniversities.com/universities/jamia-hamdard
+Jeju National University,1201-1400,https://www.topuniversities.com/universities/jeju-national-university
+Kenyatta University,1201-1400,https://www.topuniversities.com/universities/kenyatta-university
+Khulna University of Engineering and Technology,1201-1400,https://www.topuniversities.com/universities/khulna-university-engineering-technology
+Kindai University (Kinki University),1201-1400,https://www.topuniversities.com/universities/kindai-university-kinki-university
+King Mongkut's University of Technology North Bangkok,1201-1400,https://www.topuniversities.com/universities/king-mongkuts-university-technology-north-bangkok
+King Mongkut's Institute of Technology Ladkrabang,1201-1400,https://www.topuniversities.com/universities/king-mongkuts-institute-technology-ladkrabang
+Korkyt Ata Kyzylorda University,1201-1400,https://www.topuniversities.com/universities/korkyt-ata-kyzylorda-university
+Kwansei Gakuin University,1201-1400,https://www.topuniversities.com/universities/kwansei-gakuin-university
+Lucian Blaga University of Sibiu,1201-1400,https://www.topuniversities.com/universities/lucian-blaga-university-sibiu
+M.Kh.Dulaty Taraz Regional University,1201-1400,https://www.topuniversities.com/universities/mkhdulaty-taraz-regional-university
+Marmara University,1201-1400,https://www.topuniversities.com/universities/marmara-university
+Marquette University,1201-1400,https://www.topuniversities.com/universities/marquette-university
+Mendeleev University of Chemical Technology,1201-1400,https://www.topuniversities.com/universities/mendeleev-university-chemical-technology
+Miami University,1201-1400,https://www.topuniversities.com/universities/miami-university
+Moscow Pedagogical State University,1201-1400,https://www.topuniversities.com/universities/moscow-pedagogical-state-university
+Nagoya Institute of Technology (NIT),1201-1400,https://www.topuniversities.com/universities/nagoya-institute-technology-nit
+Narxoz University,1201-1400,https://www.topuniversities.com/universities/narxoz-university
+National Dong Hwa University,1201-1400,https://www.topuniversities.com/universities/national-dong-hwa-university
+National Research University Moscow Power Engineering Institute (MPEI),1201-1400,https://www.topuniversities.com/universities/national-research-university-moscow-power-engineering-institute-mpei
+National Taipei University,1201-1400,https://www.topuniversities.com/universities/national-taipei-university
+National Taiwan Ocean University,1201-1400,https://www.topuniversities.com/universities/national-taiwan-ocean-university
+National University of Life and Environmental sciences of Ukraine,1201-1400,https://www.topuniversities.com/universities/national-university-life-environmental-sciences-ukraine
+National University of Modern Languages (NUML),1201-1400,https://www.topuniversities.com/universities/national-university-modern-languages-numl
+Norwegian University of Life Sciences,1201-1400,https://www.topuniversities.com/universities/norwegian-university-life-sciences
+Nova Southeastern University,1201-1400,https://www.topuniversities.com/universities/nova-southeastern-university
+OSMANIA UNIVERSITY,1201-1400,https://www.topuniversities.com/universities/osmania-university
+Perm State National Research University,1201-1400,https://www.topuniversities.com/universities/perm-state-national-research-university
+Pondicherry University,1201-1400,https://www.topuniversities.com/universities/pondicherry-university
+Pontificia Universidad Católica Madre y Maestra (PUCMM),1201-1400,https://www.topuniversities.com/universities/pontificia-universidad-catolica-madre-y-maestra-pucmm
+"Pontifícia Universidade Católica do Rio Grande do Sul, PUCRS",1201-1400,https://www.topuniversities.com/universities/pontificia-universidade-catolica-do-rio-grande-do-sul-pucrs
+Pukyong National University,1201-1400,https://www.topuniversities.com/universities/pukyong-national-university
+Rikkyo University,1201-1400,https://www.topuniversities.com/universities/rikkyo-university
+Russian State Agrarian University - Moscow Timiryazev Agricultural Academy,1201-1400,https://www.topuniversities.com/universities/russian-state-agrarian-university-moscow-timiryazev-agricultural-academy
+Russian State University for the Humanities,1201-1400,https://www.topuniversities.com/universities/russian-state-university-humanities
+Rutgers University–Camden,1201-1400,https://www.topuniversities.com/universities/rutgers-university-camden
+SRM Institute of Science and Technology,1201-1400,https://www.topuniversities.com/universities/srm-institute-science-technology
+Saitama University,1201-1400,https://www.topuniversities.com/universities/saitama-university
+Saken Seifullin Kazakh Agrotechnical University,1201-1400,https://www.topuniversities.com/universities/saken-seifullin-kazakh-agrotechnical-university
+San Francisco State University,1201-1400,https://www.topuniversities.com/universities/san-francisco-state-university
+Seattle University,1201-1400,https://www.topuniversities.com/universities/seattle-university
+Shanghai Normal University,1201-1400,https://www.topuniversities.com/universities/shanghai-normal-university
+Shanghai University of Finance and Economics,1201-1400,https://www.topuniversities.com/universities/shanghai-university-finance-economics
+Shibaura Institute of Technology,1201-1400,https://www.topuniversities.com/universities/shibaura-institute-technology
+"Siksha ‘O’ Anusandhan (Deemed to be University), SOA",1201-1400,https://www.topuniversities.com/universities/siksha-o-anusandhan-deemed-be-university-soa
+Sookmyung Women's University,1201-1400,https://www.topuniversities.com/universities/sookmyung-womens-university
+Soongsil University,1201-1400,https://www.topuniversities.com/universities/soongsil-university
+Stefan cel Mare University of Suceava,1201-1400,https://www.topuniversities.com/universities/stefan-cel-mare-university-suceava
+Suez Canal University,1201-1400,https://www.topuniversities.com/universities/suez-canal-university
+"Süleyman Demirel University, Turkey",1201-1400,https://www.topuniversities.com/universities/suleyman-demirel-university-turkey
+Suleyman Demirel University,1201-1400,https://www.topuniversities.com/universities/suleyman-demirel-university
+Suranaree University of Technology,1201-1400,https://www.topuniversities.com/universities/suranaree-university-technology
+Tamkang University,1201-1400,https://www.topuniversities.com/universities/tamkang-university
+Tanta University,1201-1400,https://www.topuniversities.com/universities/tanta-university
+Technical University of Cluj-Napoca,1201-1400,https://www.topuniversities.com/universities/technical-university-cluj-napoca
+Technical University of Lublin,1201-1400,https://www.topuniversities.com/universities/technical-university-lublin
+"The ""Gheorghe Asachi"" Technical University of Iasi",1201-1400,https://www.topuniversities.com/universities/gheorghe-asachi-technical-university-iasi
+The Hashemite University,1201-1400,https://www.topuniversities.com/universities/hashemite-university
+The Herzen State Pedagogical University of Russia,1201-1400,https://www.topuniversities.com/universities/herzen-state-pedagogical-university-russia
+"The National Research University ""Belgorod State University""",1201-1400,https://www.topuniversities.com/universities/national-research-university-belgorod-state-university
+Toraighyrov University,1201-1400,https://www.topuniversities.com/universities/toraighyrov-university
+Transilvania University of Brasov,1201-1400,https://www.topuniversities.com/universities/transilvania-university-brasov
+Tunghai University,1201-1400,https://www.topuniversities.com/universities/tunghai-university
+United International University,1201-1400,https://www.topuniversities.com/universities/united-international-university
+Universidad Alberto Hurtado,1201-1400,https://www.topuniversities.com/universities/universidad-alberto-hurtado
+Universidad Autónoma de Aguascalientes (UAA),1201-1400,https://www.topuniversities.com/universities/universidad-autonoma-de-aguascalientes-uaa
+Universidad Autónoma de Baja California,1201-1400,https://www.topuniversities.com/universities/universidad-autonoma-de-baja-california
+Universidad Bernardo O'Higgins,1201-1400,https://www.topuniversities.com/universities/universidad-bernardo-ohiggins
+Universidad Católica de Temuco,1201-1400,https://www.topuniversities.com/universities/universidad-catolica-de-temuco
+Universidad Católica del Norte,1201-1400,https://www.topuniversities.com/universities/universidad-catolica-del-norte
+Universidad Central del Ecuador,1201-1400,https://www.topuniversities.com/universities/universidad-central-del-ecuador
+Universidad Mayor de San Andrés (UMSA),1201-1400,https://www.topuniversities.com/universities/universidad-mayor-de-san-andres-umsa
+Universidad Nacional Agraria la Molina,1201-1400,https://www.topuniversities.com/universities/universidad-nacional-agraria-la-molina
+Universidad Nacional de Río Cuarto - UNRC,1201-1400,https://www.topuniversities.com/universities/universidad-nacional-de-rio-cuarto-unrc
+Universidad Nacional de San Martín (UNSAM),1201-1400,https://www.topuniversities.com/universities/universidad-nacional-de-san-martin-unsam
+Universidad Nacional del Comahue,1201-1400,https://www.topuniversities.com/universities/universidad-nacional-del-comahue
+Universidad Nacional del Litoral,1201-1400,https://www.topuniversities.com/universities/universidad-nacional-del-litoral
+Universidad Popular Autónoma del Estado de Puebla (UPAEP),1201-1400,https://www.topuniversities.com/universities/universidad-popular-autonoma-del-estado-de-puebla-upaep
+Universidad San Ignacio de Loyola,1201-1400,https://www.topuniversities.com/universities/universidad-san-ignacio-de-loyola
+"Universidad Tecnológica de la Habana José Antonio Echeverría, Cujae",1201-1400,https://www.topuniversities.com/universities/universidad-tecnologica-de-la-habana-jose-antonio-echeverria-cujae
+Universidad Veracruzana,1201-1400,https://www.topuniversities.com/universities/universidad-veracruzana
+Universidad de Carabobo,1201-1400,https://www.topuniversities.com/universities/universidad-de-carabobo
+Universidad de Cartagena,1201-1400,https://www.topuniversities.com/universities/universidad-de-cartagena
+Universidad de Córdoba - Colombia,1201-1400,https://www.topuniversities.com/universities/universidad-de-cordoba-colombia
+Universidad de Guanajuato,1201-1400,https://www.topuniversities.com/universities/universidad-de-guanajuato
+Universidad de La Frontera (UFRO),1201-1400,https://www.topuniversities.com/universities/universidad-de-la-frontera-ufro
+Universidad de Las Américas Ecuador,1201-1400,https://www.topuniversities.com/universities/universidad-de-las-americas-ecuador
+Universidad de Panamá - UP,1201-1400,https://www.topuniversities.com/universities/universidad-de-panama
+Universidad de Piura,1201-1400,https://www.topuniversities.com/universities/universidad-de-piura
+Universidad de San Carlos de Guatemala,1201-1400,https://www.topuniversities.com/universities/universidad-de-san-carlos-de-guatemala
+Universidad de Valparaíso (UV),1201-1400,https://www.topuniversities.com/universities/universidad-de-valparaiso-uv
+Universidad de las Fuerzas Armadas ESPE (Ex - Escuela Politécnica del Ejército),1201-1400,https://www.topuniversities.com/universities/universidad-de-las-fuerzas-armadas-espe-ex-escuela-politecnica-del-ejercito
+Universidad del Bío-Bío,1201-1400,https://www.topuniversities.com/universities/universidad-del-bio-bio
+Universidad del Cauca,1201-1400,https://www.topuniversities.com/universities/universidad-del-cauca
+Universidad del Desarrollo (UDD),1201-1400,https://www.topuniversities.com/universities/universidad-del-desarrollo-udd
+Universidad del Salvador,1201-1400,https://www.topuniversities.com/universities/universidad-del-salvador
+Universidad del Zulia,1201-1400,https://www.topuniversities.com/universities/universidad-del-zulia
+Universidade Federal Fluminense,1201-1400,https://www.topuniversities.com/universities/universidade-federal-fluminense
+Universidade Federal da Bahia,1201-1400,https://www.topuniversities.com/universities/universidade-federal-da-bahia
+Universidade Federal de Juiz de Fora- (UFJF),1201-1400,https://www.topuniversities.com/universities/universidade-federal-de-juiz-de-fora-ufjf
+Universidade Federal de Pelotas,1201-1400,https://www.topuniversities.com/universities/universidade-federal-de-pelotas
+Universidade Federal de Viçosa (UFV),1201-1400,https://www.topuniversities.com/universities/universidade-federal-de-vicosa-ufv
+Universidade Federal do Ceará (UFC),1201-1400,https://www.topuniversities.com/universities/universidade-federal-do-ceara-ufc
+Universidade Presbiteriana Mackenzie,1201-1400,https://www.topuniversities.com/universities/universidade-presbiteriana-mackenzie
+Universidade do Estado do Rio de Janeiro (UERJ),1201-1400,https://www.topuniversities.com/universities/universidade-do-estado-do-rio-de-janeiro-uerj
+Universitas Islam Indonesia,1201-1400,https://www.topuniversities.com/universities/universitas-islam-indonesia
+Universitas Muhammadiyah Yogyakarta,1201-1400,https://www.topuniversities.com/universities/universitas-muhammadiyah-yogyakarta
+Universitas Pendidikan Indonesia,1201-1400,https://www.topuniversities.com/universities/universitas-pendidikan-indonesia
+Universitas Sumatera Utara,1201-1400,https://www.topuniversities.com/universities/universitas-sumatera-utara
+Universitatea de Vest din Timisoara /  West University of Timisoara,1201-1400,https://www.topuniversities.com/universities/universitatea-de-vest-din-timisoara-west-university-timisoara
+Universiti Sains Islam Malaysia,1201-1400,https://www.topuniversities.com/universities/universiti-sains-islam-malaysia
+UNIVERSITI TEKNIKAL MALAYSIA MELAKA,1201-1400,https://www.topuniversities.com/universities/universiti-teknikal-malaysia-melaka
+University POLITEHNICA of Bucharest,1201-1400,https://www.topuniversities.com/universities/university-politehnica-bucharest
+University of Babylon,1201-1400,https://www.topuniversities.com/universities/university-babylon
+University of Basrah,1201-1400,https://www.topuniversities.com/universities/university-basrah
+University of Central Oklahoma,1201-1400,https://www.topuniversities.com/universities/university-central-oklahoma
+University of Iceland,1201-1400,https://www.topuniversities.com/universities/university-iceland
+University of International Business and Economics,1201-1400,https://www.topuniversities.com/universities/university-international-business-economics
+University of Khartoum,1201-1400,https://www.topuniversities.com/universities/university-khartoum
+University of Kufa,1201-1400,https://www.topuniversities.com/universities/university-kufa
+University of Memphis,1201-1400,https://www.topuniversities.com/universities/university-memphis
+University of Miskolc,1201-1400,https://www.topuniversities.com/universities/university-miskolc
+University of Missouri Saint Louis,1201-1400,https://www.topuniversities.com/universities/university-missouri-saint-louis
+University of Montana Missoula,1201-1400,https://www.topuniversities.com/universities/university-montana-missoula
+University of Niš,1201-1400,https://www.topuniversities.com/universities/university-nis
+University of North Carolina at Greensboro,1201-1400,https://www.topuniversities.com/universities/university-north-carolina-greensboro
+University of Ostrava,1201-1400,https://www.topuniversities.com/universities/university-ostrava
+University of Pannonia,1201-1400,https://www.topuniversities.com/universities/university-pannonia
+University of Peradeniya,1201-1400,https://www.topuniversities.com/universities/university-peradeniya
+University of Rzeszów,1201-1400,https://www.topuniversities.com/universities/university-rzeszow
+University of San Carlos,1201-1400,https://www.topuniversities.com/universities/university-san-carlos
+University of San Diego,1201-1400,https://www.topuniversities.com/universities/university-san-diego
+University of Sarajevo,1201-1400,https://www.topuniversities.com/universities/university-sarajevo
+University of Silesia in Katowice,1201-1400,https://www.topuniversities.com/universities/university-silesia-katowice
+University of South Alabama (USA),1201-1400,https://www.topuniversities.com/universities/university-south-alabama-usa
+University of Split,1201-1400,https://www.topuniversities.com/universities/university-split
+University of Warmia and Mazury in Olsztyn,1201-1400,https://www.topuniversities.com/universities/university-warmia-mazury-olsztyn
+University of West Bohemia,1201-1400,https://www.topuniversities.com/universities/university-west-bohemia
+University of the Pacific,1201-1400,https://www.topuniversities.com/universities/university-pacific
+Università degli studi di Bergamo,1201-1400,https://www.topuniversities.com/universities/universita-degli-studi-di-bergamo
+Université Jean Moulin Lyon 3,1201-1400,https://www.topuniversities.com/universities/universite-jean-moulin-lyon-3
+Université Mohammed V de Rabat,1201-1400,https://www.topuniversities.com/universities/universite-mohammed-v-de-rabat
+Université Paris-Nanterre,1201-1400,https://www.topuniversities.com/universities/universite-paris-nanterre
+Université de Limoges,1201-1400,https://www.topuniversities.com/universities/universite-de-limoges
+Université de Tunis,1201-1400,https://www.topuniversities.com/universities/universite-de-tunis
+Voronezh State University,1201-1400,https://www.topuniversities.com/universities/voronezh-state-university
+Universitas Negeri Yogyakarta,1201-1400,https://www.topuniversities.com/universities/universitas-negeri-yogyakarta
+Youngsan University,1201-1400,https://www.topuniversities.com/universities/youngsan-university
+Yuan Ze University,1201-1400,https://www.topuniversities.com/universities/yuan-ze-university
+Zagazig University,1201-1400,https://www.topuniversities.com/universities/zagazig-university
+Óbuda University,1201-1400,https://www.topuniversities.com/universities/obuda-university
+Akdeniz Üniversitesi,1401+,https://www.topuniversities.com/universities/akdeniz-universitesi
+Al-Balqa Applied University,1401+,https://www.topuniversities.com/universities/al-balqa-applied-university
+Ataturk University,1401+,https://www.topuniversities.com/universities/ataturk-university
+California State University - Los Angeles,1401+,https://www.topuniversities.com/universities/california-state-university-los-angeles
+Cukurova University,1401+,https://www.topuniversities.com/universities/cukurova-university
+Georgian Technical University,1401+,https://www.topuniversities.com/universities/georgian-technical-university
+Humboldt State University,1401+,https://www.topuniversities.com/universities/humboldt-state-university
+Illinois State University,1401+,https://www.topuniversities.com/universities/illinois-state-university
+Indian Statistical Institute,1401+,https://www.topuniversities.com/universities/indian-statistical-institute
+"International University of Business, Agriculture and Technology (IUBAT)",1401+,https://www.topuniversities.com/universities/international-university-business-agriculture-technology-iubat
+Irkutsk State University,1401+,https://www.topuniversities.com/universities/irkutsk-state-university
+Khulna University,1401+,https://www.topuniversities.com/universities/khulna-university
+Kwame Nkrumah University of Science and Technology,1401+,https://www.topuniversities.com/universities/kwame-nkrumah-university-science-technology
+MIREA - Russian Technological University,1401+,https://www.topuniversities.com/universities/mirea-russian-technological-university
+Moscow City University,1401+,https://www.topuniversities.com/universities/moscow-city-university
+Nara Institute of Science and Technology,1401+,https://www.topuniversities.com/universities/nara-institute-science-technology
+Pontifícia Universidade Católica de Campinas,1401+,https://www.topuniversities.com/universities/pontificia-universidade-catolica-de-campinas
+Pontifícia Universidade Católica de Minas Gerais,1401+,https://www.topuniversities.com/universities/pontificia-universidade-catolica-de-minas-gerais
+Pontifícia Universidade Católica do Paraná,1401+,https://www.topuniversities.com/universities/pontificia-universidade-catolica-do-parana
+University of Rajshahi,1401+,https://www.topuniversities.com/universities/university-rajshahi
+Shahjalal University of Science and Technology,1401+,https://www.topuniversities.com/universities/shahjalal-university-science-technology
+Soochow University (Taiwan),1401+,https://www.topuniversities.com/universities/soochow-university-taiwan
+Stamford University Bangladesh,1401+,https://www.topuniversities.com/universities/stamford-university-bangladesh
+State University of Malang (Universitas Negeri Malang),1401+,https://www.topuniversities.com/universities/state-university-malang-universitas-negeri-malang
+Sudan University of Science and Technology,1401+,https://www.topuniversities.com/universities/sudan-university-science-technology
+Technical University of Crete,1401+,https://www.topuniversities.com/universities/technical-university-crete
+Technische Universität Bergakademie Freiberg,1401+,https://www.topuniversities.com/universities/technische-universitat-bergakademie-freiberg
+Technische Universität Hamburg,1401+,https://www.topuniversities.com/universities/technische-universitat-hamburg
+University of Kaiserslautern-Landau(RPTU),1401+,https://www.topuniversities.com/universities/university-kaiserslautern-landaurptu
+"The University of Notre Dame, Australia",1401+,https://www.topuniversities.com/universities/university-notre-dame-australia
+Universidad Politécnica Salesiana,1401+,https://www.topuniversities.com/universities/universidad-politecnica-salesiana
+Udayana University,1401+,https://www.topuniversities.com/universities/udayana-university
+Universidad Autonoma de Yucatan,1401+,https://www.topuniversities.com/universities/universidad-autonoma-de-yucatan
+Universidad Autónoma de Chile,1401+,https://www.topuniversities.com/universities/universidad-autonoma-de-chile
+Universidad Autónoma de San Luis de Potosí,1401+,https://www.topuniversities.com/universities/universidad-autonoma-de-san-luis-de-potosi
+Universidad Autónoma del Estado de Morelos (UAEM),1401+,https://www.topuniversities.com/universities/universidad-autonoma-del-estado-de-morelos-uaem
+"Universidad Católica Boliviana ""San Pablo""",1401+,https://www.topuniversities.com/universities/universidad-catolica-boliviana
+Universidad Católica de Colombia,1401+,https://www.topuniversities.com/universities/universidad-catolica-de-colombia
+Universidad Católica de la Santísima Concepción (UCSC),1401+,https://www.topuniversities.com/universities/universidad-catolica-de-la-santisima-concepcion-ucsc
+Universidad Católica de Santiago de Guayaquil,1401+,https://www.topuniversities.com/universities/universidad-catolica-de-santiago-de-guayaquil
+Universidad Central de Chile,1401+,https://www.topuniversities.com/universities/universidad-central-de-chile
+Universidad Mayor de San Simón,1401+,https://www.topuniversities.com/universities/universidad-mayor-de-san-simon
+Universidad de San Nicolás de Hidalgo,1401+,https://www.topuniversities.com/universities/universidad-de-san-nicolas-de-hidalgo
+Universidad Nacional Autónoma de Honduras (UNAH),1401+,https://www.topuniversities.com/universities/universidad-nacional-autonoma-de-honduras-unah
+Universidad Nacional de Quilmes,1401+,https://www.topuniversities.com/universities/universidad-nacional-de-quilmes
+Universidad Nacional de Tucumà¡n,1401+,https://www.topuniversities.com/universities/universidad-nacional-de-tucuman
+Universidad Nacional del Sur,1401+,https://www.topuniversities.com/universities/universidad-nacional-del-sur
+Universidad Técnica Particular de Loja,1401+,https://www.topuniversities.com/universities/universidad-tecnica-particular-de-loja
+Universidad Tecnológica de Pereira,1401+,https://www.topuniversities.com/universities/universidad-tecnologica-de-pereira
+Universidad de Caldas,1401+,https://www.topuniversities.com/universities/universidad-de-caldas
+Universidad de Cuenca,1401+,https://www.topuniversities.com/universities/universidad-de-cuenca
+Universidad de La Salle,1401+,https://www.topuniversities.com/universities/universidad-de-la-salle
+Universidad de La Serena,1401+,https://www.topuniversities.com/universities/universidad-de-la-serena
+Universidad de Santander - UDES,1401+,https://www.topuniversities.com/universities/universidad-de-santander-udes
+Universidad de Sonora,1401+,https://www.topuniversities.com/universities/universidad-de-sonora
+Universidad de Tarapaca,1401+,https://www.topuniversities.com/universities/universidad-de-tarapaca
+Universidad del Magdalena,1401+,https://www.topuniversities.com/universities/universidad-del-magdalena
+Universidad del Valle de México (UVM),1401+,https://www.topuniversities.com/universities/universidad-del-valle-de-mexico-uvm
+Universidade Estadual de Londrina,1401+,https://www.topuniversities.com/universities/universidade-estadual-de-londrina
+Universidade Federal da Paraíba,1401+,https://www.topuniversities.com/universities/universidade-federal-da-paraba
+Universidade Federal de Goiás,1401+,https://www.topuniversities.com/universities/universidade-federal-de-goias
+Universidade Federal de Uberlândia,1401+,https://www.topuniversities.com/universities/universidade-federal-de-uberlandia
+Universidade Federal do Pará,1401+,https://www.topuniversities.com/universities/universidade-federal-do-para
+Universidade Federal do Rio Grande Do Norte,1401+,https://www.topuniversities.com/universities/universidade-federal-do-rio-grande-do-norte
+Universidade do Estado de Santa Catarina,1401+,https://www.topuniversities.com/universities/universidade-do-estado-de-santa-catarina
+Universitas Andalas,1401+,https://www.topuniversities.com/universities/universitas-andalas
+Petra Christian University,1401+,https://www.topuniversities.com/universities/petra-christian-university
+Universitas Muhammadiyah Surakarta,1401+,https://www.topuniversities.com/universities/universitas-muhammadiyah-surakarta
+"Politehnica University Timisoara, UPT",1401+,https://www.topuniversities.com/universities/politehnica-university-timisoara-upt
+University of Craiova,1401+,https://www.topuniversities.com/universities/university-craiova
+University of Ibadan,1401+,https://www.topuniversities.com/universities/university-ibadan
+University of Kragujevac,1401+,https://www.topuniversities.com/universities/university-kragujevac
+University of Lagos,1401+,https://www.topuniversities.com/universities/university-lagos
+University of Lampung,1401+,https://www.topuniversities.com/universities/university-lampung
+University of Mataram,1401+,https://www.topuniversities.com/universities/university-mataram
+University of Oradea,1401+,https://www.topuniversities.com/universities/university-oradea
+Université Paris 13 Nord,1401+,https://www.topuniversities.com/universities/universite-paris-13-nord
+Western Washington University,1401+,https://www.topuniversities.com/universities/western-washington-university
+Zurich University of Applied Sciences (ZHAW),1401+,https://www.topuniversities.com/universities/zurich-university-applied-sciences-zhaw
