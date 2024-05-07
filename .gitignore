@@ -7,3 +7,5 @@ university_info_generator/configs/uforseAdminKey.json
 cache_repo/
 cache_repo/*.jsonl
 /university_info_generator/build/
+/university_info_generator/fetcher/ranking_fetcher/*.ipynb
+/university_info_generator/fetcher/ranking_fetcher/ranking_data/*.jsonl
