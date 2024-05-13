@@ -38,18 +38,18 @@ import time
 
 from university_info_generator.configs import config
 from university_info_generator.configs.enum_class import (
-    AttributeColumnType,
+    UniversityAttributeColumnType,
     ALL_ATTRIBUTE_NAME,
-    BasicInfoType,
+    UniversityBasicInfoType,
     GPTMethodType,
-    GeneralInfoType,
+    UniversityGeneralInfoType,
     HandlerType,
-    SavedDictType,
+    UniversitySavedDictType,
 )
 from university_info_generator.fetcher._gpt_method import GPTClient
 from university_info_generator.fetcher._langchain_method import LanchainWrapper
 from university_info_generator.fetcher._tuition_crawl import TuitionCrawl
-from university_info_generator.fetcher.ranking_fetcher import RankingFetcher
+from university_info_generator.fetcher.website_fetcher import WebsiteFetcher
 from university_info_generator.university import University
 from university_info_generator.utility.save_load_utility import load_cache, store_cache
 
@@ -124,7 +124,7 @@ class UniversityInfoGenerator:
         self.gpt_cache_dict = gpt_cache_list
         self.tuition_crawl = TuitionCrawl()
         self.gpt_client = GPTClient()
-        self.ranking_fetcher = RankingFetcher()
+        self.website_fetcher = WebsiteFetcher()
         self.trouble_produced_dict = {}
         # self.get_retrieved_attr = LanchainWrapper.get_retrieved_attr_with_format
 
@@ -135,7 +135,7 @@ class UniversityInfoGenerator:
         print("fine_tuning")
         raise NotImplementedError()
 
-    def get_specific_dict_from_type(self, dict_type: SavedDictType) -> Dict[str, str]:
+    def get_specific_dict_from_type(self, dict_type: UniversitySavedDictType) -> Dict[str, str]:
         """
         Retrieves a specific dictionary based on the given dictionary type from an enumerated list.
 
@@ -147,7 +147,7 @@ class UniversityInfoGenerator:
             Dict[str, str]: The dictionary corresponding to the provided dictionary type.
         """
         # Check if the provided dict_type is indeed an instance of SavedDictType
-        if not isinstance(dict_type, SavedDictType):
+        if not isinstance(dict_type, UniversitySavedDictType):
             raise ValueError(f"Invalid type provided: {dict_type}. Expected a SavedDictType instance.")
         dict_attr_name = dict_type.name.lower() + "_dict"
         if not hasattr(self, dict_attr_name):
@@ -155,12 +155,12 @@ class UniversityInfoGenerator:
         return getattr(self, dict_attr_name)
 
     @classmethod
-    def unpack_params(cls, params: Dict[str, Any], name: Union[str, AttributeColumnType]):
+    def unpack_params(cls, params: Dict[str, Any], name: Union[str, UniversityAttributeColumnType]):
         # Access the appropriate dictionary based on the enum name
         return params.get(str(name), "")
 
     @lru_cache(maxsize=config.CACHE_MAX_SIZE)
-    def get_university_basic_info(self, param: str, param_type: BasicInfoType) -> Dict[str, str]:
+    def get_university_basic_info(self, param: str, id_: int, param_type: UniversityBasicInfoType) -> Dict[str, str]:
         """
         Retrieves basic information about a university based on a specified parameter and its type.
 
@@ -180,9 +180,9 @@ class UniversityInfoGenerator:
         Raises:
             ValueError: If an invalid type is provided that is not recognized by `BasicInfoType`.
         """
-        if param_type not in BasicInfoType:
+        if param_type not in UniversityBasicInfoType:
             raise ValueError(f"Invalid type provided: {param_type}. Expected a BasicInfoType.")
-        if param_type == BasicInfoType.UNIVERSITY_NAME and param in self.university_basic_info_dict:
+        if param_type == UniversityBasicInfoType.UNIVERSITY_NAME and param in self.university_basic_info_dict:
             return self.university_basic_info_dict[param]
         gpt_dict_key = str((param, GPTMethodType.BASIC_INFO))
         if gpt_dict_key in self.gpt_cache_dict:
@@ -190,7 +190,8 @@ class UniversityInfoGenerator:
             return result
         json_str = self.gpt_client.get_university_name_from_gpt(param)
         target_data = json.loads(json_str)
-        uni_name = target_data[BasicInfoType.UNIVERSITY_NAME.name.lower()]
+        target_data.update({"id_": id_})
+        uni_name = target_data[UniversityBasicInfoType.UNIVERSITY_NAME.name.lower()]
         self.gpt_cache_dict[str((uni_name, GPTMethodType.BASIC_INFO))] = (target_data, [])
         if param != uni_name:
             self.gpt_cache_dict[str((param, GPTMethodType.BASIC_INFO))] = (target_data, [])
@@ -245,7 +246,7 @@ class UniversityInfoGenerator:
         if not isinstance(handler, HandlerType):
             raise ValueError(f"Expect a member of HandlerType, but got {handler}")
         university_json = self.initialize_university_json(university_name)
-        university_json, reference = self.add_basic_university_info(university_json, university_name)
+        university_json, reference = self.add_basic_university_info(university_json, university_name, id_=0)
         university_name = temp if university_name != (temp := university_json["university_name"]) else university_name
 
         university_json = {}
@@ -280,7 +281,7 @@ class UniversityInfoGenerator:
         return {"id_": id_, "university_name": university_name}
 
     def add_basic_university_info(
-        self, university_json: Dict[str, str], university_name
+        self, university_json: Dict[str, str], university_name:str, id_:int
     ) -> Tuple[Dict[str, str], List[str]]:
         """
         Adds basic university information to the provided university JSON dictionary based on a given university name.
@@ -318,7 +319,7 @@ class UniversityInfoGenerator:
             >>> print(references)
             'https://www.example.edu https://en.wikipedia.org/wiki/Example_University'
         """
-        basic_json = self.get_university_basic_info(param=university_name, param_type=BasicInfoType.UNIVERSITY_NAME)
+        basic_json = self.get_university_basic_info(param=university_name, id_=id_, param_type=UniversityBasicInfoType.UNIVERSITY_NAME)
         university_json.update(basic_json)
         reference = [basic_json.get("website", ""), basic_json.get("wikipedia", "")]
         return university_json, reference
@@ -386,26 +387,26 @@ class UniversityInfoGenerator:
 
         result: Dict[str, Any] = self.attribute_dict[attribute_name].copy()
         result.update(dict_to_unpack)
-        for attribute in AttributeColumnType:
+        for attribute in UniversityAttributeColumnType:
             if not result[attribute.value]:
                 result[attribute.value] = attribute.get_default_value()
 
-        k_value = result[AttributeColumnType.K_VALUE.value]
+        k_value = result[UniversityAttributeColumnType.K_VALUE.value]
         try:
             k_value = int(k_value)
         except ValueError:
             print(f"Cannot convert '{k_value}' to an integer. Use default value instead")
-            k_value = AttributeColumnType.K_VALUE.get_default_value()
+            k_value = UniversityAttributeColumnType.K_VALUE.get_default_value()
         if k_value < 1:
             print(f"expect k_value >= 1, but got {k_value}. Use default value instead")
-            k_value = AttributeColumnType.K_VALUE.get_default_value()
-        reference = result[AttributeColumnType.ATTRIBUTE_REFERENCE.value]
+            k_value = UniversityAttributeColumnType.K_VALUE.get_default_value()
+        reference = result[UniversityAttributeColumnType.ATTRIBUTE_REFERENCE.value]
         if isinstance(reference, str) and len(reference) > 0:
             reference = json.loads(reference)
         elif not isinstance(reference, list):
             reference = []
         result.update(
-            {AttributeColumnType.K_VALUE.value: k_value, AttributeColumnType.ATTRIBUTE_REFERENCE.value: reference}
+            {UniversityAttributeColumnType.K_VALUE.value: k_value, UniversityAttributeColumnType.ATTRIBUTE_REFERENCE.value: reference}
         )
         return result
 
@@ -457,7 +458,7 @@ class UniversityInfoGenerator:
                 params=self.unpack_attribute_dict(attribute_name=attribute_name, dict_to_unpack=pra),
                 name=x,
             ),
-            AttributeColumnType.__all__,
+            UniversityAttributeColumnType.__all__,
         )
         reference.extend(additional_reference)
         generated_attr, generated_reference = self.gpt_client.get_value_and_reference_from_gpt(
@@ -537,12 +538,12 @@ class UniversityInfoGenerator:
                 params=self.unpack_attribute_dict(attribute_name=attribute_name, dict_to_unpack=pra),
                 name=x,
             ),
-            AttributeColumnType.__all__,
+            UniversityAttributeColumnType.__all__,
         )
 
         # pprint(f"{format_} {additional_reference} {example} {extra_prompt} {example} {k_value} {mapping}")
         # pprint(f"process_attribute_with_langchain {(additional_reference)}")
-        if handler == HandlerType.LANGCHAIN_TAVILY and GeneralInfoType.is_ranking(attr_name=attribute_name):
+        if handler == HandlerType.LANGCHAIN_TAVILY and UniversityGeneralInfoType.is_ranking(attr_name=attribute_name):
             func = LanchainWrapper.get_retrieved_ranking_with_format_tavily
         else:
             reference.extend(additional_reference)
@@ -615,10 +616,10 @@ class UniversityInfoGenerator:
         if (university_name in self.university_info_dict):
             return self.university_info_dict[university_name]
         university_json = self.initialize_university_json(university_name, id_=id_)
-        university_json, reference = self.add_basic_university_info(university_json, university_name)
+        university_json, reference = self.add_basic_university_info(university_json, university_name, id_=id_)
         university_name = (
             temp
-            if university_name != (temp := university_json[BasicInfoType.UNIVERSITY_NAME.value])
+            if university_name != (temp := university_json[UniversityBasicInfoType.UNIVERSITY_NAME.value])
             else university_name
         )
         university_json.update({"id_": id_})
@@ -630,24 +631,30 @@ class UniversityInfoGenerator:
                 and len(university_json[attribute_name]) > 0
             ):
                 return
-            if self.attribute_dict[attribute_name][AttributeColumnType.HANDLER.value] == HandlerType.TUITION_CRAWL:
+            if self.attribute_dict[attribute_name][UniversityAttributeColumnType.HANDLER.value] == HandlerType.TUITION_CRAWL:
                 #  if attribute_name in ("domestic_student_tuition", "international_student_tuition")
                 university_json = self.handle_tuition_info(university_json, university_name)
                 if attribute_name in university_json and len(university_json[attribute_name]) > 0:
                     return
             # handle by ranking fetcher
-            if "ranking" in attribute_name:
-                ret_json = self.ranking_fetcher.get_ranking(university_name, attribute_name)
+            if self.attribute_dict[attribute_name][UniversityAttributeColumnType.HANDLER.value] == HandlerType.RANKING_FETCHER:
+                ret_json = self.website_fetcher.get_ranking(university_name, attribute_name)
                 if ret_json:
                     university_json.update({attribute_name: ret_json["rank"]})
                 else:
                     university_json.update({attribute_name: ""})
                 return
+            if self.attribute_dict[attribute_name][UniversityAttributeColumnType.HANDLER.value] == HandlerType.PROGRAM_FETCHER:
+                ret = self.website_fetcher.get_programs(university_name)
+                if ret:
+                    university_json.update({attribute_name: "\n".join(ret)})
             if (
                 handler := self.attribute_dict[attribute_name].get(
-                    AttributeColumnType.HANDLER.value, HandlerType.LANGCHAIN_TAVILY
+                    UniversityAttributeColumnType.HANDLER.value, HandlerType.LANGCHAIN_TAVILY
                 )
-            ) in HandlerType.LANGCHAIN_METHOD:
+            ) in HandlerType.LANGCHAIN_METHOD or attribute_name not in university_json:
+                if attribute_name not in university_json:
+                    handler = HandlerType.LANGCHAIN_TAVILY
                 university_json = self.process_attribute_with_langchain(
                     university_json=university_json,
                     university_name=university_name,
@@ -686,7 +693,7 @@ class UniversityInfoGenerator:
         self.university_info_dict.update({university_name: generated_university})
         return generated_university
 
-    def save_to_file(self, dict_type: SavedDictType, file_path: str):
+    def save_to_file(self, dict_type: UniversitySavedDictType, file_path: str):
         """
         Saves the dictionary specified by dict_type to a JSON file at file_path.
 
@@ -703,7 +710,7 @@ class UniversityInfoGenerator:
         except IOError as exc:
             raise IOError(f"An error occurred while writing to the file: {file_path}") from exc
 
-    def load_from_file(self, dict_type: SavedDictType, file_path: str):
+    def load_from_file(self, dict_type: UniversitySavedDictType, file_path: str):
         """
         Loads data from a JSON file and updates the corresponding dictionary
         in the class based on the specified type.
@@ -715,7 +722,7 @@ class UniversityInfoGenerator:
         Raises:
             ValueError: If the file content is not a valid JSON or dict_type is invalid.
         """
-        if dict_type not in SavedDictType:
+        if dict_type not in UniversitySavedDictType:
             raise ValueError(f"Invalid type provided: {dict_type}. Expected a SavedDictType.")
         try:
             data = load_cache(file_path)
@@ -729,7 +736,7 @@ class UniversityInfoGenerator:
         # Using the existing method to load data into the class
         self.load_from_dict(dict_type, data)
 
-    def load_from_dict(self, dict_type: SavedDictType, input_dict: Dict):
+    def load_from_dict(self, dict_type: UniversitySavedDictType, input_dict: Dict):
         """
         Loads data into a specific dictionary managed by the system from a provided dictionary.
 
@@ -749,20 +756,20 @@ class UniversityInfoGenerator:
             Modifies the internal state of dictionaries managed by the class by updating them with new data.
             Specifically for ATTRIBUTE type, it checks and modifies handler types based on their existence or value.
         """
-        if dict_type not in SavedDictType:
+        if dict_type not in UniversitySavedDictType:
             raise ValueError(f"Invalid type provided: {dict_type}. Expected a SavedDictType.")
         if not isinstance(input_dict, dict):
             raise ValueError("input_dict must be a dictionary.")
         self.get_specific_dict_from_type(dict_type).update(input_dict)
-        if dict_type == SavedDictType.ATTRIBUTE:
+        if dict_type == UniversitySavedDictType.ATTRIBUTE:
             for attr in self.attribute_dict:
                 for col in self.attribute_dict[attr]:
-                    if col == AttributeColumnType.HANDLER.value:
+                    if col == UniversityAttributeColumnType.HANDLER.value:
                         if _is_nan(self.attribute_dict[attr][col]):
-                            self.attribute_dict[attr][AttributeColumnType.HANDLER.value] = HandlerType.NOT_SPECIFIED
+                            self.attribute_dict[attr][UniversityAttributeColumnType.HANDLER.value] = HandlerType.NOT_SPECIFIED
                         else:
-                            self.attribute_dict[attr][AttributeColumnType.HANDLER.value] = HandlerType[
-                                self.attribute_dict[attr][AttributeColumnType.HANDLER.value]
+                            self.attribute_dict[attr][UniversityAttributeColumnType.HANDLER.value] = HandlerType[
+                                self.attribute_dict[attr][UniversityAttributeColumnType.HANDLER.value]
                             ]
                     elif _is_nan(self.attribute_dict[attr][col]):
                         self.attribute_dict[attr][col] = ""
@@ -789,9 +796,9 @@ class UniversityInfoGenerator:
         """
         university: Union[University, Dict[str, str]] = self.get_university_info(university_name)
         if isinstance(university, Dict):
-            return dict(university)[GeneralInfoType.FACULTY.value]
+            return dict(university)[UniversityGeneralInfoType.FACULTY.value]
         if isinstance(university, University):
-            return university.get_attr(GeneralInfoType.FACULTY.value)
+            return university.get_attr(UniversityGeneralInfoType.FACULTY.value)
         return None
 
     # @lru_cache(maxsize=config.CACHE_MAX_SIZE)
@@ -817,9 +824,9 @@ class UniversityInfoGenerator:
         university: Union[University, Dict[str, str]] = self.get_university_info(university_name)
         # print(university)
         if isinstance(university, Dict):
-            return dict(university)[GeneralInfoType.POPULAR_PROGRAMS.value]
+            return dict(university)[UniversityGeneralInfoType.POPULAR_PROGRAMS.value]
         if isinstance(university, University):
-            return university.get_attr(GeneralInfoType.POPULAR_PROGRAMS.value)
+            return university.get_attr(UniversityGeneralInfoType.POPULAR_PROGRAMS.value)
         return None
 
     @DeprecationWarning

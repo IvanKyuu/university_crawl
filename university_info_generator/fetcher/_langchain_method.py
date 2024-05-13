@@ -54,7 +54,7 @@ from langchain_community.embeddings.sentence_transformer import (
 from langchain_community.vectorstores import FAISS
 from langchain_text_splitters import CharacterTextSplitter
 from university_info_generator.configs import config
-from university_info_generator.configs.enum_class import AttributeColumnType
+from university_info_generator.configs.enum_class import UniversityAttributeColumnType
 
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
 os.environ["LANGCHAIN_API_KEY"] = config.LANGCHAIN_API_KEY
@@ -91,7 +91,7 @@ class LanchainWrapper:
         reference: List[str],
         _data_example_pair: str,
         _extra_prompt: str = "",
-        k_value: int = AttributeColumnType.K_VALUE.get_default_value(),
+        k_value: int = UniversityAttributeColumnType.K_VALUE.get_default_value(),
         _params=None,
     ):
         """
@@ -186,7 +186,7 @@ class LanchainWrapper:
         reference: List[str],
         _data_example_pair: str,  #                   place holder: data_example_pair
         _extra_prompt: str = "",  #                   place holder: extra_prompt
-        k_value: int = AttributeColumnType.K_VALUE.get_default_value(),
+        k_value: int = UniversityAttributeColumnType.K_VALUE.get_default_value(),
         _params=None,
     ):
         """
@@ -295,7 +295,7 @@ class LanchainWrapper:
         reference: List[str],
         _data_example_pair: str,
         _extra_prompt: str = "",
-        k_value: int = AttributeColumnType.K_VALUE.get_default_value(),
+        k_value: int = UniversityAttributeColumnType.K_VALUE.get_default_value(),
         _params: Dict[Literal["transformer"], Literal["BeautifulSoup", "RecursiveURL"]] = {
             "transformer": "BeautifulSoup"
         },

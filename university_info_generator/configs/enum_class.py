@@ -26,7 +26,7 @@ from enum import Enum, auto, Flag
 from typing import Any
 
 
-class SavedDictType(Enum):
+class UniversitySavedDictType(Enum):
     """
     Enumeration for specifying different types of saved dictionaries used within the system.
 
@@ -57,7 +57,7 @@ class SavedDictType(Enum):
     TROUBLE_PRODUCED = 5
 
 
-class BasicInfoType(Enum):
+class UniversityBasicInfoType(Enum):
     """
     Enumeration for specifying different types of basic information attributes related to universities.
     Attributes:
@@ -86,7 +86,7 @@ class BasicInfoType(Enum):
 
 
 # TODO: refactor everything!
-class GeneralInfoType(Enum):
+class UniversityGeneralInfoType(Enum):
     """
     Enumeration for specifying different types of general information attributes related to universities.
     These members represent the various data points that can be associated with universities,
@@ -156,7 +156,7 @@ class GeneralInfoType(Enum):
         return __default_value_dict__[self.name]
 
 
-class AttributeColumnType(Enum):
+class UniversityAttributeColumnType(Enum):
     """
     Enumeration defining the columns of attribute data in a system that manages university information.
     These members represent the different types of data columns that can be used to describe attributes
@@ -248,9 +248,13 @@ class HandlerType(Flag):
     TUITION_CRAWL = auto()
     LANGCHAIN_TAVILY = auto()
     LANGCHAIN_SERPER = auto()
+    RANKING_FETCHER = auto()
+    PROGRAM_FETCHER = auto()
     LANGCHAIN_METHOD = LANGCHAIN_TAVILY | LANGCHAIN_SERPER
 
 
-ALL_ATTRIBUTE_NAME = [member.value for member in BasicInfoType] + [member.value for member in GeneralInfoType]
+ALL_ATTRIBUTE_NAME = [member.value for member in UniversityBasicInfoType] + [
+    member.value for member in UniversityGeneralInfoType
+]
 
 __all__ = [name for name in dir() if name[0] != "_"]

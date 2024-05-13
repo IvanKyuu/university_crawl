@@ -6,11 +6,11 @@ from selenium.common.exceptions import TimeoutException
 
 from configs.config import PROJECT_HOME
 
-__all__ = ["RankingFetcher"]
+__all__ = ["WebsiteFetcher"]
 
 
-class RankingFetcher:
-    repo_path = f"{PROJECT_HOME}/university_info_generator/fetcher/ranking_fetcher/"
+class WebsiteFetcher:
+    repo_path = f"{PROJECT_HOME}/university_info_generator/fetcher/website_fetcher"
 
     def __init__(self):
         self.ranking_arwu_rank_2023_df = pd.read_csv(f"{self.repo_path}/ranking_data/arwu_ranking_2023.csv")
@@ -39,7 +39,26 @@ class RankingFetcher:
                 return None
             return dicts[0]
 
+    def get_programs(self, university_name: str) -> List[str]:
+        # , country: Literal["CA", "US"] = "CA"
+        # if country not in ["CA", "US"]:
+        # raise NotImplementedError()
+        file_path = self.repo_path + "/ranking_data/"
+        # if country == "CA":
+        file_path += "canada_dataset/canada_programs.csv"
+        # elif country == "US":
+        # file_path += "usa_dataset/usa_programs.csv"
+        dataframe = pd.read_csv(file_path)
+        result_row = dataframe.loc[
+            (dataframe.get("arwu_name") == university_name) | (dataframe.get("canada_name") == university_name)
+        ]
+        if result_row.empty:
+            return None
+        ret = result_row["programs"].item()
+        return list(map(lambda x: x.strip(" \'"), ret.strip("][").replace('"', "").split(",")))
+
 
 if __name__ == "__main__":
-    ran_fe = RankingFetcher()
-    print(ran_fe.get_ranking("University of Toronto", "ranking_us_news_2023"))
+    ran_fe = WebsiteFetcher()
+    result = ran_fe.get_programs("University of Toronto")
+    print("\n".join(result))

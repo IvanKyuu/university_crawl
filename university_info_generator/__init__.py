@@ -9,7 +9,7 @@ from university_info_generator import university, university_info_general_genera
 from university_info_generator.configs import config
 from university_info_generator.university import University
 
-from university_info_generator.configs.enum_class import BasicInfoType, GPTMethodType, SavedDictType, HandlerType
+from university_info_generator.configs.enum_class import UniversityBasicInfoType, GPTMethodType, UniversitySavedDictType, HandlerType
 
 __version__ = "0.1.0"
 __all__ = []
@@ -26,7 +26,7 @@ if hasattr(fetcher, "__all__"):
 if hasattr(config, "__all__"):
     __all__.extend(config.__all__)
 
-__enum_type__ = [BasicInfoType.__name__, GPTMethodType.__name__, SavedDictType.__name__, HandlerType.__name__]
+__enum_type__ = [UniversityBasicInfoType.__name__, GPTMethodType.__name__, UniversitySavedDictType.__name__, HandlerType.__name__]
 __all__.extend(__enum_type__)
 
 __all__.extend(university.__all__)

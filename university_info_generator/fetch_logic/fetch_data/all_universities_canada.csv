@@ -1,0 +1,112 @@
+ id_,university_name,website,wikipedia
+71,Algoma University,https://www.algomau.ca,https://en.wikipedia.org/wiki/Algoma_University
+49,University of Toronto,https://www.utoronto.ca,https://en.wikipedia.org/wiki/University_of_Toronto
+92,University of Calgary,https://www.ucalgary.ca,https://en.wikipedia.org/wiki/University_of_Calgary
+1,Memorial University of Newfoundland,https://www.mun.ca,https://en.wikipedia.org/wiki/Memorial_University_of_Newfoundland
+2,University of Prince Edward Island,https://www.upei.ca,https://en.wikipedia.org/wiki/University_of_Prince_Edward_Island
+3,Acadia University,https://www2.acadiau.ca/,https://en.wikipedia.org/wiki/Acadia_University
+4,Acadia Divinity College,https://acadiadiv.ca/,https://en.wikipedia.org/wiki/Acadia_Divinity_College
+5,Atlantic School of Theology,https://www.astheology.ns.ca/,https://en.wikipedia.org/wiki/Atlantic_School_of_Theology
+7,Dalhousie University,https://www.dal.ca,https://en.wikipedia.org/wiki/Dalhousie_University
+8,University of King's College,https://www.ukings.ca,https://en.wikipedia.org/wiki/University_of_King%27s_College
+9,Mount Saint Vincent University,https://www.msvu.ca,https://en.wikipedia.org/wiki/Mount_Saint_Vincent_University
+10,Nova Scotia College of Art and Design University,https://nscad.ca,https://en.wikipedia.org/wiki/Nova_Scotia_College_of_Art_and_Design_University
+11,Université Sainte-Anne,https://www.usainteanne.ca,https://en.wikipedia.org/wiki/Universit%C3%A9_Sainte-Anne
+12,St. Francis Xavier University,https://www.stfx.ca,https://en.wikipedia.org/wiki/St._Francis_Xavier_University
+13,Saint Mary's University,https://www.smu.ca,https://en.wikipedia.org/wiki/Saint_Mary%27s_University_(Halifax)
+14,Mount Allison University,https://www.mta.ca,https://en.wikipedia.org/wiki/Mount_Allison_University
+15,University of New Brunswick,https://www.unb.ca,https://en.wikipedia.org/wiki/University_of_New_Brunswick
+16,Université de Moncton,https://www.umoncton.ca,https://en.wikipedia.org/wiki/Universit%C3%A9_de_Moncton
+17,St. Thomas University,https://www.stu.ca,https://en.wikipedia.org/wiki/St._Thomas_University_(New_Brunswick)
+19,McGill University,https://www.mcgill.ca,https://en.wikipedia.org/wiki/McGill_University
+20,Université de Montréal,https://www.umontreal.ca/en/,https://en.wikipedia.org/wiki/Universit%C3%A9_de_Montr%C3%A9al
+21,Polytechnique Montréal,https://www.polymtl.ca,https://en.wikipedia.org/wiki/Polytechnique_Montr%C3%A9al
+22,École des hautes études commerciales,https://www.hec.ca/en,https://en.wikipedia.org/wiki/HEC_Montr%C3%A9al
+23,Université Laval,https://www.ulaval.ca/en/,https://en.wikipedia.org/wiki/Universit%C3%A9_Laval
+24,Université de Sherbrooke,https://www.usherbrooke.ca,https://en.wikipedia.org/wiki/Universit%C3%A9_de_Sherbrooke
+25,Concordia University,https://www.concordia.ca,https://en.wikipedia.org/wiki/Concordia_University
+26,Université du Québec à Chicoutimi,https://www.uqac.ca,https://en.wikipedia.org/wiki/Universit%C3%A9_du_Qu%C3%A9bec_%C3%A0_Chicoutimi
+27,Université du Québec à Montréal,https://www.uqam.ca,https://en.wikipedia.org/wiki/Universit%C3%A9_du_Qu%C3%A9bec_%C3%A0_Montr%C3%A9al
+28,Université du Québec en Abitibi-Témiscamingue,https://www.uqat.ca,https://en.wikipedia.org/wiki/Universit%C3%A9_du_Qu%C3%A9bec_en_Abitibi-T%C3%A9miscamingue
+29,Université du Québec à Trois-Rivières,https://www.uqtr.ca,https://en.wikipedia.org/wiki/Universit%C3%A9_du_Qu%C3%A9bec_%C3%A0_Trois-Rivi%C3%A8res
+30,Université du Québec en Outaouais,https://www.uqo.ca,https://en.wikipedia.org/wiki/Universit%C3%A9_du_Qu%C3%A9bec_en_Outaouais
+31,"Université du Québec, École nationale d'administration publique (ENAP)",https://www.enap.ca,https://en.wikipedia.org/wiki/%C3%89cole_nationale_d%27administration_publique
+32,"Université du Québec, Institut national de la recherche scientifique",https://inrs.ca,https://en.wikipedia.org/wiki/Institut_national_de_la_recherche_scientifique
+33,Université du Québec à Rimouski,https://www.uqar.ca,https://en.wikipedia.org/wiki/Universit%C3%A9_du_Qu%C3%A9bec_%C3%A0_Rimouski
+34,École de technologie supérieure,https://www.etsmtl.ca,https://en.wikipedia.org/wiki/%C3%89cole_de_technologie_sup%C3%A9rieure
+35,"Université du Québec, Télé-université du Québec (TÉLUQ)",https://www.teluq.ca,https://en.wikipedia.org/wiki/T%C3%89LUQ
+37,Concordia Lutheran Theological Seminary,https://www.clts.ca,https://en.wikipedia.org/wiki/Concordia_Lutheran_Theological_Seminary
+38,Carleton University,https://www.carleton.ca,https://en.wikipedia.org/wiki/Carleton_University
+39,Dominican University College/Collège Universitaire Dominicain,https://www.collegedominicain.ca/en/,https://en.wikipedia.org/wiki/Dominican_University_College
+41,Lakehead University,https://www.lakeheadu.ca,https://en.wikipedia.org/wiki/Lakehead_University
+42,Laurentian University of Sudbury/Université Laurentienne de Sudbury,https://laurentian.ca,https://en.wikipedia.org/wiki/Laurentian_University
+43,McMaster University,https://www.mcmaster.ca,https://en.wikipedia.org/wiki/McMaster_University
+44,Nipissing University,https://www.nipissingu.ca,https://en.wikipedia.org/wiki/Nipissing_University
+45,University of Ottawa,https://www.uottawa.ca,https://en.wikipedia.org/wiki/University_of_Ottawa
+46,Saint Paul University,https://ustpaul.ca,https://en.wikipedia.org/wiki/Saint_Paul_University
+47,Queen's University,https://www.queensu.ca,https://en.wikipedia.org/wiki/Queen%27s_University
+48,Ryerson University,https://www.ryerson.ca,https://en.wikipedia.org/wiki/Ryerson_University
+50,St. Augustine's Seminary,https://staugustines.on.ca/,https://en.wikipedia.org/wiki/St._Augustine%27s_Seminary_(Toronto)
+51,University of St. Michael's College,https://stmikes.utoronto.ca/,https://en.wikipedia.org/wiki/University_of_St._Michael%27s_College
+52,University of Trinity College,https://www.trinity.utoronto.ca/,"https://en.wikipedia.org/wiki/Trinity_College,_Toronto"
+53,Victoria University,https://www.vu.edu.au,"https://en.wikipedia.org/wiki/Victoria_University,_Australia"
+54,Knox College,https://knox.utoronto.ca/,"https://en.wikipedia.org/wiki/Knox_College,_Toronto"
+55,Wycliffe College,https://www.wycliffecollege.ca,https://en.wikipedia.org/wiki/Wycliffe_College
+56,Regis College,https://www.regiscollege.ca,"https://en.wikipedia.org/wiki/Regis_College,_Toronto"
+57,Trent University,https://www.trentu.ca,https://en.wikipedia.org/wiki/Trent_University
+59,St. Jerome's University,https://www.sju.ca,https://en.wikipedia.org/wiki/St._Jerome%27s_University
+60,Renison University College,https://uwaterloo.ca/renison/,https://en.wikipedia.org/wiki/Renison_University_College
+61,Conrad Grebel University College,https://uwaterloo.ca/grebel/,https://en.wikipedia.org/wiki/Conrad_Grebel_University_College
+62,Western University,https://www.uwo.ca,https://en.wikipedia.org/wiki/Western_University
+63,Brescia University College,https://brescia.uwo.ca/,https://en.wikipedia.org/wiki/Brescia_University_College
+64,Huron University College,https://huronuc.ca/,https://en.wikipedia.org/wiki/Huron_University_College
+65,King's College,https://www.kcl.ac.uk,https://en.wikipedia.org/wiki/King%27s_College_London
+66,Wilfrid Laurier University,https://www.wlu.ca,https://en.wikipedia.org/wiki/Wilfrid_Laurier_University
+67,University of Windsor,https://www.uwindsor.ca,https://en.wikipedia.org/wiki/University_of_Windsor
+68,York University,http://www.yorku.ca,https://en.wikipedia.org/wiki/York_University
+69,Ontario College of Art and Design University,https://www.ocadu.ca,https://en.wikipedia.org/wiki/Ontario_College_of_Art_and_Design_University
+70,University of Ontario Institute of Technology,https://ontariotechu.ca/,https://en.wikipedia.org/wiki/Ontario_Tech_University
+72,University of Sudbury,https://usudbury.ca/,https://en.wikipedia.org/wiki/University_of_Sudbury
+73,Université de Hearst,https://www.uhearst.ca,https://en.wikipedia.org/wiki/Universit%C3%A9_de_Hearst
+74,Huntington University,https://www.huntingtonu.ca,https://en.wikipedia.org/wiki/Huntington_University
+75,Thorneloe University,https://www.thorneloe.ca,https://en.wikipedia.org/wiki/Thorneloe_University
+77,Canadian Mennonite University,https://www.cmu.ca,https://en.wikipedia.org/wiki/Canadian_Mennonite_University
+78,University of Manitoba,http://umanitoba.ca/,https://en.wikipedia.org/wiki/University_of_Manitoba
+79,Université de Saint-Boniface,https://ustboniface.ca/,https://en.wikipedia.org/wiki/Universit%C3%A9_de_Saint-Boniface
+80,University of Winnipeg,https://www.uwinnipeg.ca,https://en.wikipedia.org/wiki/University_of_Winnipeg
+81,University of Regina,https://www.uregina.ca,https://en.wikipedia.org/wiki/University_of_Regina
+82,Campion College,https://campioncollege.ca,"https://en.wikipedia.org/wiki/Campion_College,_Regina"
+83,Luther College,https://www.luthercollege.edu,https://en.wikipedia.org/wiki/Luther_College_(Saskatchewan)
+84,University of Saskatchewan,https://www.usask.ca,https://en.wikipedia.org/wiki/University_of_Saskatchewan
+85,College of Emmanuel and St. Chad,https://www.emmanuel.ualberta.ca/,https://en.wikipedia.org/wiki/College_of_Emmanuel_and_St._Chad
+86,Lutheran Theological Seminary,https://www.usask.ca/luther/,https://en.wikipedia.org/wiki/Lutheran_Theological_Seminary_(Saskatoon)
+87,St. Andrew's College,https://www.sac.on.ca,https://en.wikipedia.org/wiki/St._Andrew%27s_College_(Aurora)
+88,St. Thomas More College,https://stmcollege.ca/,"https://en.wikipedia.org/wiki/St._Thomas_More_College,_Saskatoon"
+89,Horizon College & Seminary,https://www.horizon.edu,https://en.wikipedia.org/wiki/Horizon_College_and_Seminary
+90,University of Alberta,https://www.ualberta.ca,https://en.wikipedia.org/wiki/University_of_Alberta
+93,Burman University,https://www.burmanu.ca,https://en.wikipedia.org/wiki/Burman_University
+94,Concordia University of Edmonton,https://concordia.ab.ca,https://en.wikipedia.org/wiki/Concordia_University_of_Edmonton
+95,University of Lethbridge,https://www.uleth.ca,https://en.wikipedia.org/wiki/University_of_Lethbridge
+96,The King's University College,https://www.kings.uwo.ca,https://en.wikipedia.org/wiki/King%27s_University_College
+97,Ambrose University,https://ambrose.edu,https://en.wikipedia.org/wiki/Ambrose_University
+98,MacEwan University,https://www.macewan.ca,https://en.wikipedia.org/wiki/MacEwan_University
+99,Mount Royal University,https://www.mtroyal.ca,https://en.wikipedia.org/wiki/Mount_Royal_University
+100,The University of British Columbia,https://www.ubc.ca,https://en.wikipedia.org/wiki/University_of_British_Columbia
+101,University of Northern British Columbia,https://www.unbc.ca,https://en.wikipedia.org/wiki/University_of_Northern_British_Columbia
+102,Royal Roads University,https://www.royalroads.ca,https://en.wikipedia.org/wiki/Royal_Roads_University
+104,University of Victoria,https://www.uvic.ca,https://en.wikipedia.org/wiki/University_of_Victoria
+105,Thompson Rivers University,https://www.tru.ca,https://en.wikipedia.org/wiki/Thompson_Rivers_University
+107,Vancouver Island University,https://www.viu.ca,https://en.wikipedia.org/wiki/Vancouver_Island_University
+108,Emily Carr University of Art and Design,https://www.ecuad.ca,https://en.wikipedia.org/wiki/Emily_Carr_University_of_Art_and_Design
+109,Kwantlen Polytechnic University,http://www.kpu.ca,https://en.wikipedia.org/wiki/Kwantlen_Polytechnic_University
+110,University of the Fraser Valley,https://www.ufv.ca,https://en.wikipedia.org/wiki/University_of_the_Fraser_Valley
+111,Yukon University,https://www.yukonu.ca,https://en.wikipedia.org/wiki/Yukon_University
+6,Cape Breton University,https://www.cbu.ca,https://en.wikipedia.org/wiki/Cape_Breton_University
+18,Bishop's University,https://www.ubishops.ca,https://en.wikipedia.org/wiki/Bishop%27s_University
+36,Brock University,https://brocku.ca,https://en.wikipedia.org/wiki/Brock_University
+40,University of Guelph,https://www.uoguelph.ca,https://en.wikipedia.org/wiki/University_of_Guelph
+58,University of Waterloo,https://uwaterloo.ca,https://en.wikipedia.org/wiki/University_of_Waterloo
+76,Brandon University,https://www.brandonu.ca,https://en.wikipedia.org/wiki/Brandon_University
+91,Athabasca University,https://www.athabascau.ca,https://en.wikipedia.org/wiki/Athabasca_University
+103,Simon Fraser University,https://www.sfu.ca,https://en.wikipedia.org/wiki/Simon_Fraser_University
+106,Capilano University,https://www.capilanou.ca,https://en.wikipedia.org/wiki/Capilano_University

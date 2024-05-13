@@ -25,7 +25,9 @@ setup(
         "langchain-openai",
         "google-api-python-client",
         "langchain-chroma",
-        "tavily-python"
+        "tavily-python",
+        "selenium",
+        "g4f"
     ],
     include_package_data=True,
     package_data={

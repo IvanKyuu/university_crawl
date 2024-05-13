@@ -127,7 +127,7 @@ class GPTClient:
         "wikipedia":"https://en.wikipedia.org/wiki/University_of_British_Columbia"}
         """
         prompt = """# Instruction
-        You are an Education developer in Canada aiming to help high school students to apply to universities. Now I will give
+        You are an Education developer in Canada/USA aiming to help high school students to apply to universities. Now I will give
         you any university name, an abbreviation, an official website or a wikipedia website that links to the university. You are supposed to give me back
         a JSON filled with fields <university_name>, <abbreviation>, <website>, and <wikipedia>.
         
@@ -217,7 +217,7 @@ class GPTClient:
         )
         prompt = f"""
         # Instruction
-        You are an Education developer in Canada aiming to help high school students to apply to universities. Now I will give
+        You are an Education developer in Canada/USA aiming to help high school students to apply to universities. Now I will give
         you any university_name, and the target_attribute for you to collect data from the internet, you are supposed to find the knowledge I am looking for and give me back an asserted output.
         If you have checked any websites during your data collection procedure, you should return a List[str], which is a list of references that you have checked.
         Think through the procedure deeply and take it step by step.

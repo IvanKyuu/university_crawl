@@ -1,0 +1,126 @@
+{"('Thompson Rivers University', 'graduation_year', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Thompson Rivers University', 'graduation_year', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Thompson Rivers University', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Thompson Rivers University', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Thompson Rivers University', 'important_calendar', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Thompson Rivers University', 'important_calendar', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Thompson Rivers University', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Thompson Rivers University', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Thompson Rivers University', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Thompson Rivers University', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Vancouver Island University', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Vancouver Island University', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Vancouver Island University', 'domestic_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Vancouver Island University', 'domestic_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Vancouver Island University', 'international_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Vancouver Island University', 'international_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Vancouver Island University', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: 120\nMaster's Programs: 4\nPhD Programs: not available"}
+{"('Vancouver Island University', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Vancouver Island University', 'popular_programs', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Vancouver Island University', 'popular_programs', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Vancouver Island University', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Vancouver Island University', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Emily Carr University of Art and Design', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Emily Carr University of Art and Design', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Emily Carr University of Art and Design', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: 3\nMaster's and PhD Programs: not available"}
+{"('Emily Carr University of Art and Design', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Emily Carr University of Art and Design', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Emily Carr University of Art and Design', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Kwantlen Polytechnic University', 'domestic_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Kwantlen Polytechnic University', 'domestic_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Kwantlen Polytechnic University', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Kwantlen Polytechnic University', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Kwantlen Polytechnic University', 'international_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Kwantlen Polytechnic University', 'international_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Kwantlen Polytechnic University', 'important_calendar', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Kwantlen Polytechnic University', 'important_calendar', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Kwantlen Polytechnic University', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: not available\nMaster's Programs: not available\nPhD Programs: not available"}
+{"('Kwantlen Polytechnic University', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Kwantlen Polytechnic University', 'popular_programs', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Kwantlen Polytechnic University', 'popular_programs', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Kwantlen Polytechnic University', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Kwantlen Polytechnic University', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('University of the Fraser Valley', 'university_type', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('University of the Fraser Valley', 'university_type', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('University of the Fraser Valley', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('University of the Fraser Valley', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('University of the Fraser Valley', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: 110\nMaster's Programs: not available\nPhD Programs: not available"}
+{"('University of the Fraser Valley', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Yukon University', 'university_type', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Yukon University', 'university_type', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Yukon University', 'graduation_year', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Yukon University', 'graduation_year', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Yukon University', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Yukon University', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Yukon University', 'international_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Yukon University', 'international_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Yukon University', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: not available\nMaster's and PhD Programs: not available"}
+{"('Yukon University', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Yukon University', 'popular_programs', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Yukon University', 'popular_programs', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Yukon University', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Yukon University', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Cape Breton University', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Cape Breton University', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Cape Breton University', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: not available\nMaster's Programs: not available\nPhD Programs: not available"}
+{"('Cape Breton University', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Cape Breton University', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Cape Breton University', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"(\"Bishop's University\", 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"(\"Bishop's University\", 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"(\"Bishop's University\", 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: 39\nMaster's Programs: 9\nPhD Programs: not available"}
+{"(\"Bishop's University\", 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"(\"Bishop's University\", 'popular_programs', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"(\"Bishop's University\", 'popular_programs', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"(\"Bishop's University\", 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"(\"Bishop's University\", 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Brock University', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Brock University', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Brock University', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: more than 120\nMaster's Programs: not available\nPhD Programs: not available"}
+{"('Brock University', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Brock University', 'programs', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Brock University', 'programs', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Brock University', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Brock University', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('University of Guelph', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: not available\nMaster's Programs: not available\nPhD Programs: not available"}
+{"('University of Guelph', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('University of Guelph', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('University of Guelph', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('University of Waterloo', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: not available\nMaster's Programs: not available\nPhD Programs: not available"}
+{"('University of Waterloo', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('University of Waterloo', 'faculty', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('University of Waterloo', 'faculty', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('University of Waterloo', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('University of Waterloo', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Brandon University', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Brandon University', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Brandon University', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: 29\nMaster's Programs: not available\nPhD Programs: not available"}
+{"('Brandon University', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Brandon University', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Brandon University', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Brandon University', 'characteristics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Brandon University is characterized by its strong commitment to education, inclusivity, and community engagement. Here are some key characteristics:\n\nInclusive and Supportive Environment: Brandon University is described as inclusive and accessible, focusing on meeting the unique needs of its region and students. This commitment is evident in its strategic plans and the supportive measures it implements for both students and faculty.\n\nDedicated to Student Success: The university emphasizes a student-centered learning environment, aiming to empower students through exceptional educational programs and support. This is supported by the availability of one-to-one interactions with professors and opportunities for research, often not available at larger institutions.\n\nCommunity Engagement: Brandon University actively engages with the community through various programs and initiatives. This includes addressing important social issues, as evidenced by its observance of the National Day of Awareness of Missing and Murdered Indigenous Women, Girls, and Two-spirited People.\n\nDiverse Academic Offerings: The university offers a wide range of degree programs across different fields such as Arts, Education, Music, Health Studies, and Science, catering to a diverse student body with varied academic interests.\n\nFocus on Research and Scholarly Activities: Brandon University fosters an environment that encourages innovative scholarly activities and intensive study, which broadens student horizons and expands viewpoints.\n\nThese characteristics highlight Brandon University's role as a nurturing and engaging educational institution that prioritizes the well-being and success of its students and faculty."}
+{"('Brandon University', 'characteristics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Athabasca University', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Athabasca University', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Athabasca University', 'international_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Athabasca University', 'international_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Athabasca University', 'important_calendar', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Athabasca University', 'important_calendar', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Athabasca University', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: not available\nMaster's Programs: not available\nPhD Programs: not available"}
+{"('Athabasca University', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Athabasca University', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Athabasca University', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Simon Fraser University', 'graduation_year', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Simon Fraser University', 'graduation_year', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Simon Fraser University', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Simon Fraser University', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Simon Fraser University', 'popular_programs', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Simon Fraser University', 'popular_programs', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Simon Fraser University', 'others', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Simon Fraser University', 'others', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Capilano University', 'graduation_rate', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Capilano University', 'graduation_rate', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Capilano University', 'domestic_student_tuition', <HandlerType.LANGCHAIN_TAVILY: 16>)": "not available"}
+{"('Capilano University', 'domestic_student_tuition', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}
+{"('Capilano University', 'statistics', <HandlerType.LANGCHAIN_TAVILY: 16>)": "Undergraduate Programs: 97\nMaster's and PhD Programs: not available"}
+{"('Capilano University', 'statistics', <HandlerType.LANGCHAIN_METHOD: 48>)": ""}

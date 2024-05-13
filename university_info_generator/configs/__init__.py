@@ -3,21 +3,21 @@ university_info_generator/configs/__init__.py
 """
 
 from .enum_class import (
-    SavedDictType,
-    BasicInfoType,
+    UniversitySavedDictType,
+    UniversityBasicInfoType,
     GPTMethodType,
-    GeneralInfoType,
-    AttributeColumnType,
+    UniversityGeneralInfoType,
+    UniversityAttributeColumnType,
     HandlerType,
     ALL_ATTRIBUTE_NAME,
 )
 from . import config
 
 __all__ = [
-    SavedDictType.__name__,
-    BasicInfoType.__name__,
-    GeneralInfoType.__name__,
-    AttributeColumnType.__name__,
+    UniversitySavedDictType.__name__,
+    UniversityBasicInfoType.__name__,
+    UniversityGeneralInfoType.__name__,
+    UniversityAttributeColumnType.__name__,
     GPTMethodType.__name__,
     "ALL_ATTRIBUTE_NAME",
     HandlerType.__name__,
