@@ -217,6 +217,11 @@ class University:
         if attr_name in self.params:
             return self.params[attr_name]
         return default
+    
+    def update(self, input_dict: Dict[str, str]):
+        for key in self.params:
+            if key in input_dict:
+                self.params[key] = input_dict[key]
 
     @staticmethod
     def translate(source_dict: Dict[str, str], translation_map: Dict[str, str]):
@@ -269,3 +274,4 @@ if __name__ == "__main__":
     uni = University.json_to_university(json_data, language="CH")
     pprint(uni.to_dict_ch())
     pprint(uni.get_attr("description"))
+    uni.update({"graduation_rate": "111", "faculty": "*" * 60})

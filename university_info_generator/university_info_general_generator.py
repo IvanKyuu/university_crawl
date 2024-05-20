@@ -245,35 +245,65 @@ class UniversityInfoGenerator:
             raise ValueError(f"Expect a member of configs.enum_class.ALL_ATTRIBUTE_NAME, but got {attribute_name}")
         if not isinstance(handler, HandlerType):
             raise ValueError(f"Expect a member of HandlerType, but got {handler}")
+        university_json = self.initialize_university_json(university_name, id_=-1)
+        university_json, reference = self.add_basic_university_info(university_json, university_name, id_=-1)
+        university_name = (
+            temp
+            if university_name != (temp := university_json[UniversityBasicInfoType.UNIVERSITY_NAME.value])
+            else university_name
+        )
         university_json = self.initialize_university_json(university_name)
-        university_json, reference = self.add_basic_university_info(university_json, university_name, id_=0)
-        university_name = temp if university_name != (temp := university_json["university_name"]) else university_name
-
-        university_json = {}
-        if handler == HandlerType.TUITION_CRAWL:
-            # if attribute_name in ("domestic_student_tuition", "international_student_tuition")
+        if (attribute_name == "others"):
+            university_json["others"] = ""
+            return
+        if (
+            attribute_name in ("wikipedia", "website")
+            and attribute_name in university_json
+            and len(str(university_json[attribute_name])) > 0
+        ):
+            return
+        if self.attribute_dict[attribute_name][UniversityAttributeColumnType.HANDLER.value] == HandlerType.TUITION_CRAWL:
+            #  if attribute_name in ("domestic_student_tuition", "international_student_tuition")
             university_json = self.handle_tuition_info(university_json, university_name)
-            if attribute_name in university_json and len(university_json[attribute_name]) > 0:
-                return university_json
-        if handler in HandlerType.LANGCHAIN_METHOD:
+            if attribute_name in university_json and len(str(university_json[attribute_name])) > 0:
+                return
+        # handle by ranking fetcher
+        if self.attribute_dict[attribute_name][UniversityAttributeColumnType.HANDLER.value] == HandlerType.RANKING_FETCHER:
+            ret_json = self.website_fetcher.get_ranking(university_name, attribute_name)
+            if ret_json:
+                university_json.update({attribute_name: ret_json["rank"]})
+            else:
+                university_json.update({attribute_name: ""})
+            return
+        if self.attribute_dict[attribute_name][UniversityAttributeColumnType.HANDLER.value] == HandlerType.PROGRAM_FETCHER:
+            ret = self.website_fetcher.get_programs(university_name)
+            if ret:
+                university_json.update({attribute_name: "\n".join(ret)})
+        if (
+            handler := self.attribute_dict[attribute_name].get(
+                UniversityAttributeColumnType.HANDLER.value, HandlerType.LANGCHAIN_TAVILY
+            )
+        ) in HandlerType.LANGCHAIN_METHOD or attribute_name not in university_json:
+            if attribute_name not in university_json:
+                handler = HandlerType.LANGCHAIN_TAVILY
             university_json = self.process_attribute_with_langchain(
                 university_json=university_json,
                 university_name=university_name,
                 attribute_name=attribute_name,
                 reference=reference,
                 handler=handler,
-                params=params,
             )
-            if attribute_name in university_json and len(university_json[attribute_name]) > 0:
-                return university_json
-        # last choice
-        if attribute_name not in university_json or len(university_json[attribute_name]) <= 0:
-            # if handler == HandlerType.GPT_GENERAL
+            if attribute_name in university_json and len(str(university_json[attribute_name])) > 0:
+                return
+        if attribute_name not in university_json or len(str(university_json[attribute_name])) <= 0:
+            # last choice
+            # if self.attribute_dict[attribute_name]["handler"] == HandlerType.GPT_GENERAL
+            self.trouble_produced_dict.update({(university_name, attribute_name, HandlerType.LANGCHAIN_METHOD): ""})
             university_json = self.process_attribute_with_gpt(
-                university_json, university_name, attribute_name, reference, params
+                university_json, university_name, attribute_name, reference
             )
-        return university_json
-
+        if attribute_name not in university_json or len(str(university_json[attribute_name])) <= 0:
+            university_json.update({attribute_name: ""})
     def initialize_university_json(self, university_name:str, id_:int=0) -> Dict[str, Any]:
         """
         TODO: place holder for initializing university_json
@@ -625,16 +655,19 @@ class UniversityInfoGenerator:
         university_json.update({"id_": id_})
 
         def process_attribute(attribute_name: str, university_json: Dict[str, str]):
+            if (attribute_name == "others"):
+                university_json["others"] = ""
+                return
             if (
                 attribute_name in ("wikipedia", "website")
                 and attribute_name in university_json
-                and len(university_json[attribute_name]) > 0
+                and len(str(university_json[attribute_name])) > 0
             ):
                 return
             if self.attribute_dict[attribute_name][UniversityAttributeColumnType.HANDLER.value] == HandlerType.TUITION_CRAWL:
                 #  if attribute_name in ("domestic_student_tuition", "international_student_tuition")
                 university_json = self.handle_tuition_info(university_json, university_name)
-                if attribute_name in university_json and len(university_json[attribute_name]) > 0:
+                if attribute_name in university_json and len(str(university_json[attribute_name])) > 0:
                     return
             # handle by ranking fetcher
             if self.attribute_dict[attribute_name][UniversityAttributeColumnType.HANDLER.value] == HandlerType.RANKING_FETCHER:
@@ -662,20 +695,21 @@ class UniversityInfoGenerator:
                     reference=reference,
                     handler=handler,
                 )
-                if attribute_name in university_json and len(university_json[attribute_name]) > 0:
+                if attribute_name in university_json and len(str(university_json[attribute_name])) > 0:
                     return
-            if attribute_name not in university_json or len(university_json[attribute_name]) <= 0:
+            if attribute_name not in university_json or len(str(university_json[attribute_name])) <= 0:
                 # last choice
                 # if self.attribute_dict[attribute_name]["handler"] == HandlerType.GPT_GENERAL
                 self.trouble_produced_dict.update({(university_name, attribute_name, HandlerType.LANGCHAIN_METHOD): ""})
                 university_json = self.process_attribute_with_gpt(
                     university_json, university_name, attribute_name, reference
                 )
-            if attribute_name not in university_json or len(university_json[attribute_name]) <= 0:
+            if attribute_name not in university_json or len(str(university_json[attribute_name])) <= 0:
                 university_json.update({attribute_name: ""})
 
         threads = []
         for attribute_name in self.attribute_dict:
+            # TODO: change this
             thread = threading.Thread(
                 target=process_attribute,
                 args=(
@@ -684,10 +718,134 @@ class UniversityInfoGenerator:
                 ),
             )
             threads.append(thread)
-            time.sleep(3)
+            # time.sleep(3)
             thread.start()
         for thread in threads:
             thread.join()
+
+        generated_university: University = University.json_to_university(json.dumps(university_json), language="EN")
+        self.university_info_dict.update({university_name: generated_university})
+        return generated_university
+    
+    
+        # @lru_cache(maxsize=config.CACHE_MAX_SIZE)
+        # TODO change comments
+    def get_university_info_with_json(self, university_name: str, id_:int, uni_json: Dict[str, str]) -> University:
+        """
+        Gathers comprehensive information about a university by using various handlers and updates it
+            into a University object.
+
+        This method initializes a JSON structure for a university and populates it with data by calling different
+            handlers based on attribute requirements and the handlers specified in the attribute dictionary.
+            It manages how attributes like tuition fees and general information are fetched using specific
+            services or by processing through LLMs.
+
+        Args:
+            university_name (str): The name of the university for which information is being gathered.
+
+        Returns:
+            University: An instance of the University class populated with all the relevant data about the university.
+
+        Steps:
+            1. Initialize the base JSON structure for university information.
+            2. Add basic university information from predefined sources or caches.
+            3. Iterate through each attribute specified in the system's attribute dictionary.
+            4. Handle each attribute based on its designated handler (e.g., tuition information via crawlers,
+                other attributes via LangChain or GPT models).
+            5. For attributes without explicit data, use a GPT model to generate the required information.
+            6. Convert the final JSON data into a University instance and update the
+                central university information dictionary.
+
+        This method ensures that the University instance it returns is filled with up-to-date and comprehensive
+            information.
+        """
+        university_json = self.initialize_university_json(university_name, id_=id_)
+        if not uni_json or not isinstance(uni_json, dict):
+            uni_json = self.initialize_university_json(university_name, id_=id_)
+        else:
+            uni_json.pop("university_name", None)
+        university_json.update(uni_json)
+        if university_name in self.university_info_dict:
+            self.university_info_dict[university_name].update(uni_json)
+            return self.university_info_dict[university_name]
+        university_json, reference = self.add_basic_university_info(university_json, university_name, id_=id_)
+        university_name = (
+            temp
+            if university_name != (temp := university_json[UniversityBasicInfoType.UNIVERSITY_NAME.value])
+            else university_name
+        )
+        
+
+        def process_attribute(attribute_name: str, university_json: Dict[str, str]):
+            if attribute_name == "others":
+                university_json["others"] = ""
+                return
+            if (
+                attribute_name in ("wikipedia", "website")
+                and attribute_name in university_json
+                and len(str(university_json[attribute_name])) > 0
+            ):
+                return
+            if self.attribute_dict[attribute_name][UniversityAttributeColumnType.HANDLER.value] == HandlerType.TUITION_CRAWL:
+                #  if attribute_name in ("domestic_student_tuition", "international_student_tuition")
+                university_json = self.handle_tuition_info(university_json, university_name)
+                if attribute_name in university_json and len(str(university_json[attribute_name])) > 0:
+                    return
+            # handle by ranking fetcher
+            if self.attribute_dict[attribute_name][UniversityAttributeColumnType.HANDLER.value] == HandlerType.RANKING_FETCHER:
+                ret_json = self.website_fetcher.get_ranking(university_name, attribute_name)
+                if ret_json:
+                    university_json.update({attribute_name: ret_json["rank"]})
+                else:
+                    university_json.update({attribute_name: ""})
+                return
+            if self.attribute_dict[attribute_name][UniversityAttributeColumnType.HANDLER.value] == HandlerType.PROGRAM_FETCHER:
+                ret = self.website_fetcher.get_programs(university_name)
+                if ret:
+                    university_json.update({attribute_name: "\n".join(ret)})
+            if (
+                handler := self.attribute_dict[attribute_name].get(
+                    UniversityAttributeColumnType.HANDLER.value, HandlerType.LANGCHAIN_TAVILY
+                )
+            ) in HandlerType.LANGCHAIN_METHOD or attribute_name not in university_json:
+                if attribute_name not in university_json:
+                    handler = HandlerType.LANGCHAIN_TAVILY
+                university_json = self.process_attribute_with_langchain(
+                    university_json=university_json,
+                    university_name=university_name,
+                    attribute_name=attribute_name,
+                    reference=reference,
+                    handler=handler,
+                )
+                if attribute_name in university_json and len(str(university_json[attribute_name])) > 0:
+                    return
+            if attribute_name not in university_json or len(str(university_json[attribute_name])) <= 0:
+                # last choice
+                # if self.attribute_dict[attribute_name]["handler"] == HandlerType.GPT_GENERAL
+                self.trouble_produced_dict.update({(university_name, attribute_name, HandlerType.LANGCHAIN_METHOD): ""})
+                university_json = self.process_attribute_with_gpt(
+                    university_json, university_name, attribute_name, reference
+                )
+            if attribute_name not in university_json or len(str(university_json[attribute_name])) <= 0:
+                university_json.update({attribute_name: ""})
+
+        threads = []
+        for attribute_name in self.attribute_dict:
+            if attribute_name in university_json:
+                continue
+            thread = threading.Thread(
+                target=process_attribute,
+                args=(
+                    attribute_name,
+                    university_json,
+                ),
+            )
+            threads.append((thread, attribute_name))
+            time.sleep(3)
+            thread.start()
+        for thread, attribute_name in threads:
+            thread.join()
+            print("finished " + attribute_name)
 
         generated_university: University = University.json_to_university(json.dumps(university_json), language="EN")
         self.university_info_dict.update({university_name: generated_university})

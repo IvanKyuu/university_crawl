@@ -147,7 +147,7 @@ class LanchainWrapper:
                     # + "You may wish to refer "
                     # + x["reference"]
                     + "\n If you find the website that you are referring from the university, "
-                    + " load the whole page directly"
+                    + "  the whole page loaddirectly"
                 )
                 | retriever
             )

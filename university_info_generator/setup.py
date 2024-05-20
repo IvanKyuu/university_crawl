@@ -27,7 +27,6 @@ setup(
         "langchain-chroma",
         "tavily-python",
         "selenium",
-        "g4f"
     ],
     include_package_data=True,
     package_data={

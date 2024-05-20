@@ -9,6 +9,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium import webdriver
 from bs4 import BeautifulSoup
 
+__all__ = ["QSRankingCrawl"]
 
 def store_cache(cache_path, cache: Dict[str, str]):
     """
@@ -88,6 +89,6 @@ class QSRankingCrawl:
 
     def to_csv(self):
         data_frame = self.to_dataframe()
-        file_path = "/home/ivan/Uforse/university_crawl/university_info_generator/fetcher/ranking_fetcher"+"/ranking_data/qs_ranking_2024.csv"
+        file_path = "/home/ivan/Uforse/university_crawl/university_info_generator/fetcher/website_fetcher"+"/ranking_data/qs_ranking_2024.csv"
         data_frame.to_csv(file_path, index=False, encoding="utf-8")
 

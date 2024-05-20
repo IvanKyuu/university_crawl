@@ -41,7 +41,7 @@ from typing import List
 from dotenv import load_dotenv
 from openai import OpenAI
 from openai import APIConnectionError, APIError, RateLimitError
-from tenacity import retry, wait_random_exponential, retry_if_exception_type, stop_after_attempt
+from tenacity import retry, wait_random_exponential, retry_if_exception_type, stop_any, stop_after_attempt, stop_after_delay
 from university_info_generator.configs import config
 
 
@@ -150,7 +150,7 @@ class GPTClient:
 
     @retry(
         wait=wait_random_exponential(multiplier=1, max=30),
-        stop=stop_after_attempt(3),
+        stop=stop_any(stop_after_attempt(3), stop_after_delay(60)),
         retry=retry_if_exception_type(UnscorableCommentError)
         | retry_if_exception_type(APIConnectionError)
         | retry_if_exception_type(APIError)
