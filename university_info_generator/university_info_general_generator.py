@@ -634,10 +634,10 @@ class UniversityInfoGenerator:
             1. Initialize the base JSON structure for university information.
             2. Add basic university information from predefined sources or caches.
             3. Iterate through each attribute specified in the system's attribute dictionary.
-            4. Handle each attribute based on its designated handler (e.g., tuition information via crawlers,
+            4. Handle each attribute based on its designated handler (e.g., tuition information via crawlers, \
                 other attributes via LangChain or GPT models).
             5. For attributes without explicit data, use a GPT model to generate the required information.
-            6. Convert the final JSON data into a University instance and update the
+            6. Convert the final JSON data into a University instance and update the \
                 central university information dictionary.
 
         This method ensures that the University instance it returns is filled with up-to-date and comprehensive

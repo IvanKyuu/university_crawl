@@ -3,7 +3,8 @@ from collections import defaultdict
 import time
 
 import pandas as pd
-import re
+import requests
+from requests.exceptions import HTTPError
 
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
@@ -37,27 +38,25 @@ class UniversityProgramScraper:
     program_url = f"{base_url}/programs"
     filter_index_dict = {"subject": 4, "study_level": 3}
 
-    def __init__(self, need_scrap=False, country: Literal["US", "CA"] = "CA") -> None:
+    def init_driver(self):
+        service = Service(
+            "/usr/bin/chromedriver/chromedriver"
+        )  # Make sure to replace this with the correct path to your chromedriver
+        # # headless_driver
         # chrome_options = Options()
         # chrome_options.add_argument("--headless")
         # chrome_options.add_argument("--no-sandbox")
         # self.driver = webdriver.Chrome(chrome_options)
-        service = Service(
-            "/usr/bin/chromedriver/chromedriver"
-        )  # Make sure to replace this with the correct path to your chromedriver
+        self.driver = webdriver.Chrome(service=service)
+
+    def quit_driver(self):
+        self.close()
+
+    def __init__(self, need_selenium=False) -> None:
+
         self.driver = None
-        if need_scrap:
-            self.driver = webdriver.Chrome(service=service)
-            # chrome_options = Options()
-            # chrome_options.add_argument("--headless")
-            # chrome_options.add_argument("--no-sandbox")
-            # self.driver = webdriver.Chrome(chrome_options)
+        self.init_driver()
         self.uni_link_df = None
-        if country == "CA":
-            self.uni_link_df = pd.read_csv(f"{self.data_repo_path}/canada_dataset/qs_canada_uni_matched.csv")
-        else:
-            # country == "US"
-            self.uni_link_df = pd.read_csv(f"{self.data_repo_path}/data/usa_dataset/qs_usa_uni_matched.csv")
 
     def get_entry_page(self):
         self.driver.get(f"{self.program_url}")
@@ -101,43 +100,55 @@ class UniversityProgramScraper:
         ).pause(3).perform()
         return self
 
-    def get_program_link_lst(self, link: str) -> Dict[str, Dict[str, Dict[str, str]]]:
-        program_lst: Dict[str, Dict[str, Dict[str, str]]] = {}
+    @classmethod
+    def get_program_link_lst(cls, link: str) -> Dict[str, Dict[str, Dict[str, str]]]:
+        program_dict: Dict[str, Dict[str, Dict[str, str]]] = {}
         try:
-            self.driver.get(link)
-            dpt_tabs = self.driver.find_element(By.ID, "aptabs")
-            dpt_lst = dpt_tabs.find_elements(By.TAG_NAME, "h3")
-            for dpt in dpt_lst:
-                program_lst[dpt.text.lower()] = {}
-            panel_group_by_dpt = self.driver.find_elements(By.CLASS_NAME, "panel-group")
-            assert len(panel_group_by_dpt) == len(program_lst)
-            for each_group, dpt in zip(panel_group_by_dpt, program_lst):
-                soup = BeautifulSoup(each_group.get_attribute("outerHTML"), "html.parser")
-                subject_areas: ResultSet = soup.find_all(
-                    name="div", attrs={"class": "item", "data-once": "qs_profiles"}
-                )
+            # base_url = "https://www.topuniversities.com"
 
+            response:requests.Response = requests.get(link)
+            response.raise_for_status()
+            page_content = response.content
+            page_soup = BeautifulSoup(page_content, "html.parser")
+            # Bachelor/Master
+            dpt_lst = page_soup.find(name="ul", attrs={"id": "aptabs"}).find_all(name="h3")
+            for dpt in dpt_lst:
+                program_dict[dpt.span.text.lower().strip()] = {}
+            panel_group_by_dpt = page_soup.find_all(name="div", attrs={"class": "panel-group"})
+            assert len(panel_group_by_dpt) == len(program_dict)
+            for each_group, dpt in zip(panel_group_by_dpt, program_dict):
+                # Arts and humanities
+                soup = BeautifulSoup(str(each_group), "html.parser")
+                subject_areas: ResultSet = soup.find_all(name="div", attrs={"class": "item"})
                 subject_area: Tag
                 for subject_area in subject_areas:
-                    department_name = subject_area.find(name="span", attrs={"class": "pgmname"}).text
-                    program_lst[dpt].update({department_name: {}})
+                    department_name = subject_area.find(
+                        name="span", attrs={"class": "pgmname"}, recursive=True
+                    ).text
+                    program_dict[dpt].update({department_name: {}})
                     programs = subject_area.find(name="div", attrs={"class": "item-body"}).find_all(
                         name="div", attrs={"class": "views-row"}
                     )
                     program_body: Tag
+                    # Architectural Engineering
                     for program_body in programs:
                         program_name: str = program_body.find(name="h4").text
                         program_link = program_body.find(name="a", attrs={"id": "view_details"}).get("href")
-                        program_lst[dpt][department_name].update({program_name.strip(): self.base_url + program_link})
-        except NoSuchElementException:
-            pass
-        return program_lst
+                        program_dict[dpt][department_name].update(
+                            {program_name.strip(): cls.base_url + program_link}
+                        )
+        except HTTPError as http_err:
+            print(f"HTTP error occurred: {http_err}")
+        return program_dict
 
-    def extract_program_by_link(self, link: str, program=Program()) -> Program:
+    @classmethod
+    def extract_program_by_link(cls, link: str, program=Program()) -> Program:
         # result_program = Program()
         try:
-            self.driver.get(link)
-            page_soup = BeautifulSoup(self.driver.page_source, "html.parser")
+            response:requests.Response = requests.get(link)
+            response.raise_for_status()
+            page_content = response.content
+            page_soup = BeautifulSoup(page_content, "html.parser")
             # print(page_soup)
             univ_log_div = page_soup.find(name="div", attrs={"class": "univ-logo-n-name"}, recursive=True)
             univ_log_soup = BeautifulSoup(str(univ_log_div), "html.parser")
@@ -248,8 +259,8 @@ class UniversityProgramScraper:
                     "international_student_tuition": international_fee,
                 }
             )
-        except NoSuchElementException:
-            pass
+        except HTTPError as http_err:
+            print(f"HTTP error occurred: {http_err}")
         return program
 
     @staticmethod

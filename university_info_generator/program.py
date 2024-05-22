@@ -5,8 +5,19 @@ __all__ = ["Program"]
 
 
 class Program:
+    __program_id__ = 0
+
+    @classmethod
+    def get_program_id(cls):
+        cls.__program_id__ += 1
+        return cls.__program_id__
+
+    @classmethod
+    def set_program_id(cls, val: int = 0):
+        cls.__program_id__ = val
+
     en_ch_translation_map = {
-        "program_id": "program_id",
+        "program_id": "学科ID",
         "university_id": "学校id",
         "university_name": "学校",
         "main_subject_area": "主要学科领域",  # done
@@ -34,7 +45,7 @@ class Program:
         "career_direction": "就业方向",
         "employment_rate": "就业率",
         "coop_opportunity": "带薪实习机会",
-        "statistics": "employment_field_and_salary",
+        "employment_field_and_salary": "调研数据：就业领域及薪资",
         "case_study": "案例",  #
         "characteristics": "项目特色",
         "others": "其他",  #
@@ -42,9 +53,10 @@ class Program:
     valid_keys = set(en_ch_translation_map.keys())
 
     def __init__(
-        self, program_id: int = -1, university_name: str = None, program_name: str = None, params: Dict[str, str] = None
+        self, program_id: int = None, university_name: str = None, program_name: str = None, params: Dict[str, str] = None
     ):
-        self.program_id: int = program_id
+        if not program_id:
+            self.program_id: int = type(self).get_program_id()
         self.university_name: str = university_name
         self.program_name = program_name
         self.params: Dict[str, str] = params if params is not None else {}
