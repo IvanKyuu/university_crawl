@@ -171,6 +171,10 @@ class University:
         "characteristics": "学校特色",
         "others": "其他",
         "wikipedia": "维基百科页",
+        "mission": "使命",
+        "vision": "愿景",
+        "values": "价值观",
+        "admission_rate": "录取率",
     }
 
     valid_keys = set(en_ch_translation_map.keys())

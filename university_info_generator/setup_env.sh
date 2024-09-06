@@ -29,7 +29,6 @@ fi
 # langchain env setup
 export LANGCHAIN_TRACING_V2="true"
 # TODO: be careful
-export LANGCHAIN_API_KEY="ls__3780df60c0ef4fd2b2414f032feb31ce"
 
 echo "Environment variables set:"
 echo "PROJECT_HOME=$PROJECT_HOME"

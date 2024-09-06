@@ -37,17 +37,18 @@ class UniversityProgramScraper:
     base_url = "https://www.topuniversities.com"
     program_url = f"{base_url}/programs"
     filter_index_dict = {"subject": 4, "study_level": 3}
+    service = Service(
+        "/usr/bin/chromedriver/chromedriver"
+    )  # Make sure to replace this with the correct path to your chromedriver
 
     def init_driver(self):
-        service = Service(
-            "/usr/bin/chromedriver/chromedriver"
-        )  # Make sure to replace this with the correct path to your chromedriver
+
         # # headless_driver
         # chrome_options = Options()
         # chrome_options.add_argument("--headless")
         # chrome_options.add_argument("--no-sandbox")
         # self.driver = webdriver.Chrome(chrome_options)
-        self.driver = webdriver.Chrome(service=service)
+        self.driver = webdriver.Chrome(service=type(self).service)
 
     def quit_driver(self):
         self.close()
@@ -55,7 +56,8 @@ class UniversityProgramScraper:
     def __init__(self, need_selenium=False) -> None:
 
         self.driver = None
-        self.init_driver()
+        if need_selenium:
+            self.init_driver()
         self.uni_link_df = None
 
     def get_entry_page(self):
@@ -103,164 +105,212 @@ class UniversityProgramScraper:
     @classmethod
     def get_program_link_lst(cls, link: str) -> Dict[str, Dict[str, Dict[str, str]]]:
         program_dict: Dict[str, Dict[str, Dict[str, str]]] = {}
-        try:
-            # base_url = "https://www.topuniversities.com"
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 \
+            (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0"
+        }
+        # base_url = "https://www.topuniversities.com"
 
-            response:requests.Response = requests.get(link)
-            response.raise_for_status()
-            page_content = response.content
-            page_soup = BeautifulSoup(page_content, "html.parser")
-            # Bachelor/Master
-            dpt_lst = page_soup.find(name="ul", attrs={"id": "aptabs"}).find_all(name="h3")
-            for dpt in dpt_lst:
+        # requests method
+        # response: requests.Response = requests.get(link, headers=headers)
+        # response.raise_for_status()
+        # page_content = response.content
+        # page_soup = BeautifulSoup(page_content, "html.parser")
+
+        # selenium
+        try:
+            chrome_options = Options()
+            chrome_options.add_argument("--headless")
+            # chrome_options.add_argument("--no-sandbox")
+            driver = webdriver.Edge(chrome_options)
+            # driver = webdriver.Chrome(service=cls.service)
+            driver.get(link)
+            page_soup = BeautifulSoup(driver.page_source, "html.parser")
+        except (WebDriverException, TimeoutException) as exc:
+            print(f"Error when getting page by selenium webdriver: {exc}")
+            raise
+        finally:
+            driver.close()
+        if not page_soup:
+            return program_dict
+        # Bachelor/Master
+        dpt_lst = page_soup.find(name="ul", attrs={"id": "aptabs"}).find_all(name="h3")
+        for dpt in dpt_lst:
+            if not dpt.span:
+                program_dict[dpt.text.lower().strip()] = {}
+            else:
                 program_dict[dpt.span.text.lower().strip()] = {}
-            panel_group_by_dpt = page_soup.find_all(name="div", attrs={"class": "panel-group"})
-            assert len(panel_group_by_dpt) == len(program_dict)
-            for each_group, dpt in zip(panel_group_by_dpt, program_dict):
-                # Arts and humanities
-                soup = BeautifulSoup(str(each_group), "html.parser")
-                subject_areas: ResultSet = soup.find_all(name="div", attrs={"class": "item"})
-                subject_area: Tag
-                for subject_area in subject_areas:
-                    department_name = subject_area.find(
-                        name="span", attrs={"class": "pgmname"}, recursive=True
-                    ).text
-                    program_dict[dpt].update({department_name: {}})
-                    programs = subject_area.find(name="div", attrs={"class": "item-body"}).find_all(
-                        name="div", attrs={"class": "views-row"}
-                    )
-                    program_body: Tag
-                    # Architectural Engineering
-                    for program_body in programs:
-                        program_name: str = program_body.find(name="h4").text
-                        program_link = program_body.find(name="a", attrs={"id": "view_details"}).get("href")
-                        program_dict[dpt][department_name].update(
-                            {program_name.strip(): cls.base_url + program_link}
-                        )
-        except HTTPError as http_err:
-            print(f"HTTP error occurred: {http_err}")
+        panel_group_by_dpt = page_soup.find_all(name="div", attrs={"class": "panel-group"})
+        assert len(panel_group_by_dpt) == len(program_dict)
+        for each_group, dpt in zip(panel_group_by_dpt, program_dict):
+            # Arts and humanities
+            soup = BeautifulSoup(str(each_group), "html.parser")
+            subject_areas: ResultSet = soup.find_all(name="div", attrs={"class": "item"})
+            subject_area: Tag
+            for subject_area in subject_areas:
+                department_name = subject_area.find(name="span", attrs={"class": "pgmname"}, recursive=True).text
+                program_dict[dpt].update({department_name: {}})
+                programs = subject_area.find(name="div", attrs={"class": "item-body"}).find_all(
+                    name="div", attrs={"class": "views-row"}
+                )
+                program_body: Tag
+                # Architectural Engineering
+                for program_body in programs:
+                    program_name: str = program_body.find(name="h4").text
+                    program_link = program_body.find(name="a", attrs={"id": "view_details"}).get("href")
+                    program_dict[dpt][department_name].update({program_name.strip(): cls.base_url + program_link})
         return program_dict
 
     @classmethod
-    def extract_program_by_link(cls, link: str, program=Program()) -> Program:
+    def extract_program_by_link(cls, link: str, program=Program(), driver_prm=None) -> Program:
         # result_program = Program()
+
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 \
+            (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0"
+        }
         try:
-            response:requests.Response = requests.get(link)
-            response.raise_for_status()
-            page_content = response.content
-            page_soup = BeautifulSoup(page_content, "html.parser")
-            # print(page_soup)
-            univ_log_div = page_soup.find(name="div", attrs={"class": "univ-logo-n-name"}, recursive=True)
-            univ_log_soup = BeautifulSoup(str(univ_log_div), "html.parser")
-            # print("*" * 80)
-            badge_description_lst: Tag = page_soup.find_all(
-                name="div", attrs={"class": "badge-description"}, recursive=True
-            )
+            if not driver_prm:
+                chrome_options = Options()
+                chrome_options.add_argument("--headless")
+                # chrome_options.add_argument("--no-sandbox")
+                driver = webdriver.Chrome(chrome_options)
+            else:
+                driver = driver_prm
+            driver.get(link)
+            page_soup = BeautifulSoup(driver.page_source, "html.parser")
+        except (WebDriverException, TimeoutException) as exc:
+            print(f"Error when getting page by selenium webdriver: {exc}")
+            raise
+        finally:
+            if not driver_prm:
+                driver.close()
+        response: requests.Response = requests.get(link, headers=headers)
+        response.raise_for_status()
+        page_content = response.content
+        page_soup = BeautifulSoup(page_content, "html.parser")
+        # print(page_soup)
+        univ_log_div = page_soup.find(name="div", attrs={"class": "univ-logo-n-name"}, recursive=True)
+        univ_log_soup = BeautifulSoup(str(univ_log_div), "html.parser")
+        # print("*" * 80)
+        badge_description_lst: Tag = page_soup.find_all(
+            name="div", attrs={"class": "badge-description"}, recursive=True
+        )
 
-            # extract QS Subject Rankings / program duration / Tuition Fee/year / Main Subject Area
-            rank = ""
-            duration = ""
-            main_subject = ""
-            if badge_description_lst:
-                for badge in badge_description_lst:
-                    badge_soup = BeautifulSoup(str(badge), "html.parser")
-                    h3_lst = badge_soup.h3.contents
-                    if len(h3_lst) == 3 and "rank" in h3_lst[2].text.lower():
-                        rank = h3_lst[1]
-                    if len(h3_lst) == 2:
-                        if "duration" in h3_lst[1].text.lower():
-                            duration = int(list(h3_lst[0].split("month"))[0])
-                            duration //= 12
-                        if "main subject" in h3_lst[1].text.lower():
-                            main_subject = h3_lst[0].text.lower()
+        # extract QS Subject Rankings / program duration / Tuition Fee/year / Main Subject Area
+        rank = ""
+        duration = ""
+        main_subject = ""
+        if badge_description_lst:
+            for badge in badge_description_lst:
+                badge_soup = BeautifulSoup(str(badge), "html.parser")
+                h3_lst = badge_soup.h3.contents
+                if len(h3_lst) == 3 and "rank" in h3_lst[2].text.lower():
+                    rank = h3_lst[1]
+                if len(h3_lst) == 2:
+                    if "duration" in h3_lst[1].text.lower():
+                        duration = int(list(h3_lst[0].split("month"))[0])
+                        duration //= 12
+                    if "main subject" in h3_lst[1].text.lower():
+                        main_subject = h3_lst[0].text.lower()
 
-            # extract Main Subject / Degree / Study Level / description
-            degree_type = ""
-            academic_degree_level = ""
-            description = ""
-            car_content_div: Tag = page_soup.find(name="div", attrs={"class": "card-content"})
-            if car_content_div:
-                card_content_lst = car_content_div.find_all(name="div", attrs={"class": "prog-view-highli"})
+        # extract Main Subject / Degree / Study Level / description
+        degree_type = ""
+        academic_degree_level = ""
+        description = ""
+        car_content_div: Tag = page_soup.find(name="div", attrs={"class": "card-content"})
+        if car_content_div:
+            card_content_lst = car_content_div.find_all(name="div", attrs={"class": "prog-view-highli"})
 
-                if card_content_lst:
-                    for card_content in card_content_lst:
-                        if "main subject" in card_content.h3.text.lower():
-                            if not main_subject:
-                                main_subject = card_content.p
-                        elif "degree" in card_content.h3.text.lower():
-                            degree_type = card_content.p.text
-                        elif "study level" in card_content.h3.text.lower():
-                            academic_degree_level = card_content.p.text.lower()
-                    description_div: Tag = car_content_div.find(
-                        name="div", attrs={"class": "textsection abt-overview-read"}
-                    )
-                    if description_div and len(description_div.contents):
-                        description += description_div.contents[0].text.strip()
-                    if detail := description_div.find(name="span", attrs={"class": "details"}):
-                        description += " " if description else "" + detail.contents[0].text.strip()
-
-            # admin requirement
-            # extra language / course_requirement
-            enrollment_language_requirement = ""
-            course_requirement = ""
-            admin_div: Tag = page_soup.find(name="div", attrs={"id": "p2-university-information"})
-
-            if admin_div:
-                language_div_lst = admin_div.find_all(
-                    name="div", attrs={"class": "univ-subsection-full-width-value bottom-div"}
+            if card_content_lst:
+                for card_content in card_content_lst:
+                    if "main subject" in card_content.h3.text.lower():
+                        if not main_subject:
+                            main_subject = card_content.p
+                    elif "degree" in card_content.h3.text.lower():
+                        degree_type = card_content.p.text
+                    elif "study level" in card_content.h3.text.lower():
+                        academic_degree_level = card_content.p.text.lower()
+                description_div: Tag = car_content_div.find(
+                    name="div", attrs={"class": "textsection abt-overview-read"}
                 )
-                for language_div in language_div_lst:
-                    if "TOEFL" in language_div.label.text.upper():
-                        enrollment_language_requirement += f"TOEFL: {language_div.div.text}"
-                    if "IELTS" in language_div.label.text.upper():
-                        if enrollment_language_requirement:
-                            enrollment_language_requirement += "\n"
-                        enrollment_language_requirement += f"IELTS: {language_div.div.text}"
-            course_req_div = admin_div.find(name="div", attrs={"class": "exam-score-footnote"})
-            if course_req_div:
-                if course_req_div.p:
-                    course_requirement = course_req_div.p.text
-                    course_requirement = course_requirement.replace(":", ":\n").replace(";", ";\n")
+                if description_div and len(description_div.contents):
+                    description += description_div.contents[0].text.strip()
+                if detail := description_div.find(name="span", attrs={"class": "details"}):
+                    description += " " if description else "" + detail.contents[0].text.strip()
 
-            # extract tuition fee
-            def process_fee(fee: str):
-                fee_num, fee_type = fee.upper().split()
-                return f"{fee_type.strip()} ${fee_num.strip()}"
+        # admin requirement
+        # extra language / course_requirement
+        enrollment_language_requirement = ""
+        course_requirement = ""
+        admin_div: Tag = page_soup.find(name="div", attrs={"id": "p2-university-information"})
 
-            domestic_fee = ""
-            international_fee = ""
-            tuition_div = page_soup.find(name="div", attrs={"id": "p2-tuition-fee-and-scholarships"})
-            if tuition_div:
-                tuition_lst = tuition_div.find_all(name="div", attrs={"class": "univ-subsection"})
-                if tuition_lst:
-                    tui_div: Tag
-                    for tui_div in tuition_lst:
-                        if "domestic" in tui_div.h4.text.lower():
-                            domestic_fee = tui_div.find(name="div", attrs={"class": "univ-subsection-value"})
-                            domestic_fee = process_fee(domestic_fee.div.text)
-                        if "international" in tui_div.h4.text.lower():
-                            international_fee = tui_div.find(name="div", attrs={"class": "univ-subsection-value"})
-                            international_fee = process_fee(international_fee.div.text)
-            program.update(
-                {
-                    "program_name": univ_log_soup.find(
-                        name="h1",
-                    ).text,
-                    "location": univ_log_soup.find(name="h2", attrs={"class": "hero-campus-heading"}).text,
-                    "ranking_qs_subject_2024": rank,
-                    "graduation_year": duration,
-                    "main_subject_area": main_subject,
-                    "degree_type": degree_type,
-                    "academic_degree_level": academic_degree_level,
-                    "description": description,
-                    "enrollment_language_requirement": enrollment_language_requirement,
-                    "course_requirement": course_requirement,
-                    "domestic_student_tuition": domestic_fee,
-                    "international_student_tuition": international_fee,
-                }
+        if admin_div:
+            language_div_lst = admin_div.find_all(
+                name="div", attrs={"class": "univ-subsection-full-width-value bottom-div"}
             )
-        except HTTPError as http_err:
-            print(f"HTTP error occurred: {http_err}")
+            for language_div in language_div_lst:
+                if "TOEFL" in language_div.label.text.upper():
+                    enrollment_language_requirement += f"TOEFL: {language_div.div.text}"
+                if "IELTS" in language_div.label.text.upper():
+                    if enrollment_language_requirement:
+                        enrollment_language_requirement += "\n"
+                    enrollment_language_requirement += f"IELTS: {language_div.div.text}"
+        course_req_div = admin_div.find(name="div", attrs={"class": "exam-score-footnote"})
+        if course_req_div:
+            if course_req_div.p:
+                course_requirement = course_req_div.p.text
+                course_requirement = course_requirement.replace(":", ":\n").replace(";", ";\n")
+
+        # extract tuition fee
+        def process_fee(fee: str):
+            result = list(fee.upper().split())
+            fee_type = ""
+            fee_num = ""
+            if len(result) >= 1:
+                fee_num = result[0]
+                if len(result) == 2:
+                    fee_type = result[1]
+                    return f"{fee_type.strip()} ${fee_num.strip()}"
+            if len(fee_type) <= 0:
+                return f"${fee_num.strip()}"
+            return ""
+
+        domestic_fee = ""
+        international_fee = ""
+        tuition_div = page_soup.find(name="div", attrs={"id": "p2-tuition-fee-and-scholarships"})
+        if tuition_div:
+            tuition_lst = tuition_div.find_all(name="div", attrs={"class": "univ-subsection"})
+            if tuition_lst:
+                tui_div: Tag
+                for tui_div in tuition_lst:
+                    if "domestic" in tui_div.h4.text.lower():
+                        domestic_fee = tui_div.find(name="div", attrs={"class": "univ-subsection-value"})
+                        domestic_fee = process_fee(domestic_fee.div.text)
+                    if "international" in tui_div.h4.text.lower():
+                        international_fee = tui_div.find(name="div", attrs={"class": "univ-subsection-value"})
+                        international_fee = process_fee(international_fee.div.text)
+        program.update(
+            {
+                "program_name": univ_log_soup.find(
+                    name="h1",
+                ).text,
+                "location": (
+                    item.text if (item := univ_log_soup.find(name="h2", attrs={"class": "hero-campus-heading"})) else ""
+                ),
+                "ranking_qs_subject_2024": rank,
+                "graduation_year": duration,
+                "main_subject_area": main_subject,
+                "degree_type": degree_type,
+                "academic_degree_level": academic_degree_level,
+                "description": description,
+                "enrollment_language_requirement": enrollment_language_requirement,
+                "course_requirement": course_requirement,
+                "domestic_student_tuition": domestic_fee,
+                "international_student_tuition": international_fee,
+            }
+        )
+
         return program
 
     @staticmethod

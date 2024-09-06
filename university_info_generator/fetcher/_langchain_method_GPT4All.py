@@ -47,7 +47,7 @@ from langchain_community.utilities import GoogleSerperAPIWrapper
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
-from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain_community.llms import GPT4All
 from langchain_community.embeddings.sentence_transformer import (
     SentenceTransformerEmbeddings,
 )
@@ -57,12 +57,12 @@ from university_info_generator.configs import config
 from university_info_generator.configs.enum_class import UniversityAttributeColumnType
 
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
-# os.environ["LANGCHAIN_API_KEY"] = config.LANGCHAIN_API_KEY
+os.environ["LANGCHAIN_API_KEY"] = config.LANGCHAIN_API_KEY
 
-__all__ = ["LanchainWrapper"]
+__all__ = ["LanchainGPT4AllWrapper"]
 
 
-class LanchainWrapper:
+class LanchainGPT4AllWrapper:
     """
     A wrapper class for Langchain operations that retrieve and process university-related information
         using the Langchain API and LLMs.
@@ -135,7 +135,12 @@ class LanchainWrapper:
         )
 
         # Context is the part that retriever get to work
-
+        model = GPT4All(model=f"{config.PROJECT_HOME}/university_info_generator/models/mistral-7b-openorca.gguf2.Q4_0.gguf", temp=0, n_threads=20)
+        # model = OpenAI(
+        #         api_key=config.OPENAI_API_KEY,
+        #         model=config.DEFAULT_OPENAI_MODEL,
+        #         temperature=0,
+        #     )
         chain = (
             RunnablePassthrough.assign(
                 context=(
@@ -152,120 +157,13 @@ class LanchainWrapper:
                 | retriever
             )
             | prompt
-            | ChatOpenAI(
-                api_key=config.OPENAI_API_KEY,
-                model=config.DEFAULT_OPENAI_MODEL,
-                temperature=0,
-            )
+            | model
             | StrOutputParser()
         )
 
         return chain.invoke(
             {
                 "university_name": f"{university_name}",
-                "reference": f"{reference}",
-                "example": f"{_data_example_pair}",
-                "extra_prompt": f"{_extra_prompt}",
-                "attribute": f"{target_attribute}",
-                "format": f"{format_}",
-            }
-        )
-
-    @classmethod
-    @retry(
-        stop=stop_after_attempt(3),  # Stop after 3 attempts
-        wait=wait_random_exponential(multiplier=1, max=30),
-        retry=retry_if_exception_type((HTTPError, ConnectionError)),  # Retry on HTTPError and ConnectionError
-        reraise=True,
-    )
-    def get_retrieved_program_attr_with_format_tavily(
-        cls,
-        university_name: str,
-        program_name: str,
-        faculty_name: str,
-        target_attribute: str,
-        format_: str,
-        reference: List[str],
-        _data_example_pair: str,
-        _extra_prompt: str = "",
-        k_value: int = UniversityAttributeColumnType.K_VALUE.get_default_value(),
-        _params=None,
-    ):
-        """
-        Retrieves detailed attributes for a specified university using the
-                Tavily search API
-                structured OpenAI prompts
-            in a data pipeline.
-
-        Parameters:
-        # TODO(ivan): add the param
-            university_name (str): The name of the university for which to retrieve information.
-            target_attribute (str): The specific attribute of the university to retrieve.
-            format_ (str): The desired output format for the retrieved information.
-            reference (List[str]): A list of references in terms of URLs to consider when retrieving information.
-            data_example_pair (str): Example data to help guide the retrieval process.
-            extra_prompt (str, optional): Additional instructions or context for the OpenAI prompt.
-
-        Returns:
-            The retrieved information as processed by the GPT model in the specified format.
-
-        Usage:
-            This method is used when precise, detailed information about a university's specific attributes is required.
-                It constructs a detailed query using multiple inputs to obtain accurate and relevant information.
-        """
-        print(
-            f"""used langchain: get_retrieved_attr_with_format_tavily, university_name: {university_name},
-                attribute: {target_attribute}"""
-        )
-        retriever = TavilySearchAPIRetriever(api_key=config.TAVILY_API_KEY, k=k_value)
-        # GPT
-        prompt = ChatPromptTemplate.from_template(
-            """Find the attribute that related to a specific program from the university in Canada/US.
-                If you don't know or you are not sure, just return "not available" without further explaining
-                You will only use information that related to the {program_name} from {university_name}.
-                The faculty of the program is {faculty_name}.
-                You can check here for additional reference: {reference}.
-                {extra_prompt}
-                Context: {context}
-                Attribute: {attribute}
-                Output format: {format}
-                Output example: {example}
-                """
-        )
-
-        # Context is the part that retriever get to work
-
-        chain = (
-            RunnablePassthrough.assign(
-                context=(
-                    # Tavily
-                    lambda x: "For "
-                    + x["program_name"]
-                    + " in "
-                    + x["university_name"]
-                    + ". "
-                    + x["extra_prompt"]
-                    # + "You may wish to refer "
-                    # + x["reference"]
-                    + "\n If you find the website that you are referring from the university, "
-                    + " load the whole page directly"
-                )
-                | retriever
-            )
-            | prompt
-            | ChatOpenAI(
-                api_key=config.OPENAI_API_KEY,
-                model=config.DEFAULT_OPENAI_MODEL,
-                temperature=0,
-            )
-            | StrOutputParser()
-        )
-
-        return chain.invoke(
-            {
-                "university_name": f"{university_name}",
-                "program_name": f"{program_name}",
-                "faculty_name": f"{faculty_name}",
                 "reference": f"{reference}",
                 "example": f"{_data_example_pair}",
                 "extra_prompt": f"{_extra_prompt}",
@@ -339,11 +237,7 @@ class LanchainWrapper:
                 | retriever
             )
             | prompt
-            | ChatOpenAI(
-                api_key=config.OPENAI_API_KEY,
-                model=config.DEFAULT_OPENAI_MODEL,
-                temperature=0,
-            )
+            | GPT4All(model=f"{config.PROJECT_HOME}/university_info_generator/models/mistral-7b-openorca.gguf2.Q4_0.gguf", temp=0, n_threads=20)
             | StrOutputParser()
         )
 
@@ -453,17 +347,13 @@ class LanchainWrapper:
         Example: {example}
         """
         prompt = ChatPromptTemplate.from_template(template)
-        # response = ChatOpenAI(api_key=config.OPENAI_API_KEY, model=config.DEFAULT_OPENAI_MODEL, temperature=0).invoke(
+        # response = OpenAI(api_key=config.OPENAI_API_KEY, model=config.DEFAULT_OPENAI_MODEL, temperature=0).invoke(
         #     prompt
         # )
         chain = (
             RunnablePassthrough()
             | prompt
-            | ChatOpenAI(
-                api_key=config.OPENAI_API_KEY,
-                model=config.DEFAULT_OPENAI_MODEL,
-                temperature=0,
-            )
+            | GPT4All(model=f"{config.PROJECT_HOME}/university_info_generator/models/mistral-7b-openorca.gguf2.Q4_0.gguf", temp=0, n_threads=20)
             | StrOutputParser()
         )
         return chain.invoke(

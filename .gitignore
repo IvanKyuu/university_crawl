@@ -10,3 +10,6 @@ cache_repo/*.jsonl
 /university_info_generator/fetcher/ranking_fetcher/*.ipynb
 /university_info_generator/fetcher/ranking_fetcher/ranking_data/*.jsonl
 /university_info_generator/fetcher/ranking_fetcher/ranking_data/*.zip
+*.csv
+*.xlsx
+

@@ -138,6 +138,10 @@ class UniversityGeneralInfoType(Enum):
     CHARACTERISTICS = "characteristics"
     WIKIPEDIA = "wikipedia"
     OTHERS = "others"
+    MISSION = "mission"
+    VISION = "vision"
+    VALUES = "values"
+    ADMISSION_RATE = "admission_rate"
 
     @classmethod
     def is_ranking(cls, attr_name: str):

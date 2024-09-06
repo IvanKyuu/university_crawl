@@ -7,7 +7,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="university_info_generator",
-    version="0.0.3",
+    version="0.0.5",
     packages=find_packages(),
     install_requires=[
         # list the package dependencies here

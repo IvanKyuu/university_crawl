@@ -100,7 +100,7 @@ class UniversityInfoGenerator:
     DEFAULT_CACHE_REPO_PATH = config.CACHE_REPO_PATH
     DEFAULT_ENCODING = "utf-8"
 
-    token_not_know = ["not ranked", "not available", "not know", "N/A", "none available", "none"]
+    token_not_know = ["not ranked", "not available", "not know", "N/A", "none available", "none", "nan"]
 
     def __init__(
         self,
@@ -664,11 +664,12 @@ class UniversityInfoGenerator:
                 and len(str(university_json[attribute_name])) > 0
             ):
                 return
-            if self.attribute_dict[attribute_name][UniversityAttributeColumnType.HANDLER.value] == HandlerType.TUITION_CRAWL:
-                #  if attribute_name in ("domestic_student_tuition", "international_student_tuition")
-                university_json = self.handle_tuition_info(university_json, university_name)
-                if attribute_name in university_json and len(str(university_json[attribute_name])) > 0:
-                    return
+            # if self.attribute_dict[attribute_name][UniversityAttributeColumnType.HANDLER.value] == HandlerType.TUITION_CRAWL:
+            #     #  if attribute_name in ("domestic_student_tuition", "international_student_tuition")
+            #     university_json = self.handle_tuition_info(university_json, university_name)
+            #     if attribute_name in university_json and len(str(university_json[attribute_name])) > 0:
+            #         return
+
             # handle by ranking fetcher
             if self.attribute_dict[attribute_name][UniversityAttributeColumnType.HANDLER.value] == HandlerType.RANKING_FETCHER:
                 ret_json = self.website_fetcher.get_ranking(university_name, attribute_name)
@@ -709,6 +710,9 @@ class UniversityInfoGenerator:
 
         threads = []
         for attribute_name in self.attribute_dict:
+            if attribute_name not in ['mission', 'vision', 'values', 'admission_rate']:
+                university_json.update({attribute_name: ""})
+                continue
             # TODO: change this
             thread = threading.Thread(
                 target=process_attribute,
@@ -850,6 +854,53 @@ class UniversityInfoGenerator:
         generated_university: University = University.json_to_university(json.dumps(university_json), language="EN")
         self.university_info_dict.update({university_name: generated_university})
         return generated_university
+
+    def get_program_info(self,
+        university_name: str,
+        program_name: str,
+        faculty_name: str,
+        target_attribute: str,
+        format_: str,
+        reference: List[str],
+        _data_example_pair: str,
+        _extra_prompt: str = "",
+        k_value: int = UniversityAttributeColumnType.K_VALUE.get_default_value()):
+        gpt_dict_key = str(((university_name, program_name, target_attribute), GPTMethodType.ATTRIBUTE_INFO))
+        if gpt_dict_key in self.gpt_cache_dict:
+            print("cached")
+            return self.gpt_cache_dict[gpt_dict_key][0]
+        # generated_attr = self.cleanup_rrm_generated_result(LanchainWrapper.get_retrieved_program_attr_with_format_tavily(
+        #     university_name,
+        #     program_name,
+        #     faculty_name,
+        #     target_attribute,
+        #     format_,
+        #     reference,
+        #     _data_example_pair,
+        #     _extra_prompt,
+        #     k_value
+        # ))
+        generated_attr = ""
+        if generated_attr == "":
+            generated_attr, reference = self.gpt_client.get_value_and_reference_from_gpt(
+            university_name=university_name,
+            target_attribute=f"{target_attribute} of faculty: {faculty_name}",
+            format_=format_,
+            reference=f"{reference}",
+            data_example_pair=f"{_data_example_pair}",
+            extra_prompt=_extra_prompt,
+        )
+        gpt_dict_key = str(((university_name, program_name, target_attribute), GPTMethodType.ATTRIBUTE_INFO))
+        if isinstance(generated_attr, list):
+            generated_attr = "\n".join(generated_attr)
+        # clean generated_attr if gpt find none, or it is making things up
+        if isinstance(generated_attr, str):
+            generated_attr = self.cleanup_rrm_generated_result(generated_attr)
+        # if generated_attr and generated_attr != "":
+        if generated_attr:
+            self.gpt_cache_dict.update({gpt_dict_key: (generated_attr, reference)})
+        return generated_attr
+
 
     def save_to_file(self, dict_type: UniversitySavedDictType, file_path: str):
         """
